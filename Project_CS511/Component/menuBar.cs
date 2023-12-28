@@ -71,7 +71,7 @@ namespace Project_CS511.Component
         {
             setColorBack();
             hideAllControls();
-            main.message.Show();
+            main.messagePage.Show();
             lb_message.ForeColor = green;
             pb_message.Image = Resources.chat_active;
         }
@@ -79,6 +79,8 @@ namespace Project_CS511.Component
         private void pb_account_Click(object sender, EventArgs e)
         {
             setColorBack();
+            hideAllControls();
+            main.accountPage.Show();
             lb_account.ForeColor = green;
             pb_account.Image = Resources.customer_active;
         }
@@ -92,8 +94,8 @@ namespace Project_CS511.Component
             {
                 main.homePage.Hide();
             }
-            if(main.message != null)
-            { main.message.Hide(); }
+            if(main.messagePage != null) { main.messagePage.Hide(); }
+            if(main.accountPage != null) { main.accountPage.Hide(); }
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion

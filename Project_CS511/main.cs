@@ -15,7 +15,8 @@ namespace Project_CS511
     public partial class mainForm : Form
     {
         public home homePage;
-        public message message;
+        public message messagePage;
+        public account accountPage;
         public mainForm()
         {
             InitializeComponent();
@@ -33,8 +34,12 @@ namespace Project_CS511
             this.Controls.Add(homePage);
 
             //add message
-            message = new message(this);
-            this.Controls.Add(message);
+            messagePage = new message(this);
+            this.Controls.Add(messagePage);
+
+            //add account
+            accountPage = new account(this);
+            this.Controls.Add(accountPage);
         }
     }
 }

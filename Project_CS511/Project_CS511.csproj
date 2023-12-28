@@ -100,6 +100,12 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\account.Designer.cs">
+      <DependentUpon>account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\account.resx">
+      <DependentUpon>account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -204,25 +213,24 @@
     <None Include="icons\wallet_active.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\kfc_ad.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="icons\star.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\trash.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\bubble\bubble1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\bubble\bubble2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="icons\bubble\output-onlinepngtools %286%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\bubble\output-onlinepngtools %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\ads\kfc_ad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\food\food1.png" />
+    <None Include="icons\white_pen.png" />
+    <None Include="icons\pen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

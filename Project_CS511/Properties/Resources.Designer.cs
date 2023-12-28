@@ -173,6 +173,16 @@ namespace Project_CS511.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pen {
+            get {
+                object obj = ResourceManager.GetObject("pen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap star {
             get {
                 object obj = ResourceManager.GetObject("star", resourceCulture);
@@ -206,6 +216,16 @@ namespace Project_CS511.Properties {
         internal static System.Drawing.Bitmap wallet_active {
             get {
                 object obj = ResourceManager.GetObject("wallet_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_pen {
+            get {
+                object obj = ResourceManager.GetObject("white_pen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

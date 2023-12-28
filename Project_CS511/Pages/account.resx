@@ -117,56 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="compass_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\compass_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="food_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\food_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wallet_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\wallet_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="food" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="compass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\compass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="customer_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\customer_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chat_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\chat_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wallet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\wallet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bubble_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\bubble\output-onlinepngtools (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bubble_lightGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\bubble\output-onlinepngtools (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kfc_ad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\ads\kfc_ad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\pen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="white_pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icons\white_pen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pb_logOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        6gUAABQMr6sMLwAAoGB4XeXjhgAAQMHfd32XqxcAAHBLrl0nuXoBAAC35Nr1g1y9AACAW3Dt+kmuXgAA
+        wC24dv0iVy8AAOAtXLuekasXAADwFse00K9y9QIAAF7DRwxf2NkjAgAA/IiPGL6ys8cEAAA4c8wIvaaz
+        BwUAALh2zAe9pbOHBQAAuDhmg27R2QMDAACP7ZgLumW+7RAAAHhyzAQV+T9fAADw2Hx74f+Y6xcAADyW
+        ywbwf7p+Q5dHN8AAAOB9M7juJAMMAADeH4PrTnsaYE/OfngAAMD9evpd3uD6g/p+iAEAAPfL2JIkSZIk
+        SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIk
+        SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIk
+        SZIkSZIkSZIkSZIkSZIkSZIkSZJ0J3348B9quK1MAHIxogAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>
