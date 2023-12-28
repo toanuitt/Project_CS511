@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             this.flp_home = new System.Windows.Forms.FlowLayoutPanel();
-            this.pic_advertisement = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.restaurantSlide1 = new Project_CS511.Component.restaurantSlide();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pic_advertisement = new System.Windows.Forms.PictureBox();
             this.flp_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_advertisement)).BeginInit();
             this.SuspendLayout();
@@ -50,16 +50,6 @@
             this.flp_home.Size = new System.Drawing.Size(414, 542);
             this.flp_home.TabIndex = 0;
             // 
-            // pic_advertisement
-            // 
-            this.pic_advertisement.Image = ((System.Drawing.Image)(resources.GetObject("pic_advertisement.Image")));
-            this.pic_advertisement.Location = new System.Drawing.Point(3, 3);
-            this.pic_advertisement.Name = "pic_advertisement";
-            this.pic_advertisement.Size = new System.Drawing.Size(400, 160);
-            this.pic_advertisement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_advertisement.TabIndex = 1;
-            this.pic_advertisement.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -69,6 +59,13 @@
             this.label1.Size = new System.Drawing.Size(248, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Restaurants you may like ➜";
+            // 
+            // restaurantSlide1
+            // 
+            this.restaurantSlide1.Location = new System.Drawing.Point(3, 192);
+            this.restaurantSlide1.Name = "restaurantSlide1";
+            this.restaurantSlide1.Size = new System.Drawing.Size(400, 185);
+            this.restaurantSlide1.TabIndex = 3;
             // 
             // label2
             // 
@@ -80,12 +77,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Quảng cáo ➜";
             // 
-            // restaurantSlide1
+            // pic_advertisement
             // 
-            this.restaurantSlide1.Location = new System.Drawing.Point(3, 192);
-            this.restaurantSlide1.Name = "restaurantSlide1";
-            this.restaurantSlide1.Size = new System.Drawing.Size(400, 185);
-            this.restaurantSlide1.TabIndex = 3;
+            this.pic_advertisement.Image = ((System.Drawing.Image)(resources.GetObject("pic_advertisement.Image")));
+            this.pic_advertisement.Location = new System.Drawing.Point(3, 3);
+            this.pic_advertisement.Name = "pic_advertisement";
+            this.pic_advertisement.Size = new System.Drawing.Size(400, 160);
+            this.pic_advertisement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_advertisement.TabIndex = 1;
+            this.pic_advertisement.TabStop = false;
             // 
             // home
             // 

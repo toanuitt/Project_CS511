@@ -58,6 +58,12 @@
     <Compile Include="Component\adSlide.Designer.cs">
       <DependentUpon>adSlide.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\chatBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\chatBlock.Designer.cs">
+      <DependentUpon>chatBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\foodBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     <Compile Include="Pages\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\message.Designer.cs">
+      <DependentUpon>message.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Component\adBlock.resx">
@@ -107,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\adSlide.resx">
       <DependentUpon>adSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\chatBlock.resx">
+      <DependentUpon>chatBlock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\foodBlock.resx">
       <DependentUpon>foodBlock.cs</DependentUpon>
@@ -129,20 +144,23 @@
     <EmbeddedResource Include="Pages\home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\message.resx">
+      <DependentUpon>message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -190,6 +208,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\bubble\bubble1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\bubble\bubble2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\bubble\output-onlinepngtools %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\bubble\output-onlinepngtools %287%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

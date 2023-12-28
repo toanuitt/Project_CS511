@@ -71,6 +71,7 @@ namespace Project_CS511.Component
         {
             setColorBack();
             hideAllControls();
+            main.message.Show();
             lb_message.ForeColor = green;
             pb_message.Image = Resources.chat_active;
         }
@@ -91,6 +92,8 @@ namespace Project_CS511.Component
             {
                 main.homePage.Hide();
             }
+            if(main.message != null)
+            { main.message.Hide(); }
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion
