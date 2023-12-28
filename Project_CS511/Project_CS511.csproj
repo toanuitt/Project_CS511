@@ -46,14 +46,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Component\adBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\adBlock.Designer.cs">
+      <DependentUpon>adBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\adSlide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\adSlide.Designer.cs">
+      <DependentUpon>adSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\foodBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\foodBlock.Designer.cs">
+      <DependentUpon>foodBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\foodSlide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\foodSlide.Designer.cs">
+      <DependentUpon>foodSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\menuBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\menuBar.Designer.cs">
+      <DependentUpon>menuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\restaurantBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\restaurantBlock.Designer.cs">
+      <DependentUpon>restaurantBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\restaurantSlide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\restaurantSlide.Designer.cs">
+      <DependentUpon>restaurantSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Component\adBlock.resx">
+      <DependentUpon>adBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\adSlide.resx">
+      <DependentUpon>adSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\foodBlock.resx">
+      <DependentUpon>foodBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\foodSlide.resx">
+      <DependentUpon>foodSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\menuBar.resx">
+      <DependentUpon>menuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\restaurantBlock.resx">
+      <DependentUpon>restaurantBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\restaurantSlide.resx">
+      <DependentUpon>restaurantSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +151,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\chat_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\compass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\compass_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\customer_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\food_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\wallet_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\kfc_ad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

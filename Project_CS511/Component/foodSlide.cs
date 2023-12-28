@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_CS511
+namespace Project_CS511.Component
 {
-    public partial class Form1 : Form
+    public partial class foodSlide : UserControl
     {
-        public Form1()
+        public foodSlide()
         {
             InitializeComponent();
         }
