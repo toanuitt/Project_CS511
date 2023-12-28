@@ -47,7 +47,7 @@
             this.flp_home.Controls.Add(this.label2);
             this.flp_home.Location = new System.Drawing.Point(-3, -4);
             this.flp_home.Name = "flp_home";
-            this.flp_home.Size = new System.Drawing.Size(422, 542);
+            this.flp_home.Size = new System.Drawing.Size(414, 542);
             this.flp_home.TabIndex = 0;
             // 
             // pic_advertisement
