@@ -80,10 +80,15 @@ namespace Project_CS511.Pages
         {
             pn_savedPlaces.BackColor = Color.White;
         }
+
+
         #endregion
 
         #endregion
 
-
+        private void lb_logOut_Click(object sender, EventArgs e)
+        {
+            main.Close();
+        }
     }
 }

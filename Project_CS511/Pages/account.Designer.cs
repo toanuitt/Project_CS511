@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(account));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pb_edit = new System.Windows.Forms.PictureBox();
             this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.lb_name = new System.Windows.Forms.Label();
-            this.pb_edit = new System.Windows.Forms.PictureBox();
             this.pn_changeUsername = new System.Windows.Forms.Panel();
-            this.lb_changeUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lb_changeUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_changePassword = new System.Windows.Forms.Label();
             this.pn_changePassword = new System.Windows.Forms.Panel();
@@ -51,8 +51,8 @@
             this.lb_logOut = new System.Windows.Forms.Label();
             this.pb_logOut = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             this.pn_changeUsername.SuspendLayout();
             this.pn_changePassword.SuspendLayout();
             this.pn_favourites.SuspendLayout();
@@ -71,6 +71,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 128);
             this.panel1.TabIndex = 0;
+            // 
+            // pb_edit
+            // 
+            this.pb_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_edit.Image = global::Project_CS511.Properties.Resources.white_pen;
+            this.pb_edit.Location = new System.Drawing.Point(344, 69);
+            this.pb_edit.Name = "pb_edit";
+            this.pb_edit.Size = new System.Drawing.Size(30, 28);
+            this.pb_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_edit.TabIndex = 6;
+            this.pb_edit.TabStop = false;
             // 
             // pb_avatar
             // 
@@ -94,17 +105,6 @@
             this.lb_name.TabIndex = 4;
             this.lb_name.Text = "Admin";
             // 
-            // pb_edit
-            // 
-            this.pb_edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_edit.Image = global::Project_CS511.Properties.Resources.white_pen;
-            this.pb_edit.Location = new System.Drawing.Point(344, 69);
-            this.pb_edit.Name = "pb_edit";
-            this.pb_edit.Size = new System.Drawing.Size(30, 28);
-            this.pb_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_edit.TabIndex = 6;
-            this.pb_edit.TabStop = false;
-            // 
             // pn_changeUsername
             // 
             this.pn_changeUsername.Controls.Add(this.label1);
@@ -116,6 +116,18 @@
             this.pn_changeUsername.TabIndex = 1;
             this.pn_changeUsername.MouseEnter += new System.EventHandler(this.lb_changeUsername_MouseEnter);
             this.pn_changeUsername.MouseLeave += new System.EventHandler(this.pn_changeUsername_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(355, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 31);
+            this.label1.TabIndex = 9;
+            this.label1.Text = ">";
+            this.label1.MouseEnter += new System.EventHandler(this.lb_changeUsername_MouseEnter);
             // 
             // lb_changeUsername
             // 
@@ -129,18 +141,6 @@
             this.lb_changeUsername.Text = "Change Username";
             this.lb_changeUsername.MouseEnter += new System.EventHandler(this.lb_changeUsername_MouseEnter);
             this.lb_changeUsername.MouseLeave += new System.EventHandler(this.pn_changeUsername_MouseLeave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 31);
-            this.label1.TabIndex = 9;
-            this.label1.Text = ">";
-            this.label1.MouseEnter += new System.EventHandler(this.lb_changeUsername_MouseEnter);
             // 
             // label2
             // 
@@ -302,6 +302,7 @@
             this.lb_logOut.Size = new System.Drawing.Size(108, 33);
             this.lb_logOut.TabIndex = 11;
             this.lb_logOut.Text = "Log Out";
+            this.lb_logOut.Click += new System.EventHandler(this.lb_logOut_Click);
             // 
             // pb_logOut
             // 
@@ -313,6 +314,7 @@
             this.pb_logOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_logOut.TabIndex = 10;
             this.pb_logOut.TabStop = false;
+            this.pb_logOut.Click += new System.EventHandler(this.lb_logOut_Click);
             // 
             // account
             // 
@@ -330,8 +332,8 @@
             this.Size = new System.Drawing.Size(400, 520);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).EndInit();
             this.pn_changeUsername.ResumeLayout(false);
             this.pn_changeUsername.PerformLayout();
             this.pn_changePassword.ResumeLayout(false);

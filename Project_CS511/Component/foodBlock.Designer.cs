@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(foodBlock));
             this.lb_price = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
-            this.pb_store = new System.Windows.Forms.Label();
+            this.lb_store = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pb_picture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).BeginInit();
@@ -47,6 +47,7 @@
             this.lb_price.Size = new System.Drawing.Size(80, 22);
             this.lb_price.TabIndex = 7;
             this.lb_price.Text = "27.000₫";
+            this.lb_price.Click += new System.EventHandler(this.pb_picture_Click);
             this.lb_price.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             // 
             // lb_name
@@ -60,20 +61,22 @@
             this.lb_name.Size = new System.Drawing.Size(122, 44);
             this.lb_name.TabIndex = 6;
             this.lb_name.Text = "Original Salt Coffee";
+            this.lb_name.Click += new System.EventHandler(this.pb_picture_Click);
             this.lb_name.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             // 
-            // pb_store
+            // lb_store
             // 
-            this.pb_store.AutoSize = true;
-            this.pb_store.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_store.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pb_store.Location = new System.Drawing.Point(8, 161);
-            this.pb_store.MaximumSize = new System.Drawing.Size(165, 17);
-            this.pb_store.Name = "pb_store";
-            this.pb_store.Size = new System.Drawing.Size(127, 17);
-            this.pb_store.TabIndex = 8;
-            this.pb_store.Text = "Tiệm Cà Phê Muối";
-            this.pb_store.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.lb_store.AutoSize = true;
+            this.lb_store.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_store.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_store.Location = new System.Drawing.Point(8, 161);
+            this.lb_store.MaximumSize = new System.Drawing.Size(165, 17);
+            this.lb_store.Name = "lb_store";
+            this.lb_store.Size = new System.Drawing.Size(127, 17);
+            this.lb_store.TabIndex = 8;
+            this.lb_store.Text = "Tiệm Cà Phê Muối";
+            this.lb_store.Click += new System.EventHandler(this.pb_picture_Click);
+            this.lb_store.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             // 
             // label2
             // 
@@ -85,6 +88,7 @@
             this.label2.Size = new System.Drawing.Size(151, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "________________________";
+            this.label2.Click += new System.EventHandler(this.pb_picture_Click);
             this.label2.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             // 
             // pb_picture
@@ -97,6 +101,7 @@
             this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_picture.TabIndex = 5;
             this.pb_picture.TabStop = false;
+            this.pb_picture.Click += new System.EventHandler(this.pb_picture_Click);
             this.pb_picture.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.pb_picture.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
@@ -105,13 +110,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pb_store);
+            this.Controls.Add(this.lb_store);
             this.Controls.Add(this.lb_price);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.pb_picture);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "foodBlock";
             this.Size = new System.Drawing.Size(166, 211);
+            this.Click += new System.EventHandler(this.pb_picture_Click);
             this.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).EndInit();
@@ -125,7 +131,7 @@
         private System.Windows.Forms.Label lb_price;
         private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.PictureBox pb_picture;
-        private System.Windows.Forms.Label pb_store;
+        private System.Windows.Forms.Label lb_store;
         private System.Windows.Forms.Label label2;
     }
 }

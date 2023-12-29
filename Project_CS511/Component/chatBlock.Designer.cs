@@ -79,6 +79,7 @@
             // 
             // pb_avatar
             // 
+            this.pb_avatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_avatar.Image = ((System.Drawing.Image)(resources.GetObject("pb_avatar.Image")));
             this.pb_avatar.Location = new System.Drawing.Point(8, 7);
             this.pb_avatar.Name = "pb_avatar";
@@ -97,6 +98,7 @@
             this.Controls.Add(this.lb_time);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.pb_avatar);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "chatBlock";
             this.Size = new System.Drawing.Size(400, 75);
             this.MouseEnter += new System.EventHandler(this.pb_avatar_MouseEnter);

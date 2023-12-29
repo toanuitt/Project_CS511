@@ -41,5 +41,29 @@ namespace Project_CS511
             accountPage = new account(this);
             this.Controls.Add(accountPage);
         }
+
+        public void hideAllControls()
+        {
+            foreach(Control c in this.Controls)
+            {
+                c.Hide();
+            }
+        }
+
+        public void bringControlToFront(Control c)
+        {
+            c.BringToFront();
+        }
+
+        public void RemoveControlByName(string controlName)
+        {
+            var controlToRemove = Controls.Find(controlName, true).OfType<Control>().FirstOrDefault();
+
+            if (controlToRemove != null)
+            {
+                Controls.Remove(controlToRemove);
+                controlToRemove.Dispose();
+            }
+        }
     }
 }

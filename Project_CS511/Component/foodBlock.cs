@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_CS511.SubPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Project_CS511.Component
 {
     public partial class foodBlock : UserControl
     {
-        public foodBlock()
+        mainForm main;
+        public foodBlock(mainForm main)
         {
             InitializeComponent();
+            this.main = main;
         }
 
         #region decoration
@@ -28,5 +31,13 @@ namespace Project_CS511.Component
             BackColor = Color.White;
         }
         #endregion
+
+        private void pb_picture_Click(object sender, EventArgs e)
+        {
+            foodSubPage f = new foodSubPage(main);
+            f.BringToFront();
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
+        }
     }
 }
