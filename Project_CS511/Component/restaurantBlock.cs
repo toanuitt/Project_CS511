@@ -16,19 +16,5 @@ namespace Project_CS511.Component
         {
             InitializeComponent();
         }
-
-        #region decoration
-        private void pb_picture_MouseEnter(object sender, EventArgs e)
-        {
-            BackColor = Color.LightGreen;
-        }
-
-        private void pb_picture_MouseLeave(object sender, EventArgs e)
-        {
-            BackColor = Color.White;
-        }
-        #endregion
-
-
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_CS511.Component
 {
-    public partial class foodSlide : UserControl
+    public partial class addcard : UserControl
     {
-        public foodSlide()
+        public addcard()
         {
             InitializeComponent();
         }

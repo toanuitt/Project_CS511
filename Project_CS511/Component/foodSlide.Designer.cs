@@ -30,16 +30,23 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.foodBlock3 = new Project_CS511.Component.foodBlock();
+            this.foodBlock1 = new Project_CS511.Component.foodBlock();
+            this.foodBlock4 = new Project_CS511.Component.foodBlock();
+            this.foodBlock2 = new Project_CS511.Component.foodBlock();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Controls.Add(this.foodBlock3);
+            this.flowLayoutPanel1.Controls.Add(this.foodBlock1);
+            this.flowLayoutPanel1.Controls.Add(this.foodBlock4);
+            this.flowLayoutPanel1.Controls.Add(this.foodBlock2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(420, 250);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(420, 238);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -52,7 +59,34 @@
             this.label2.Size = new System.Drawing.Size(143, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Food For You ➜";
-           
+            // 
+            // foodBlock3
+            // 
+            this.foodBlock3.Location = new System.Drawing.Point(3, 3);
+            this.foodBlock3.Name = "foodBlock3";
+            this.foodBlock3.Size = new System.Drawing.Size(166, 211);
+            this.foodBlock3.TabIndex = 5;
+            // 
+            // foodBlock1
+            // 
+            this.foodBlock1.Location = new System.Drawing.Point(175, 3);
+            this.foodBlock1.Name = "foodBlock1";
+            this.foodBlock1.Size = new System.Drawing.Size(166, 211);
+            this.foodBlock1.TabIndex = 0;
+            // 
+            // foodBlock4
+            // 
+            this.foodBlock4.Location = new System.Drawing.Point(347, 3);
+            this.foodBlock4.Name = "foodBlock4";
+            this.foodBlock4.Size = new System.Drawing.Size(166, 211);
+            this.foodBlock4.TabIndex = 3;
+            // 
+            // foodBlock2
+            // 
+            this.foodBlock2.Location = new System.Drawing.Point(519, 3);
+            this.foodBlock2.Name = "foodBlock2";
+            this.foodBlock2.Size = new System.Drawing.Size(166, 211);
+            this.foodBlock2.TabIndex = 4;
             // 
             // foodSlide
             // 
@@ -61,7 +95,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Name = "foodSlide";
-            this.Size = new System.Drawing.Size(400, 268);
+            this.Size = new System.Drawing.Size(400, 250);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

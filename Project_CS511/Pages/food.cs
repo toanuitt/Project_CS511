@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_CS511.Component
+namespace Project_CS511.Pages
 {
-    public partial class foodSlide : UserControl
+    public partial class food : UserControl
     {
-        public foodSlide()
+        mainForm main;
+        public food(mainForm main)
         {
             InitializeComponent();
+            this.main = main;
+        }
+
+        private void food_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

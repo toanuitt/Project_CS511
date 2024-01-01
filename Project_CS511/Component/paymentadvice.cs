@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Project_CS511.Component
 {
-    public partial class foodSlide : UserControl
+    public partial class paymentadvice : UserControl
     {
-        public foodSlide()
+        public paymentadvice()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
