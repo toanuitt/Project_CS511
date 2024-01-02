@@ -37,7 +37,6 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.flowLayoutPanel1.Controls.Add(this.adBlock1);
             this.flowLayoutPanel1.Controls.Add(this.adBlock2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 2);
