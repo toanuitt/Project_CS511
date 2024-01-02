@@ -142,6 +142,12 @@
     <Compile Include="Component\foodBlock.Designer.cs">
       <DependentUpon>foodBlock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\foodCommentBubble.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\foodCommentBubble.Designer.cs">
+      <DependentUpon>foodCommentBubble.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\foodlist.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -229,17 +235,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubPage\foodSubPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\foodSubPage.Designer.cs">
+      <DependentUpon>foodSubPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="testDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="testDatabase.Designer.cs">
       <DependentUpon>testDatabase.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="testDatabase.resx">
-      <DependentUpon>testDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Resources\Resources.Designer.cs" />
     <EmbeddedResource Include="Component\adBlock.resx">
       <DependentUpon>adBlock.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\foodBlock.resx">
       <DependentUpon>foodBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\foodCommentBubble.resx">
+      <DependentUpon>foodCommentBubble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\foodlist.resx">
       <DependentUpon>foodlist.cs</DependentUpon>
@@ -279,6 +289,14 @@
     <EmbeddedResource Include="Component\restaurantSlide.resx">
       <DependentUpon>restaurantSlide.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\foodSubPage.resx">
+      <DependentUpon>foodSubPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testDatabase.resx">
+      <DependentUpon>testDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Resources\Resources.Designer.cs" />
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>

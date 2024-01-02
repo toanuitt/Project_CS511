@@ -26,7 +26,7 @@ namespace Project_CS511.Pages
             adSlide adSlide = new adSlide();
             flp_home.Controls.Add(adSlide);
 
-            foodSlide foodSlide = new foodSlide();
+            foodSlide foodSlide = new foodSlide(main);
             flp_home.Controls.Add(foodSlide);
         }
 

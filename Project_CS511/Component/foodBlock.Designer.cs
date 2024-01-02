@@ -46,6 +46,9 @@
             this.lb_price.Size = new System.Drawing.Size(80, 22);
             this.lb_price.TabIndex = 7;
             this.lb_price.Text = "27.000₫";
+            this.lb_price.Click += new System.EventHandler(this.pb_picture_Click);
+            this.lb_price.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.lb_price.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // lb_name
             // 
@@ -57,6 +60,9 @@
             this.lb_name.Size = new System.Drawing.Size(122, 44);
             this.lb_name.TabIndex = 6;
             this.lb_name.Text = "Original Salt Coffee";
+            this.lb_name.Click += new System.EventHandler(this.pb_picture_Click);
+            this.lb_name.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.lb_name.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // pb_store
             // 
@@ -68,6 +74,9 @@
             this.pb_store.Size = new System.Drawing.Size(127, 17);
             this.pb_store.TabIndex = 8;
             this.pb_store.Text = "Tiệm Cà Phê Muối";
+            this.pb_store.Click += new System.EventHandler(this.pb_picture_Click);
+            this.pb_store.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.pb_store.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // label2
             // 
@@ -78,6 +87,8 @@
             this.label2.Size = new System.Drawing.Size(151, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "________________________";
+            this.label2.Click += new System.EventHandler(this.pb_picture_Click);
+            this.label2.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             // 
             // pb_picture
             // 
@@ -88,6 +99,9 @@
             this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_picture.TabIndex = 5;
             this.pb_picture.TabStop = false;
+            this.pb_picture.Click += new System.EventHandler(this.pb_picture_Click);
+            this.pb_picture.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.pb_picture.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // foodBlock
             // 
@@ -100,6 +114,9 @@
             this.Controls.Add(this.pb_picture);
             this.Name = "foodBlock";
             this.Size = new System.Drawing.Size(166, 211);
+            this.Click += new System.EventHandler(this.pb_picture_Click);
+            this.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

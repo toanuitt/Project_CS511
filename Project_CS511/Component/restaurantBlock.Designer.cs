@@ -47,6 +47,8 @@
             this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_picture.TabIndex = 0;
             this.pb_picture.TabStop = false;
+            this.pb_picture.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.pb_picture.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // lb_name
             // 
@@ -58,6 +60,8 @@
             this.lb_name.Size = new System.Drawing.Size(140, 38);
             this.lb_name.TabIndex = 3;
             this.lb_name.Text = "Tiệm cà phê muối biển";
+            this.lb_name.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.lb_name.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // lb_distance
             // 
@@ -68,6 +72,8 @@
             this.lb_distance.Size = new System.Drawing.Size(52, 18);
             this.lb_distance.TabIndex = 4;
             this.lb_distance.Text = "2.3 km";
+            this.lb_distance.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.lb_distance.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
             // pb_star
             // 
@@ -100,6 +106,8 @@
             this.Controls.Add(this.pb_picture);
             this.Name = "restaurantBlock";
             this.Size = new System.Drawing.Size(166, 182);
+            this.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star)).EndInit();
             this.ResumeLayout(false);
