@@ -17,6 +17,8 @@ namespace Project_CS511
         public home homePage;
         public food foodPage;
         public payment paymentPage;
+        public message messagePage;
+        public account accountPage;
         public mainForm()
         {
             InitializeComponent();
@@ -38,11 +40,36 @@ namespace Project_CS511
 
             paymentPage = new payment(this);
             this.Controls.Add(paymentPage);
+
+            messagePage = new message(this);
+            this.Controls.Add(messagePage);
+
+            //add account
+            accountPage = new account(this);
+            this.Controls.Add(accountPage);
+        }
+        public void hideAllControls()
+        {
+            foreach (Control c in this.Controls)
+            {
+                c.Hide();
+            }
         }
 
-        private void mainForm_Load(object sender, EventArgs e)
+        public void bringControlToFront(Control c)
         {
+            c.BringToFront();
+        }
 
+        public void RemoveControlByName(string controlName)
+        {
+            var controlToRemove = Controls.Find(controlName, true).OfType<Control>().FirstOrDefault();
+
+            if (controlToRemove != null)
+            {
+                Controls.Remove(controlToRemove);
+                controlToRemove.Dispose();
+            }
         }
     }
 }

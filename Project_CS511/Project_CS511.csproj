@@ -64,6 +64,12 @@
     <Compile Include="Component\adSlide.Designer.cs">
       <DependentUpon>adSlide.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\chatBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\chatBlock.Designer.cs">
+      <DependentUpon>chatBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\foodBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\account.Designer.cs">
+      <DependentUpon>account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\food.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     <Compile Include="Pages\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\message.Designer.cs">
+      <DependentUpon>message.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\payment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,6 +162,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\Resources.Designer.cs" />
     <EmbeddedResource Include="Component\adBlock.resx">
       <DependentUpon>adBlock.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\adSlide.resx">
       <DependentUpon>adSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\chatBlock.resx">
+      <DependentUpon>chatBlock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\foodBlock.resx">
       <DependentUpon>foodBlock.cs</DependentUpon>
@@ -183,11 +205,17 @@
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\account.resx">
+      <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\food.resx">
       <DependentUpon>food.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\home.resx">
       <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\message.resx">
+      <DependentUpon>message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\payment.resx">
       <DependentUpon>payment.cs</DependentUpon>
@@ -202,6 +230,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Resources\Resources.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -253,6 +282,234 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kfc_ad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %286%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_active1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass_active1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_active1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_active1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kfc_ad1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_active1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_pen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %286%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_active2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass_active2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_active2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_active2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kfc_ad2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_active2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_pen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %286%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %287%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat_active3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compass_active3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_active3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_active3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kfc_ad3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_active3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_pen3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
