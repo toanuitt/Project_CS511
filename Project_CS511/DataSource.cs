@@ -14,7 +14,7 @@ namespace Project_CS511
         public IMongoCollection<BsonDocument> collection;
         public DataSource()
         {
-            MongoClient client = new MongoClient("mongodb+srv://nguyenvanlien3434:yAvV8Z5JnjSdDA7l@cluster0.xpedglx.mongodb.net/");
+            MongoClient client = new MongoClient("mongodb+srv://nguyenvanlien3434:miFKzNkYFGBv2oSD@cluster0.xpedglx.mongodb.net/");
             data = client.GetDatabase("Database");
         }
         public void SetCollection(string collectionName)

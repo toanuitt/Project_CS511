@@ -19,6 +19,8 @@ namespace Project_CS511
         public payment paymentPage;
         public message messagePage;
         public account accountPage;
+
+        DataSource dataSource = new DataSource();
         public mainForm()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace Project_CS511
 
         private void init()
         {
+            dataSource.SetCollection("user");
             //add menu bar
             menuBar menu = new menuBar(this);
             this.Controls.Add(menu);
