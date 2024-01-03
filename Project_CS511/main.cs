@@ -1,5 +1,6 @@
 ﻿using Project_CS511.Component;
 using Project_CS511.Pages;
+using Project_CS511.SubPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,18 +51,26 @@ namespace Project_CS511
             //add account
             accountPage = new account(this);
             this.Controls.Add(accountPage);
+
+            //add logSignIn
+            logSignIn logSignIn = new logSignIn(this);
+            this.Controls.Add(logSignIn);
+            logSignIn.BringToFront();
         }
+      
+
+        #region Các Hàm chức năng
+        public void bringControlToFront(Control c)
+        {
+            c.BringToFront();
+        }
+
         public void hideAllControls()
         {
             foreach (Control c in this.Controls)
             {
                 c.Hide();
             }
-        }
-
-        public void bringControlToFront(Control c)
-        {
-            c.BringToFront();
         }
 
         public void RemoveControlByName(string controlName)
@@ -74,5 +83,11 @@ namespace Project_CS511
                 controlToRemove.Dispose();
             }
         }
+
+        public void loginSuccess()
+        {
+            RemoveControlByName("logSignIn");
+        }
+        #endregion
     }
 }

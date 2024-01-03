@@ -166,6 +166,12 @@
     <Compile Include="Component\historypayment.Designer.cs">
       <DependentUpon>historypayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\menuBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +201,12 @@
     </Compile>
     <Compile Include="Component\restaurantSlide.Designer.cs">
       <DependentUpon>restaurantSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\SignUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSource.cs" />
     <Compile Include="main.cs">
@@ -241,6 +253,12 @@
     <Compile Include="SubPage\foodSubPage.Designer.cs">
       <DependentUpon>foodSubPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubPage\logSignIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\logSignIn.Designer.cs">
+      <DependentUpon>logSignIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="testDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +292,9 @@
     <EmbeddedResource Include="Component\historypayment.resx">
       <DependentUpon>historypayment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\menuBar.resx">
       <DependentUpon>menuBar.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,8 +310,14 @@
     <EmbeddedResource Include="Component\restaurantSlide.resx">
       <DependentUpon>restaurantSlide.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubPage\foodSubPage.resx">
       <DependentUpon>foodSubPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\logSignIn.resx">
+      <DependentUpon>logSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testDatabase.resx">
       <DependentUpon>testDatabase.cs</DependentUpon>

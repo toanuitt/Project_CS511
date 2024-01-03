@@ -77,7 +77,7 @@ namespace Project_CS511
         public bool checkLogIn(string name, string password)
         {
             var filter = Builders<BsonDocument>.Filter.And(
-            Builders<BsonDocument>.Filter.Eq("name", name),
+            Builders<BsonDocument>.Filter.Eq("loginName", name),
             Builders<BsonDocument>.Filter.Eq("password", password)
             );
             var result = collection.Find(filter).FirstOrDefault();
