@@ -14,10 +14,10 @@ namespace Project_CS511.Pages
     {
         mainForm main;
         Color green = Color.FromArgb(16, 83, 53);
-        public account(mainForm main)
+        public account(mainForm main=null)
         {
             InitializeComponent();
-            this.main = main;
+            //this.main = main;
             init();
         }
 

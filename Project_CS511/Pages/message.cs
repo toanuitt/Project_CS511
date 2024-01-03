@@ -18,7 +18,7 @@ namespace Project_CS511.Pages
         mainForm main;
         Color green = Color.FromArgb(16, 83, 53);
         Color lightGreen = Color.FromArgb(181, 240, 214);
-        public message(mainForm main)
+        public message(mainForm main=null)
         {
             InitializeComponent();
             this.main = main;

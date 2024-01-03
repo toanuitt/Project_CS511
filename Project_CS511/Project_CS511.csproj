@@ -295,6 +295,18 @@
     <EmbeddedResource Include="testDatabase.resx">
       <DependentUpon>testDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="icons\chat.png" />
+    <None Include="icons\chat_active.png" />
+    <None Include="icons\compass.png" />
+    <None Include="icons\compass_active.png" />
+    <None Include="icons\customer.png" />
+    <None Include="icons\customer_active.png" />
+    <None Include="icons\food.png" />
+    <None Include="icons\food_active.png" />
+    <None Include="icons\kfc_ad.png" />
+    <None Include="icons\star.png" />
+    <None Include="icons\wallet.png" />
+    <None Include="icons\wallet_active.png" />
     <None Include="packages.config" />
     <None Include="Resources\Resources.Designer.cs" />
     <EmbeddedResource Include="main.resx">
@@ -341,42 +353,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\chat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\chat_active.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\compass.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\compass_active.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\customer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\customer_active.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\food.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\food_active.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\wallet.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\wallet_active.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\kfc_ad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="icons\star.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
@@ -608,6 +584,52 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\AWSSDK.SecurityToken.3.7.100.14\analyzers\dotnet\cs\AWSSDK.SecurityToken.CodeAnalysis.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\add.png" />
+    <Content Include="icons\ads\ad1.png" />
+    <Content Include="icons\ads\ad2.png" />
+    <Content Include="icons\ads\ad3.png" />
+    <Content Include="icons\ads\kfc_ad.png" />
+    <Content Include="icons\ad_kfc.png" />
+    <Content Include="icons\back.png" />
+    <Content Include="icons\bubble\output-onlinepngtools %286%29.png" />
+    <Content Include="icons\bubble\output-onlinepngtools %287%29.png" />
+    <Content Include="icons\coffee.jpg" />
+    <Content Include="icons\food\1.png" />
+    <Content Include="icons\food\10.png" />
+    <Content Include="icons\food\11.png" />
+    <Content Include="icons\food\12.png" />
+    <Content Include="icons\food\13.png" />
+    <Content Include="icons\food\14.png" />
+    <Content Include="icons\food\15.png" />
+    <Content Include="icons\food\16.png" />
+    <Content Include="icons\food\17.png" />
+    <Content Include="icons\food\18.png" />
+    <Content Include="icons\food\19.png" />
+    <Content Include="icons\food\2.png" />
+    <Content Include="icons\food\20.png" />
+    <Content Include="icons\food\21.png" />
+    <Content Include="icons\food\22.png" />
+    <Content Include="icons\food\23.png" />
+    <Content Include="icons\food\24.png" />
+    <Content Include="icons\food\25.png" />
+    <Content Include="icons\food\26.png" />
+    <Content Include="icons\food\27.png" />
+    <Content Include="icons\food\28.png" />
+    <Content Include="icons\food\29.png" />
+    <Content Include="icons\food\3.png" />
+    <Content Include="icons\food\30.png" />
+    <Content Include="icons\food\4.png" />
+    <Content Include="icons\food\5.png" />
+    <Content Include="icons\food\6.png" />
+    <Content Include="icons\food\7.png" />
+    <Content Include="icons\food\8.png" />
+    <Content Include="icons\food\9.png" />
+    <Content Include="icons\food\food1.png" />
+    <Content Include="icons\pen.png" />
+    <Content Include="icons\trash.png" />
+    <Content Include="icons\white_pen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets')" />

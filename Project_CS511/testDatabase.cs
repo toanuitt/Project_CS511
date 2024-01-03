@@ -16,12 +16,12 @@ namespace Project_CS511
         public testDatabase()
         {
             InitializeComponent();
-            dataSource.SetCollection("user");
+            dataSource.SetCollection("food");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = dataSource.returnAllData()[0].ToString();
+            richTextBox1.Text = dataSource.returnAllData()[25].ToString();
         }
     }
 }

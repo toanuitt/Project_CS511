@@ -20,7 +20,7 @@ namespace Project_CS511
         public message messagePage;
         public account accountPage;
 
-        DataSource dataSource = new DataSource();
+        public DataSource dataSource = new DataSource();
         public mainForm()
         {
             InitializeComponent();
