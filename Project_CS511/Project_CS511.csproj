@@ -415,6 +415,12 @@
     <Compile Include="SubPage\maplocation.Designer.cs">
       <DependentUpon>maplocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubPage\updateInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\updateInfo.Designer.cs">
+      <DependentUpon>updateInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubPage\maplocation.resx">
       <DependentUpon>maplocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\updateInfo.resx">
+      <DependentUpon>updateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>

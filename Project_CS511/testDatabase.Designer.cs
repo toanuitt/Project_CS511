@@ -28,35 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.flp_addCollection = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // flp_addCollection
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 17);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(476, 133);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.flp_addCollection.AutoScroll = true;
+            this.flp_addCollection.Location = new System.Drawing.Point(10, 5);
+            this.flp_addCollection.Name = "flp_addCollection";
+            this.flp_addCollection.Size = new System.Drawing.Size(120, 262);
+            this.flp_addCollection.TabIndex = 2;
             // 
-            // button1
+            // flowLayoutPanel1
             // 
-            this.button1.Location = new System.Drawing.Point(121, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 58);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(136, 5);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(361, 262);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // testDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 294);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(514, 294);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flp_addCollection);
             this.Name = "testDatabase";
             this.Text = "testDatabase";
             this.ResumeLayout(false);
@@ -64,8 +62,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flp_addCollection;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
