@@ -103,5 +103,22 @@ namespace Project_CS511.Pages
         {
 
         }
+
+        private void lb_yourLocation_Click(object sender, EventArgs e)
+        {
+            setLocation location = new setLocation(main);
+            main.Controls.Add(location);
+            main.bringControlToFront(location);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pn_changePassword_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

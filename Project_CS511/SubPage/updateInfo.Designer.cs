@@ -108,6 +108,7 @@
             // btn_updateUsername
             // 
             this.btn_updateUsername.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_updateUsername.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_updateUsername.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updateUsername.Location = new System.Drawing.Point(254, 31);
             this.btn_updateUsername.Name = "btn_updateUsername";
@@ -132,6 +133,7 @@
             // btn_updatePhone
             // 
             this.btn_updatePhone.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_updatePhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_updatePhone.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updatePhone.Location = new System.Drawing.Point(254, 31);
             this.btn_updatePhone.Name = "btn_updatePhone";
@@ -175,6 +177,7 @@
             // btn_updateEmail
             // 
             this.btn_updateEmail.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_updateEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_updateEmail.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updateEmail.Location = new System.Drawing.Point(254, 31);
             this.btn_updateEmail.Name = "btn_updateEmail";
@@ -219,6 +222,7 @@
             // btn_updatePassword
             // 
             this.btn_updatePassword.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_updatePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_updatePassword.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updatePassword.Location = new System.Drawing.Point(254, 96);
             this.btn_updatePassword.Name = "btn_updatePassword";
@@ -293,6 +297,7 @@
             // btn_updateName
             // 
             this.btn_updateName.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_updateName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_updateName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updateName.Location = new System.Drawing.Point(254, 31);
             this.btn_updateName.Name = "btn_updateName";
@@ -353,9 +358,10 @@
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_exit.Location = new System.Drawing.Point(128, 539);
+            this.btn_exit.Location = new System.Drawing.Point(128, 541);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(154, 58);
             this.btn_exit.TabIndex = 12;

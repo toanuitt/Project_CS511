@@ -135,6 +135,7 @@
             this.label2.Size = new System.Drawing.Size(28, 31);
             this.label2.TabIndex = 9;
             this.label2.Text = ">";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             this.label2.MouseEnter += new System.EventHandler(this.lb_changePassword_MouseEnter);
             // 
             // lb_yourLocation
@@ -147,6 +148,7 @@
             this.lb_yourLocation.Size = new System.Drawing.Size(140, 22);
             this.lb_yourLocation.TabIndex = 8;
             this.lb_yourLocation.Text = "Your Location";
+            this.lb_yourLocation.Click += new System.EventHandler(this.lb_yourLocation_Click);
             this.lb_yourLocation.MouseEnter += new System.EventHandler(this.lb_changePassword_MouseEnter);
             this.lb_yourLocation.MouseLeave += new System.EventHandler(this.pn_changePassword_MouseLeave);
             // 
@@ -159,6 +161,7 @@
             this.pn_changePassword.Name = "pn_changePassword";
             this.pn_changePassword.Size = new System.Drawing.Size(397, 58);
             this.pn_changePassword.TabIndex = 10;
+            this.pn_changePassword.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_changePassword_Paint);
             this.pn_changePassword.MouseEnter += new System.EventHandler(this.lb_changePassword_MouseEnter);
             this.pn_changePassword.MouseLeave += new System.EventHandler(this.pn_changePassword_MouseLeave);
             // 
