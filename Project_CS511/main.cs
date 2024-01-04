@@ -79,6 +79,14 @@ namespace Project_CS511
                 menu.Visible = false;
             }
         }
+        public void ShowMenu()
+        {
+            // Hide the menu
+            if (menu.Visible == false)
+            {
+                menu.Visible = true;
+            }
+        }
 
         #region Các Hàm chức năng
         public void bringControlToFront(Control c)

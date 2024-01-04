@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(maplocation));
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_confirmlocation = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,18 +68,19 @@
             this.gMapControl1.TabIndex = 1;
             this.gMapControl1.Zoom = 0D;
             // 
-            // button1
+            // btn_confirmlocation
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(58, 679);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(418, 59);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Confirm Delivery Location";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_confirmlocation.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_confirmlocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_confirmlocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_confirmlocation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_confirmlocation.Location = new System.Drawing.Point(58, 679);
+            this.btn_confirmlocation.Name = "btn_confirmlocation";
+            this.btn_confirmlocation.Size = new System.Drawing.Size(418, 59);
+            this.btn_confirmlocation.TabIndex = 2;
+            this.btn_confirmlocation.Text = "Confirm Delivery Location";
+            this.btn_confirmlocation.UseVisualStyleBackColor = false;
+            this.btn_confirmlocation.Click += new System.EventHandler(this.btn_confirmlocation_Click);
             // 
             // groupBox1
             // 
@@ -93,6 +94,17 @@
             this.groupBox1.Size = new System.Drawing.Size(418, 86);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(56, 32);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(307, 48);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
             // 
             // pictureBox2
             // 
@@ -123,23 +135,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(56, 32);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(307, 48);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            // 
             // maplocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_confirmlocation);
             this.Controls.Add(this.gMapControl1);
             this.Name = "maplocation";
             this.Size = new System.Drawing.Size(533, 738);
@@ -155,7 +156,7 @@
         #endregion
 
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_confirmlocation;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;

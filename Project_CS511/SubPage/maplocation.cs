@@ -48,7 +48,10 @@ namespace Project_CS511.SubPage
                 gMapControl1.Overlays.Add(markerOverlay);
             }
         }
+        #region Các Hàm chức năng
         private GMapOverlay markerOverlay = new GMapOverlay("markers");
+        // user choose the location by left click and move map by hole right click
+        // zoom in and zoom out by scroll 
         private void GMapControl1_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -72,7 +75,7 @@ namespace Project_CS511.SubPage
                 }
             }
         }
-
+        // get address by api_key
         static string GetAddressFromLatLng(double latitude, double longitude, string apiKey)
         {
             string apiUrl = $"https://maps.googleapis.com/maps/api/geocode/json?latlng={latitude},{longitude}&key={apiKey}";
@@ -100,5 +103,27 @@ namespace Project_CS511.SubPage
                 }
             }
         }
+        #endregion
+
+        #region Chuyển dữ liệu
+
+        #endregion
+
+        private void btn_confirmlocation_Click(object sender, EventArgs e)
+        {
+            hideAllControls();
+            main.mapPage.Show();
+        }
+        #region hide usercontrol
+        public void hideAllControls()
+        {
+            if (main.maplocationPage != null)
+            {
+                main.maplocationPage.Hide();
+            }
+           
+            // tiếp tục với các page khác khi thêm vào như account, payment
+        }
+        #endregion
     }
 }

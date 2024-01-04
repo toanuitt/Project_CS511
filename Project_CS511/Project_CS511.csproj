@@ -304,6 +304,12 @@
     <Compile Include="Component\historypayment.Designer.cs">
       <DependentUpon>historypayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\location.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\location.Designer.cs">
+      <DependentUpon>location.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -447,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\historypayment.resx">
       <DependentUpon>historypayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\location.resx">
+      <DependentUpon>location.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -819,6 +828,8 @@
     <Content Include="icons\pen.png" />
     <Content Include="icons\trash.png" />
     <Content Include="icons\white_pen.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\aim.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets')" />

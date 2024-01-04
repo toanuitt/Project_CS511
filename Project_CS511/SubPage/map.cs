@@ -24,10 +24,16 @@ namespace Project_CS511.SubPage
             hideAllControls();
             main.maplocationPage.Show();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            hideAllControls();
+            main.ShowMenu();
+            main.foodPage.Show();
+        }
         #region hide usercontrol
         public void hideAllControls()
         {
-            this.Controls.Clear();
             if (main.mapPage != null) { main.mapPage.Hide(); }
             // tiếp tục với các page khác khi thêm vào như account, payment
         }

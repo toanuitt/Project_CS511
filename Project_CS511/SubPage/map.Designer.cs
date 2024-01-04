@@ -33,10 +33,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_mapchoose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btn_back = new System.Windows.Forms.PictureBox();
+            this.location1 = new Project_CS511.Component.location();
+            this.location2 = new Project_CS511.Component.location();
+            this.location3 = new Project_CS511.Component.location();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -91,18 +95,11 @@
             this.button3.Text = "Saved";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.location1);
+            this.flowLayoutPanel1.Controls.Add(this.location2);
+            this.flowLayoutPanel1.Controls.Add(this.location3);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(35, 88);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(453, 599);
@@ -125,6 +122,41 @@
             this.btn_mapchoose.UseVisualStyleBackColor = false;
             this.btn_mapchoose.Click += new System.EventHandler(this.btn_mapchoose_Click);
             // 
+            // btn_back
+            // 
+            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
+            this.btn_back.Location = new System.Drawing.Point(0, 4);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(43, 28);
+            this.btn_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_back.TabIndex = 0;
+            this.btn_back.TabStop = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // location1
+            // 
+            this.location1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.location1.Location = new System.Drawing.Point(3, 3);
+            this.location1.Name = "location1";
+            this.location1.Size = new System.Drawing.Size(450, 117);
+            this.location1.TabIndex = 0;
+            // 
+            // location2
+            // 
+            this.location2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.location2.Location = new System.Drawing.Point(3, 126);
+            this.location2.Name = "location2";
+            this.location2.Size = new System.Drawing.Size(450, 117);
+            this.location2.TabIndex = 1;
+            // 
+            // location3
+            // 
+            this.location3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.location3.Location = new System.Drawing.Point(3, 249);
+            this.location3.Name = "location3";
+            this.location3.Size = new System.Drawing.Size(450, 117);
+            this.location3.TabIndex = 2;
+            // 
             // map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,10 +168,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_back);
             this.Name = "map";
             this.Size = new System.Drawing.Size(533, 738);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,12 +180,15 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btn_back;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btn_mapchoose;
+        private Component.location location1;
+        private Component.location location2;
+        private Component.location location3;
     }
 }
