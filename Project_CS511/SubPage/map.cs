@@ -8,34 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_CS511.Pages
+namespace Project_CS511.SubPage
 {
-    public partial class food : UserControl
+    public partial class map : UserControl
     {
         mainForm main;
-        public food(mainForm main)
+        public map(mainForm main)
         {
             InitializeComponent();
             this.main = main;
         }
-
-        private void food_Load(object sender, EventArgs e)
-        {
-
-        }
-        // move to map.cs
-        private void lbl_address_Click(object sender, EventArgs e)
+        // allow user to open map to choose location
+        private void btn_mapchoose_Click(object sender, EventArgs e)
         {
             hideAllControls();
-            main.mapPage.Show();
+            main.maplocationPage.Show();
         }
-
         #region hide usercontrol
         public void hideAllControls()
         {
-            if (main.foodPage != null) { main.foodPage.Hide(); }
-            main.HideMenu();
-            //if ( != null) { main.foodPage.Hide(); }
+            this.Controls.Clear();
+            if (main.mapPage != null) { main.mapPage.Hide(); }
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion

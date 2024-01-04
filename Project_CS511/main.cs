@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project_CS511
 {
@@ -20,7 +21,9 @@ namespace Project_CS511
         public payment paymentPage;
         public message messagePage;
         public account accountPage;
-
+        public map mapPage;
+        public maplocation maplocationPage;
+        private menuBar menu;
         public DataSource dataSource = new DataSource();
         public mainForm()
         {
@@ -32,19 +35,22 @@ namespace Project_CS511
         {
             dataSource.SetCollection("user");
             //add menu bar
-            menuBar menu = new menuBar(this);
+            menu = new menuBar(this);
             this.Controls.Add(menu);
 
             //add home page
             homePage = new home(this);
             this.Controls.Add(homePage);
 
+            // add food page
             foodPage = new food(this);
             this.Controls.Add(foodPage);
 
+            // add payment page
             paymentPage = new payment(this);
             this.Controls.Add(paymentPage);
 
+            // add message page
             messagePage = new message(this);
             this.Controls.Add(messagePage);
 
@@ -56,8 +62,23 @@ namespace Project_CS511
             logSignIn logSignIn = new logSignIn(this);
             this.Controls.Add(logSignIn);
             logSignIn.BringToFront();
+
+            //add map location
+            mapPage = new map(this);
+            this.Controls.Add(mapPage);
+
+            maplocationPage = new maplocation(this);
+            this.Controls.Add(maplocationPage);
+          
         }
-      
+        public void HideMenu()
+        {
+            // Hide the menu
+            if (menu != null)
+            {
+                menu.Visible = false;
+            }
+        }
 
         #region Các Hàm chức năng
         public void bringControlToFront(Control c)

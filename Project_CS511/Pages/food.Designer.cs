@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(food));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_address = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -67,17 +67,18 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Deliver to";
             // 
-            // label2
+            // lbl_address
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(76, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(274, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "31/35/15 Ung Van ...";
+            this.lbl_address.AutoSize = true;
+            this.lbl_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbl_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_address.ForeColor = System.Drawing.Color.Black;
+            this.lbl_address.Location = new System.Drawing.Point(76, 31);
+            this.lbl_address.Name = "lbl_address";
+            this.lbl_address.Size = new System.Drawing.Size(274, 32);
+            this.lbl_address.TabIndex = 3;
+            this.lbl_address.Text = "31/35/15 Ung Van ...";
+            this.lbl_address.Click += new System.EventHandler(this.lbl_address_Click);
             // 
             // panel1
             // 
@@ -248,7 +249,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -273,7 +274,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_address;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel1;

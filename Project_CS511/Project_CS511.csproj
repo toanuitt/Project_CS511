@@ -44,6 +44,12 @@
     <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
     </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -64,6 +70,9 @@
     </Reference>
     <Reference Include="MongoDB.Libmongocrypt, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Libmongocrypt.1.8.0\lib\net472\MongoDB.Libmongocrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SharpCompress, Version=0.30.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpCompress.0.30.1\lib\net461\SharpCompress.dll</HintPath>
@@ -215,6 +224,12 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
+    <Compile Include="page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="page.Designer.cs">
+      <DependentUpon>page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\account.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,6 +273,18 @@
     </Compile>
     <Compile Include="SubPage\logSignIn.Designer.cs">
       <DependentUpon>logSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\map.Designer.cs">
+      <DependentUpon>map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\maplocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\maplocation.Designer.cs">
+      <DependentUpon>maplocation.cs</DependentUpon>
     </Compile>
     <Compile Include="testDatabase.cs">
       <SubType>Form</SubType>
@@ -313,11 +340,20 @@
     <EmbeddedResource Include="Component\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="page.resx">
+      <DependentUpon>page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubPage\foodSubPage.resx">
       <DependentUpon>foodSubPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubPage\logSignIn.resx">
       <DependentUpon>logSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\map.resx">
+      <DependentUpon>map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\maplocation.resx">
+      <DependentUpon>maplocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testDatabase.resx">
       <DependentUpon>testDatabase.cs</DependentUpon>
