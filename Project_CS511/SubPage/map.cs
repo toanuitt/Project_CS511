@@ -38,5 +38,11 @@ namespace Project_CS511.SubPage
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion
+
+        private void btn_recent_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
     }
 }

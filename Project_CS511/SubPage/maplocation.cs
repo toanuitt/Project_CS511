@@ -73,6 +73,9 @@ namespace Project_CS511.SubPage
                 {
                     gMapControl1.Overlays.Add(markerOverlay);
                 }
+                main.foodPage.currentuser.Latitude = clickedPoint.Lat;
+                main.foodPage.currentuser.Longitude = clickedPoint.Lng;
+
             }
         }
         // get address by api_key
@@ -111,8 +114,11 @@ namespace Project_CS511.SubPage
 
         private void btn_confirmlocation_Click(object sender, EventArgs e)
         {
+            main.foodPage.currentuser.Address = richTextBox1.Text;
+            main.foodPage.SetLabelAddress(label1.Text);
             hideAllControls();
-            main.mapPage.Show();
+            main.ShowMenu();
+            main.foodPage.Show();
         }
         #region hide usercontrol
         public void hideAllControls()
@@ -125,5 +131,11 @@ namespace Project_CS511.SubPage
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            hideAllControls();
+            main.mapPage.Show();
+        }
     }
 }
