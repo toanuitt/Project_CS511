@@ -150,10 +150,9 @@ namespace Project_CS511.SubPage
                 main.mapPage.Show();
                 // add location to database 
             }
-
-        }
             updateLocationForCart();
         }
+
         #region hide usercontrol
         public void hideAllControls()
         {
