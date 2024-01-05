@@ -73,7 +73,7 @@
             // 
             this.lb_money.AutoSize = true;
             this.lb_money.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_money.Location = new System.Drawing.Point(295, 17);
+            this.lb_money.Location = new System.Drawing.Point(279, 17);
             this.lb_money.MaximumSize = new System.Drawing.Size(200, 46);
             this.lb_money.Name = "lb_money";
             this.lb_money.Size = new System.Drawing.Size(65, 19);
@@ -100,7 +100,7 @@
             this.Controls.Add(this.lb_foodName);
             this.Controls.Add(this.pb_foodPic);
             this.Name = "foodBlockCart";
-            this.Size = new System.Drawing.Size(370, 56);
+            this.Size = new System.Drawing.Size(351, 56);
             ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

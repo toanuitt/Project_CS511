@@ -45,6 +45,7 @@
             // 
             // flp_order
             // 
+            this.flp_order.AutoScroll = true;
             this.flp_order.Location = new System.Drawing.Point(2, 40);
             this.flp_order.Name = "flp_order";
             this.flp_order.Size = new System.Drawing.Size(388, 159);

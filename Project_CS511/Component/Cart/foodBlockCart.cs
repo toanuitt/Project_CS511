@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,13 +22,18 @@ namespace Project_CS511.Component.Cart
             this.main = main;
             pb_foodPic.Image = Image.FromFile(getFoodPicturePath()+id+".png");
             lb_foodName.Text = name;
-            lb_money.Text = FormatMoney(price) + "₫";
-            money = Convert.ToInt32(price);
+
+            string tempMoney = (Int32.Parse(price) * Int32.Parse(lb_number.Text)).ToString();
+            lb_money.Text = FormatMoney(tempMoney) + "₫";
+            money = Convert.ToInt32(tempMoney);
         }
 
         public void updateQuantity()
         {
             lb_number.Text = (Int32.Parse(lb_number.Text) + 1).ToString();
+            string tempMoney = (Int32.Parse(lb_money.Text.Replace("₫","").Replace(",","")) * Int32.Parse(lb_number.Text)).ToString();
+            lb_money.Text = FormatMoney(tempMoney) + "₫";
+            money = Convert.ToInt32(tempMoney);
         }
 
         static string FormatMoney(string value)
