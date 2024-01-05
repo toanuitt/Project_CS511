@@ -56,6 +56,7 @@ namespace Project_CS511.Component
             setColorBack();
             hideAllControls();
             main.foodPage.Show();
+            main.foodPage.Init();
             lb_food.ForeColor = green;
             pb_food.Image = Resources.food_active;
         }

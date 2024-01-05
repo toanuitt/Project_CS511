@@ -1,6 +1,11 @@
-﻿using Project_CS511.Component;
+﻿using Amazon.Runtime.Documents;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using Project_CS511.Component;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -49,8 +54,7 @@ namespace Project_CS511.SubPage
             btn_recent.ForeColor = Color.Green;
             btn_saved.BackColor = Color.White;
             btn_saved.ForeColor = Color.Gray;
-            var newlocation = new location(main);
-            flowLayoutPanel1.Controls.Add(newlocation);
+            Init();
             // add database recent to flowlayoutpanel1
         }
 
@@ -64,6 +68,7 @@ namespace Project_CS511.SubPage
             flowLayoutPanel1.Controls.Clear();
             var addlocation = new addLocation(main);
             flowLayoutPanel1.Controls.Add(addlocation);
+            
             // add database saved to flowlayoutpanel1
         }
         public void getAddress(string address)
@@ -72,8 +77,32 @@ namespace Project_CS511.SubPage
         }
         private void map_Load(object sender, EventArgs e)
         {
+         
+          
+        }
+        // setting the flowlayoutpanel to show the history
+        public void Init()
+        {
             var newlocation = new location(main);
+            flowLayoutPanel1.Controls.Clear();
+            main.dataSource.SetCollection("user");
+            string userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
+            //MessageBox.Show(userlocation);
+            newlocation.passaddress(userlocation);
             flowLayoutPanel1.Controls.Add(newlocation);
+            IMongoCollection<BsonDocument> collections = main.dataSource.data.GetCollection<BsonDocument>("location");
+            var filter = Builders<BsonDocument>.Filter.Eq("userid", main.currentUser);
+           
+            var result = collections.Find(filter).ToList();
+            foreach (var document in result)
+            {
+                var location = document.GetValue("location").AsString;
+                var newestlocation = new location(main);
+           
+                newestlocation.passhistoryaddress(location);
+                flowLayoutPanel1.Controls.Add((newestlocation));
+
+            }
         }
     }
 }

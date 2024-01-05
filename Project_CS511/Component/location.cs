@@ -28,9 +28,22 @@ namespace Project_CS511.Component
         private void btn_choose_Click(object sender, EventArgs e)
         {
             main.foodPage.SetLabelAddress(richtxtbox_address.Text.Split(',')[0].Trim());
+            main.foodPage.userlocation = richtxtbox_address.Text;
             hideAllControls();
             main.ShowMenu();
             main.foodPage.Show();
         }
+        public void passaddress(string address)
+        {
+            richtxtbox_address.Text = address;
+            btn_choose.Image = Properties.Resources.aim;
+            label1.Text = "Current location";
+        }
+        public void passhistoryaddress(string address)
+        {
+            richtxtbox_address.Text = address;
+            label1.Text = address.Split(',')[0].Trim();
+        }
     }
 }
+

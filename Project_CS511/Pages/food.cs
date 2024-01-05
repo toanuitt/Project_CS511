@@ -33,7 +33,8 @@ namespace Project_CS511.Pages
         private void lbl_address_Click(object sender, EventArgs e)
         {
             hideAllControls();
-            main.mapPage.getAddress(lbl_address.Text);
+            main.mapPage.getAddress(userlocation);
+            main.mapPage.Init();
             main.mapPage.Show();
         }
 
@@ -100,6 +101,13 @@ namespace Project_CS511.Pages
             btn_dinner.ForeColor = Color.Teal;
             btn_delivery.BackColor = SystemColors.Control;
             btn_delivery.ForeColor = SystemColors.ControlText;
+        }
+        public string userlocation;
+        public void Init()
+        {
+            main.dataSource.SetCollection("user");
+            userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
+            lbl_address.Text = userlocation.Substring(0, 12)+ "...";
         }
     }
 }
