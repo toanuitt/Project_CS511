@@ -121,7 +121,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACyJSURBVHhe7d15
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACyJSURBVHhe7d15
         3K7VvPjx3ax2806liKJEA5WpRCglZM5so+igyHSoOCRUHBoQZUypVCia0GlAhR9KSqVZaZ7H3Xx+n6/d
         PrXru/f1DPdzP9da6/N+vT7/nOMcdF3XutdzDWtNkRqyHK1Nr6B30na0I+1O36ID6Ug6gf5MF9BFD+tS
         unEOXU3xr/kr/ZGOp/j/dSjtR3vTbvQRejttQmtS/GealyRJ0hgsQxvQdNqBvkY/pVPpn3Q3/W9Pu4+u
@@ -315,10 +315,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_dinner.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAU9JREFUSEvt1j1KA0EYxvFVUey0M4WdoHUKG8VC0wjqBfwAMSB4BNPGztpGr2At
+        vAAADrwBlbxySQAAAU9JREFUSEvt1j1KA0EYxvFVUey0M4WdoHUKG8VC0wjqBfwAMSB4BNPGztpGr2At
         8QKiR1BRG20sRBBB8PP/hJkwmtmQze4sFvvADyaTd+Ylu7NLoiJF/lv6sWj0aSKv7OPb0Di3XMI21jho
         RrCOQzzBNtb4CPpuFJmlhAO8wjaLoxrVak2qrOEZ7uaPaODEmftLa1bRU/ZgN/rCMeagUzyMabjNfOpI
         lBrs4nvMQ812cIZ3uA062UVXqeATWnSFcczgxswlpb0W0DFDuIYW6D5NYAlvZq5X+gGDiE0VtngbU3hx
@@ -327,7 +327,7 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_delivery.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAa9JREFUSEvt1jsohWEcx/HjrkykKJRkYFAGFkWkRGwWRQyMFoViFZNcRhaTwUgu

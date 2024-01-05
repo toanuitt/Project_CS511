@@ -42,31 +42,31 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(28, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 29);
+            this.label1.Size = new System.Drawing.Size(233, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Giao dịch gần đây";
+            this.label1.Text = "Recent Transactions";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(130, 159);
+            this.label2.Location = new System.Drawing.Point(108, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 22);
+            this.label2.Size = new System.Drawing.Size(319, 22);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Không có hoạt động nào gần đây";
+            this.label2.Text = "There\'s no recent activity to show here";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(154, 181);
+            this.label3.Location = new System.Drawing.Point(176, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 22);
+            this.label3.Size = new System.Drawing.Size(183, 22);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Xem các giao dịch trước đó";
+            this.label3.Text = "See past transactions";
             // 
             // pictureBox1
             // 

@@ -35,16 +35,16 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_dinner = new System.Windows.Forms.Button();
+            this.btn_delivery = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.foodlist4 = new Project_CS511.Component.foodlist();
-            this.foodlist3 = new Project_CS511.Component.foodlist();
             this.foodlist2 = new Project_CS511.Component.foodlist();
+            this.foodlist3 = new Project_CS511.Component.foodlist();
+            this.foodlist4 = new Project_CS511.Component.foodlist();
             this.foodlist1 = new Project_CS511.Component.foodlist();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -120,38 +120,40 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Popular Restaurants";
             // 
-            // button2
+            // btn_dinner
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button2.Location = new System.Drawing.Point(277, 151);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 45);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Dinner";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_dinner.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_dinner.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_dinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dinner.Image = ((System.Drawing.Image)(resources.GetObject("btn_dinner.Image")));
+            this.btn_dinner.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btn_dinner.Location = new System.Drawing.Point(277, 151);
+            this.btn_dinner.Name = "btn_dinner";
+            this.btn_dinner.Size = new System.Drawing.Size(173, 45);
+            this.btn_dinner.TabIndex = 10;
+            this.btn_dinner.Text = "Dine-in";
+            this.btn_dinner.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_dinner.UseVisualStyleBackColor = false;
+            this.btn_dinner.Click += new System.EventHandler(this.btn_dinner_Click);
             // 
-            // button1
+            // btn_delivery
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Teal;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(94, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 45);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Delivery";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_delivery.BackColor = System.Drawing.Color.LightCyan;
+            this.btn_delivery.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_delivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delivery.ForeColor = System.Drawing.Color.Teal;
+            this.btn_delivery.Image = ((System.Drawing.Image)(resources.GetObject("btn_delivery.Image")));
+            this.btn_delivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_delivery.Location = new System.Drawing.Point(94, 151);
+            this.btn_delivery.Name = "btn_delivery";
+            this.btn_delivery.Size = new System.Drawing.Size(177, 45);
+            this.btn_delivery.TabIndex = 9;
+            this.btn_delivery.Text = "Delivery";
+            this.btn_delivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_delivery.UseVisualStyleBackColor = false;
+            this.btn_delivery.Click += new System.EventHandler(this.btn_delivery_Click);
             // 
             // pictureBox5
             // 
@@ -209,30 +211,30 @@
             this.panel2.Size = new System.Drawing.Size(453, 411);
             this.panel2.TabIndex = 12;
             // 
-            // foodlist4
-            // 
-            this.foodlist4.Location = new System.Drawing.Point(3, 412);
-            this.foodlist4.Name = "foodlist4";
-            this.foodlist4.Size = new System.Drawing.Size(421, 127);
-            this.foodlist4.TabIndex = 3;
-            // 
-            // foodlist3
-            // 
-            this.foodlist3.Location = new System.Drawing.Point(3, 279);
-            this.foodlist3.Name = "foodlist3";
-            this.foodlist3.Size = new System.Drawing.Size(421, 127);
-            this.foodlist3.TabIndex = 2;
-            // 
             // foodlist2
             // 
-            this.foodlist2.Location = new System.Drawing.Point(3, 140);
+            this.foodlist2.Location = new System.Drawing.Point(3, 268);
             this.foodlist2.Name = "foodlist2";
             this.foodlist2.Size = new System.Drawing.Size(421, 127);
             this.foodlist2.TabIndex = 1;
             // 
+            // foodlist3
+            // 
+            this.foodlist3.Location = new System.Drawing.Point(3, 407);
+            this.foodlist3.Name = "foodlist3";
+            this.foodlist3.Size = new System.Drawing.Size(421, 127);
+            this.foodlist3.TabIndex = 2;
+            // 
+            // foodlist4
+            // 
+            this.foodlist4.Location = new System.Drawing.Point(3, 540);
+            this.foodlist4.Name = "foodlist4";
+            this.foodlist4.Size = new System.Drawing.Size(421, 127);
+            this.foodlist4.TabIndex = 3;
+            // 
             // foodlist1
             // 
-            this.foodlist1.Location = new System.Drawing.Point(3, 3);
+            this.foodlist1.Location = new System.Drawing.Point(3, 131);
             this.foodlist1.Name = "foodlist1";
             this.foodlist1.Size = new System.Drawing.Size(421, 127);
             this.foodlist1.TabIndex = 0;
@@ -244,8 +246,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_dinner);
+            this.Controls.Add(this.btn_delivery);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
@@ -280,13 +282,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_delivery;
+        private System.Windows.Forms.Button btn_dinner;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private Component.foodlist foodlist1;
+        private Component.foodlist foodlist4;
         private Component.foodlist foodlist3;
         private Component.foodlist foodlist2;
-        private Component.foodlist foodlist4;
+        private Component.foodlist foodlist1;
     }
 }

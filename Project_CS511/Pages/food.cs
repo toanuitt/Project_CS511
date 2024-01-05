@@ -33,6 +33,7 @@ namespace Project_CS511.Pages
         private void lbl_address_Click(object sender, EventArgs e)
         {
             hideAllControls();
+            main.mapPage.getAddress(lbl_address.Text);
             main.mapPage.Show();
         }
 
@@ -78,5 +79,22 @@ namespace Project_CS511.Pages
             
         }
         #endregion
+
+        private void btn_delivery_Click(object sender, EventArgs e)
+        {
+            btn_delivery.BackColor = Color.LightCyan;
+            btn_delivery.ForeColor = Color.Teal;
+            btn_dinner.BackColor = SystemColors.Control;
+            btn_dinner.ForeColor = SystemColors.ControlText;
+
+        }
+
+        private void btn_dinner_Click(object sender, EventArgs e)
+        {
+            btn_dinner.BackColor = Color.LightCyan;
+            btn_dinner.ForeColor = Color.Teal;
+            btn_delivery.BackColor = SystemColors.Control;
+            btn_delivery.ForeColor = SystemColors.ControlText;
+        }
     }
 }

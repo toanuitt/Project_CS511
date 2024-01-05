@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_CS511.Component
 {
-    public partial class location : UserControl
+    public partial class addLocation : UserControl
     {
+
         mainForm main;
-        public location(mainForm main)
+        public addLocation(mainForm main)
         {
             InitializeComponent();
             this.main = main;
@@ -25,12 +26,13 @@ namespace Project_CS511.Component
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion
-        private void btn_choose_Click(object sender, EventArgs e)
+
+        private void btn_addnew_Click(object sender, EventArgs e)
         {
-            main.foodPage.SetLabelAddress(richtxtbox_address.Text.Split(',')[0].Trim());
             hideAllControls();
-            main.ShowMenu();
-            main.foodPage.Show();
+            main.maplocationPage.Show();
+            main.maplocationPage.getPage(2);
+            
         }
     }
 }
