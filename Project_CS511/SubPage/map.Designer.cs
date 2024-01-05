@@ -29,28 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(map));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_address = new System.Windows.Forms.TextBox();
             this.btn_recent = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_saved = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_mapchoose = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.PictureBox();
-            this.location1 = new Project_CS511.Component.location();
-            this.location2 = new Project_CS511.Component.location();
-            this.location3 = new Project_CS511.Component.location();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtbox_address
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(69, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(417, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtbox_address.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtbox_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_address.Location = new System.Drawing.Point(69, 7);
+            this.txtbox_address.Name = "txtbox_address";
+            this.txtbox_address.Size = new System.Drawing.Size(417, 27);
+            this.txtbox_address.TabIndex = 1;
             // 
             // btn_recent
             // 
@@ -67,26 +63,24 @@
             this.btn_recent.UseVisualStyleBackColor = false;
             this.btn_recent.Click += new System.EventHandler(this.btn_recent_Click);
             // 
-            // button3
+            // btn_saved
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Gray;
-            this.button3.Location = new System.Drawing.Point(142, 51);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 34);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Saved";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_saved.BackColor = System.Drawing.Color.White;
+            this.btn_saved.FlatAppearance.BorderSize = 0;
+            this.btn_saved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_saved.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saved.ForeColor = System.Drawing.Color.Gray;
+            this.btn_saved.Location = new System.Drawing.Point(139, 48);
+            this.btn_saved.Name = "btn_saved";
+            this.btn_saved.Size = new System.Drawing.Size(105, 34);
+            this.btn_saved.TabIndex = 4;
+            this.btn_saved.Text = "Saved";
+            this.btn_saved.UseVisualStyleBackColor = false;
+            this.btn_saved.Click += new System.EventHandler(this.btn_saved_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.location1);
-            this.flowLayoutPanel1.Controls.Add(this.location2);
-            this.flowLayoutPanel1.Controls.Add(this.location3);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 88);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(484, 599);
@@ -120,30 +114,6 @@
             this.btn_back.TabStop = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // location1
-            // 
-            this.location1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.location1.Location = new System.Drawing.Point(3, 3);
-            this.location1.Name = "location1";
-            this.location1.Size = new System.Drawing.Size(450, 117);
-            this.location1.TabIndex = 0;
-            // 
-            // location2
-            // 
-            this.location2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.location2.Location = new System.Drawing.Point(3, 126);
-            this.location2.Name = "location2";
-            this.location2.Size = new System.Drawing.Size(450, 117);
-            this.location2.TabIndex = 1;
-            // 
-            // location3
-            // 
-            this.location3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.location3.Location = new System.Drawing.Point(3, 249);
-            this.location3.Name = "location3";
-            this.location3.Size = new System.Drawing.Size(450, 117);
-            this.location3.TabIndex = 2;
-            // 
             // map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,13 +121,13 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.btn_mapchoose);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_saved);
             this.Controls.Add(this.btn_recent);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbox_address);
             this.Controls.Add(this.btn_back);
             this.Name = "map";
             this.Size = new System.Drawing.Size(533, 738);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.map_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_back)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,13 +137,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox btn_back;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_address;
         private System.Windows.Forms.Button btn_recent;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_saved;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btn_mapchoose;
-        private Component.location location1;
-        private Component.location location2;
-        private Component.location location3;
     }
 }

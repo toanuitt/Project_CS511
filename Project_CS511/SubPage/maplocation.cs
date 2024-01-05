@@ -129,13 +129,29 @@ namespace Project_CS511.SubPage
 
         #endregion
 
+        //know for recent number=1 and save number=2
+        private int number;
+        public void getPage(int num)
+        {
+            number = num;
+        }
         private void btn_confirmlocation_Click(object sender, EventArgs e)
         {
             main.foodPage.currentuser.Address = richTextBox1.Text;
             main.foodPage.SetLabelAddress(label1.Text);
-            //hideAllControls();
-            //main.ShowMenu();
-            //main.foodPage.Show();
+            hideAllControls();
+            if (number == 1)
+            {
+                main.ShowMenu();
+                main.foodPage.Show();
+            }
+            else
+            {
+                main.mapPage.Show();
+                // add location to database 
+            }
+
+        }
             updateLocationForCart();
         }
         #region hide usercontrol

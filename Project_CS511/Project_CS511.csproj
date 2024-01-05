@@ -262,6 +262,12 @@
     <Compile Include="Component\addcard.Designer.cs">
       <DependentUpon>addcard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\addLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\addLocation.Designer.cs">
+      <DependentUpon>addLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\adSlide.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\addcard.resx">
       <DependentUpon>addcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\addLocation.resx">
+      <DependentUpon>addLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\adSlide.resx">
       <DependentUpon>adSlide.cs</DependentUpon>
