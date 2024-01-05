@@ -87,21 +87,20 @@ namespace Project_CS511.SubPage
             flowLayoutPanel1.Controls.Clear();
             main.dataSource.SetCollection("user");
             string userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
-            //MessageBox.Show(userlocation);
             newlocation.passaddress(userlocation);
             flowLayoutPanel1.Controls.Add(newlocation);
             IMongoCollection<BsonDocument> collections = main.dataSource.data.GetCollection<BsonDocument>("location");
             var filter = Builders<BsonDocument>.Filter.Eq("userid", main.currentUser);
-           
             var result = collections.Find(filter).ToList();
-            foreach (var document in result)
+
+            // Reverse the order of documents for bottom-up display
+            for (int i = result.Count - 1; i >= 0; i--)
             {
+                var document = result[i];
                 var location = document.GetValue("location").AsString;
                 var newestlocation = new location(main);
-           
                 newestlocation.passhistoryaddress(location);
                 flowLayoutPanel1.Controls.Add((newestlocation));
-
             }
         }
     }

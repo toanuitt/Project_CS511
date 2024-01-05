@@ -13,6 +13,9 @@ using System.Net;
 using Newtonsoft.Json;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using System.Collections;
 
 namespace Project_CS511.SubPage
 {
@@ -144,6 +147,32 @@ namespace Project_CS511.SubPage
             {
                 main.ShowMenu();
                 main.foodPage.Show();
+                IMongoCollection<BsonDocument> collections = main.dataSource.data.GetCollection<BsonDocument>("location");
+
+                // Define a filter to find documents with the specified userid and location
+                var filter = Builders<BsonDocument>.Filter.And(
+                    Builders<BsonDocument>.Filter.Eq("userid", main.currentUser),
+                    Builders<BsonDocument>.Filter.Eq("location", richTextBox1.Text)
+                );
+
+                // Check if a document with the specified userid and location exists
+                var existingDocument = collections.Find(filter).FirstOrDefault();
+
+                if (existingDocument != null)
+                {
+                    // If document exists, delete it
+                    collections.DeleteOne(filter);
+                }
+
+                // Add a new document to the collection
+                var newLocationDocument = new BsonDocument
+                {
+                    { "userid", main.currentUser },
+                    { "location", richTextBox1.Text }
+                };
+
+                collections.InsertOne(newLocationDocument);
+
             }
             else
             {
