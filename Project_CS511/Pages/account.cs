@@ -99,6 +99,13 @@ namespace Project_CS511.Pages
             main.bringControlToFront(f);
         }
 
+        private void lb_savedPlaces_Click(object sender, EventArgs e)
+        {
+            cartSubPage f = new cartSubPage(main);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
+        }
+
         private void pn_changeUsername_Paint(object sender, PaintEventArgs e)
         {
 
@@ -117,6 +124,13 @@ namespace Project_CS511.Pages
         }
 
         private void pn_changePassword_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+
+        private void pn_savedPlaces_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -19,7 +19,7 @@ namespace Project_CS511.SubPage
             this.main = main;
         }
         // allow user to open map to choose location
-        private void btn_mapchoose_Click(object sender, EventArgs e)
+        public void btn_mapchoose_Click(object sender, EventArgs e)
         {
             hideAllControls();
             main.maplocationPage.Show();

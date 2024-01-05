@@ -198,6 +198,19 @@ namespace Project_CS511
 
 
         #endregion
+
+        #region Cac Ham chuc nang
+        public BsonArray ConvertToBsonArray(string jsonString)
+        {
+            // Parse the string into a BsonDocument
+            BsonDocument bsonDocument = BsonDocument.Parse(jsonString);
+
+            // Extract the BsonArray from the document
+            BsonArray bsonArray = bsonDocument["0"].AsBsonArray;
+
+            return bsonArray;
+        }
+        #endregion
     }
 }
 

@@ -106,6 +106,23 @@ namespace Project_CS511.SubPage
                 }
             }
         }
+
+        private void updateLocationForCart()
+        {
+            Control control = main.findControlByName("cartSubPage");
+            if (main.findControlByName("cartSubPage") != null)
+            {
+                cartSubPage cartSubPage = (cartSubPage)control;
+                cartSubPage.updateAddress(richTextBox1.Text);
+                hideAllControls();
+            }
+            else
+            {
+                hideAllControls();
+                main.ShowMenu();
+                main.foodPage.Show();
+            }
+        }
         #endregion
 
         #region Chuyển dữ liệu
@@ -116,9 +133,10 @@ namespace Project_CS511.SubPage
         {
             main.foodPage.currentuser.Address = richTextBox1.Text;
             main.foodPage.SetLabelAddress(label1.Text);
-            hideAllControls();
-            main.ShowMenu();
-            main.foodPage.Show();
+            //hideAllControls();
+            //main.ShowMenu();
+            //main.foodPage.Show();
+            updateLocationForCart();
         }
         #region hide usercontrol
         public void hideAllControls()

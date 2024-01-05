@@ -41,6 +41,7 @@
             this.pb_food = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_comment = new System.Windows.Forms.TextBox();
+            this.btn_success = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_addToCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star)).BeginInit();
@@ -136,6 +137,7 @@
             this.pb_addToCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_addToCart.TabIndex = 14;
             this.pb_addToCart.TabStop = false;
+            this.pb_addToCart.Click += new System.EventHandler(this.pb_addToCart_Click);
             // 
             // pb_star
             // 
@@ -178,10 +180,25 @@
             this.tb_comment.Size = new System.Drawing.Size(386, 26);
             this.tb_comment.TabIndex = 18;
             // 
+            // btn_success
+            // 
+            this.btn_success.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_success.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_success.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_success.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_success.Location = new System.Drawing.Point(122, 12);
+            this.btn_success.Name = "btn_success";
+            this.btn_success.Size = new System.Drawing.Size(142, 33);
+            this.btn_success.TabIndex = 19;
+            this.btn_success.Text = "Added to basket";
+            this.btn_success.UseVisualStyleBackColor = false;
+            this.btn_success.Visible = false;
+            // 
             // foodSubPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_success);
             this.Controls.Add(this.tb_comment);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_back);
@@ -219,5 +236,6 @@
         private System.Windows.Forms.PictureBox pb_back;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_comment;
+        private System.Windows.Forms.Button btn_success;
     }
 }

@@ -58,6 +58,11 @@ namespace Project_CS511.Pages
         {
             lbl_address.Text = address;
         }
+
+        public string GetLabelAddress()
+        {
+            return lbl_address.Text;
+        }
         #region calculate time and distance
         public void getDistance(string origin, string destination)
         {

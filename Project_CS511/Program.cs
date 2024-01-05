@@ -16,7 +16,7 @@ namespace Project_CS511
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new testDatabase());
+            Application.Run(new mainForm());
         }
     }
 }

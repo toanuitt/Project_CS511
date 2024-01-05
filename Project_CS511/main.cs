@@ -103,6 +103,16 @@ namespace Project_CS511
                 c.Hide();
             }
         }
+        public Control findControlByName(string name)
+        {
+            Control foundControl = this.Controls.Find(name, true).FirstOrDefault();
+
+            if (foundControl != null)
+            {
+                return foundControl;
+            }
+            return null;
+        }
 
         public void RemoveControlByName(string controlName)
         {

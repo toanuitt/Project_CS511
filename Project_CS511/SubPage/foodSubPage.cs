@@ -16,6 +16,7 @@ namespace Project_CS511.SubPage
     public partial class foodSubPage : UserControl
     {
         mainForm main;
+        string foodId;
         public foodSubPage(mainForm main)
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace Project_CS511.SubPage
         {
             string path = getFoodPicturePath();
             string shopId = dataFood["shopId"].AsString;
+
+            foodId = dataFood["foodId"].ToString();
 
             //add image
             pb_food.Image = Image.FromFile(path+ dataFood["foodId"] + ".png");
@@ -66,7 +69,40 @@ namespace Project_CS511.SubPage
             // Use the "N" format specifier with CultureInfo.InvariantCulture to get the desired format
             return money.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
         }
+
+        private void notification()
+        {
+            btn_success.Visible = true;
+
+            System.Timers.Timer timer = new System.Timers.Timer
+            {
+                Interval = 2000,
+                Enabled = true
+            };
+
+            timer.Elapsed += (timerSender, timerEvent) =>
+            {
+                btn_success.Visible = false; ;
+                timer.Stop();
+            };
+            timer.Start();
+        }
         #endregion
+
+        private void pb_addToCart_Click(object sender, EventArgs e)
+        {
+            notification();
+
+            main.dataSource.SetCollection("user");
+            string temp = main.dataSource.findValue("loginName", main.currentUser, "cart");
+
+            if(temp == "")
+            {  temp += foodId; }
+            else
+            { temp += "-" + foodId; }
+
+            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", temp);
+        }
 
         private void pb_back_Click(object sender, EventArgs e)
         {

@@ -137,6 +137,7 @@ namespace Project_CS511.SubPage
         private void btn_confirmlocation_Click(object sender, EventArgs e)
         {
             notification();
+            main.dataSource.SetCollection("user");
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "coordinate", coordinate);
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "location", location);
         }
