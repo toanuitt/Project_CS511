@@ -40,7 +40,7 @@ namespace Project_CS511.SubPage
             // tiếp tục với các page khác khi thêm vào như account, payment
         }
         #endregion
-        private int number =1;
+        private int number = 1;
         private void btn_recent_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -64,7 +64,7 @@ namespace Project_CS511.SubPage
             flowLayoutPanel1.Controls.Clear();
             var addlocation = new addLocation(main);
             flowLayoutPanel1.Controls.Add(addlocation);
-           // add database saved to flowlayoutpanel1
+            // add database saved to flowlayoutpanel1
         }
         public void getAddress(string address)
         {

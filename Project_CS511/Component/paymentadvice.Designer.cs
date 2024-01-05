@@ -42,9 +42,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 29);
+            this.label1.Size = new System.Drawing.Size(183, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Recommended for you";
+            this.label1.Text = "Đề xuất của bạn";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2

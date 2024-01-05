@@ -47,6 +47,7 @@
             // 
             this.tb_username.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_username.Location = new System.Drawing.Point(19, 56);
+            this.tb_username.MaxLength = 20;
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(173, 33);
             this.tb_username.TabIndex = 5;
@@ -57,9 +58,9 @@
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(14, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 25);
+            this.label1.Size = new System.Drawing.Size(109, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Tên Tài Khoản";
+            this.label1.Text = "Username";
             // 
             // tb_email
             // 
@@ -83,6 +84,7 @@
             // 
             this.tb_sdt.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_sdt.Location = new System.Drawing.Point(204, 56);
+            this.tb_sdt.MaxLength = 10;
             this.tb_sdt.Name = "tb_sdt";
             this.tb_sdt.Size = new System.Drawing.Size(173, 33);
             this.tb_sdt.TabIndex = 9;
@@ -93,14 +95,15 @@
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(199, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 25);
+            this.label3.Size = new System.Drawing.Size(153, 25);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Số Điện Thoại";
+            this.label3.Text = "Phone Number";
             // 
             // tb_password
             // 
             this.tb_password.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_password.Location = new System.Drawing.Point(19, 184);
+            this.tb_password.MaxLength = 20;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '*';
             this.tb_password.Size = new System.Drawing.Size(358, 33);
@@ -112,14 +115,15 @@
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(14, 156);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 25);
+            this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Mật Khẩu";
+            this.label4.Text = "Password";
             // 
             // tb_password2
             // 
             this.tb_password2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_password2.Location = new System.Drawing.Point(19, 248);
+            this.tb_password2.MaxLength = 20;
             this.tb_password2.Name = "tb_password2";
             this.tb_password2.PasswordChar = '*';
             this.tb_password2.Size = new System.Drawing.Size(358, 33);
@@ -131,20 +135,20 @@
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(14, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(189, 25);
+            this.label5.Size = new System.Drawing.Size(194, 25);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Nhập Lại Mật Khẩu";
+            this.label5.Text = "Re-enter password";
             // 
             // lb_exit
             // 
             this.lb_exit.AutoSize = true;
             this.lb_exit.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lb_exit.Location = new System.Drawing.Point(341, 368);
+            this.lb_exit.Location = new System.Drawing.Point(327, 368);
             this.lb_exit.Name = "lb_exit";
-            this.lb_exit.Size = new System.Drawing.Size(56, 23);
+            this.lb_exit.Size = new System.Drawing.Size(70, 23);
             this.lb_exit.TabIndex = 15;
-            this.lb_exit.Text = "Thoát";
+            this.lb_exit.Text = "Escape";
             // 
             // btn_dangKi
             // 
@@ -155,7 +159,7 @@
             this.btn_dangKi.Name = "btn_dangKi";
             this.btn_dangKi.Size = new System.Drawing.Size(208, 71);
             this.btn_dangKi.TabIndex = 14;
-            this.btn_dangKi.Text = "Đăng Kí";
+            this.btn_dangKi.Text = "Sign Up";
             this.btn_dangKi.UseVisualStyleBackColor = false;
             this.btn_dangKi.Click += new System.EventHandler(this.btn_dangKi_Click);
             // 

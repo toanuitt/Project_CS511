@@ -32,7 +32,8 @@ namespace Project_CS511.Component
             hideAllControls();
             main.maplocationPage.Show();
             main.maplocationPage.getPage(2);
-            
+
         }
+
     }
 }

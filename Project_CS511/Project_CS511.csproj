@@ -415,11 +415,23 @@
     <Compile Include="SubPage\map.Designer.cs">
       <DependentUpon>map.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubPage\setLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\setLocation.Designer.cs">
+      <DependentUpon>setLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubPage\maplocation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SubPage\maplocation.Designer.cs">
       <DependentUpon>maplocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\updateInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\updateInfo.Designer.cs">
+      <DependentUpon>updateInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="testDatabase.cs">
       <SubType>Form</SubType>
@@ -490,8 +502,14 @@
     <EmbeddedResource Include="SubPage\map.resx">
       <DependentUpon>map.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\setLocation.resx">
+      <DependentUpon>setLocation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubPage\maplocation.resx">
       <DependentUpon>maplocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\updateInfo.resx">
+      <DependentUpon>updateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testDatabase.resx">
       <DependentUpon>testDatabase.cs</DependentUpon>

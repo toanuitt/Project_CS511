@@ -25,6 +25,8 @@ namespace Project_CS511
         public maplocation maplocationPage;
         private menuBar menu;
         public DataSource dataSource = new DataSource();
+
+        public string currentUser;
         public mainForm()
         {
             InitializeComponent();

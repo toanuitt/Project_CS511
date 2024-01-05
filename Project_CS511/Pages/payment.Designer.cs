@@ -53,7 +53,7 @@
             // 
             this.addcard1.Location = new System.Drawing.Point(3, 3);
             this.addcard1.Name = "addcard1";
-            this.addcard1.Size = new System.Drawing.Size(530, 328);
+            this.addcard1.Size = new System.Drawing.Size(527, 328);
             this.addcard1.TabIndex = 0;
             // 
             // paymentlist1

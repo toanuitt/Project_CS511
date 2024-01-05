@@ -38,6 +38,7 @@ namespace Project_CS511.Component
             }
             if(main.dataSource.checkLogIn(tb_username.Text, tb_password.Text))
             {
+                main.currentUser = tb_username.Text;
                 main.loginSuccess();
             }
             else

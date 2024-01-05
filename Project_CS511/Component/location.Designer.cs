@@ -29,24 +29,33 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(location));
-            this.label1 = new System.Windows.Forms.Label();
-            this.richtxtbox_address = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.richtxtbox_address = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_choose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_choose)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Current location";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-1, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(448, 16);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "_______________________________________________________________";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(422, 32);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // richtxtbox_address
             // 
@@ -54,41 +63,32 @@
             this.richtxtbox_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richtxtbox_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richtxtbox_address.ForeColor = System.Drawing.Color.DimGray;
-            this.richtxtbox_address.Location = new System.Drawing.Point(49, 30);
+            this.richtxtbox_address.Location = new System.Drawing.Point(48, 32);
             this.richtxtbox_address.Name = "richtxtbox_address";
             this.richtxtbox_address.ReadOnly = true;
             this.richtxtbox_address.Size = new System.Drawing.Size(339, 70);
-            this.richtxtbox_address.TabIndex = 5;
+            this.richtxtbox_address.TabIndex = 10;
             this.richtxtbox_address.Text = "06 Trần Văn Ơn, Phú Hoà, Thủ Dầu Một, Bình Dương, Vietnam";
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(448, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "_______________________________________________________________";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(423, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Current location";
             // 
             // btn_choose
             // 
             this.btn_choose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_choose.Image = global::Project_CS511.Properties.Resources.clock;
-            this.btn_choose.Location = new System.Drawing.Point(3, 30);
+            this.btn_choose.Location = new System.Drawing.Point(2, 32);
             this.btn_choose.Name = "btn_choose";
             this.btn_choose.Size = new System.Drawing.Size(40, 28);
             this.btn_choose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_choose.TabIndex = 0;
+            this.btn_choose.TabIndex = 8;
             this.btn_choose.TabStop = false;
             this.btn_choose.Click += new System.EventHandler(this.btn_choose_Click);
             // 
@@ -113,10 +113,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox btn_choose;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richtxtbox_address;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RichTextBox richtxtbox_address;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox btn_choose;
     }
 }

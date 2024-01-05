@@ -13,13 +13,16 @@ using System.Net;
 using Newtonsoft.Json;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using System.Timers;
 
 namespace Project_CS511.SubPage
 {
-    public partial class maplocation : UserControl
+    public partial class setLocation : UserControl
     {
         mainForm main;
-        public maplocation(mainForm main)
+        string coordinate;
+        string location;
+        public setLocation(mainForm main)
         {
             InitializeComponent();
             this.main = main;
@@ -56,6 +59,7 @@ namespace Project_CS511.SubPage
         {
             if (e.Button == MouseButtons.Left)
             {
+                btn_confirmlocation.Enabled = true;
                 PointLatLng clickedPoint = gMapControl1.FromLocalToLatLng(e.X, e.Y);
                 //string address = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng, apiKey);
                 string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
@@ -73,8 +77,9 @@ namespace Project_CS511.SubPage
                 {
                     gMapControl1.Overlays.Add(markerOverlay);
                 }
-                main.foodPage.currentuser.Latitude = clickedPoint.Lat;
-                main.foodPage.currentuser.Longitude = clickedPoint.Lng;
+
+                location = richTextBox1.Text;
+                coordinate = clickedPoint.Lat.ToString() + "-" + clickedPoint.Lng.ToString();
 
             }
         }
@@ -106,51 +111,41 @@ namespace Project_CS511.SubPage
                 }
             }
         }
-        #endregion
 
-        #region Chuyển dữ liệu
-
-        #endregion
-
-        //know for recent number=1 and save number=2
-        private int number;
-        public void getPage(int num)
+        private void notification()
         {
-            number = num;
+            btn_success.Visible = true;
+
+            System.Timers.Timer timer = new System.Timers.Timer
+            {
+                Interval = 3000,
+                Enabled = true
+            };
+
+            timer.Elapsed += (timerSender, timerEvent) =>
+            {
+                // Hide the button after 3 seconds
+                btn_success.Visible = false; ;
+
+                // Stop the timer
+                timer.Stop();
+            };
+            timer.Start();
         }
+        #endregion
+
         private void btn_confirmlocation_Click(object sender, EventArgs e)
         {
-            main.foodPage.currentuser.Address = richTextBox1.Text;
-            main.foodPage.SetLabelAddress(label1.Text);
-            hideAllControls();
-            if (number == 1)
-            {
-                main.ShowMenu();
-                main.foodPage.Show();
-            }
-            else
-            {
-                main.mapPage.Show();
-                // add location to database 
-            }
-
+            notification();
+            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "coordinate", coordinate);
+            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "location", location);
         }
-        #region hide usercontrol
-        public void hideAllControls()
-        {
-            if (main.maplocationPage != null)
-            {
-                main.maplocationPage.Hide();
-            }
-
-            // tiếp tục với các page khác khi thêm vào như account, payment
-        }
-        #endregion
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            hideAllControls();
-            main.mapPage.Show();
+            main.RemoveControlByName("setLocation");
         }
+
+
     }
 }

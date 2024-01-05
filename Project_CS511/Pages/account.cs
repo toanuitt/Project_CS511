@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_CS511.SubPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace Project_CS511.Pages
         public account(mainForm main=null)
         {
             InitializeComponent();
-            //this.main = main;
+            this.main = main;
             init();
         }
 
@@ -89,6 +90,35 @@ namespace Project_CS511.Pages
         private void lb_logOut_Click(object sender, EventArgs e)
         {
             main.Close();
+        }
+
+        private void lb_updateInfo_Click(object sender, EventArgs e)
+        {
+            updateInfo f = new updateInfo(main);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
+        }
+
+        private void pn_changeUsername_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lb_yourLocation_Click(object sender, EventArgs e)
+        {
+            setLocation location = new setLocation(main);
+            main.Controls.Add(location);
+            main.bringControlToFront(location);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pn_changePassword_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

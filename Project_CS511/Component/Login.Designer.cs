@@ -44,9 +44,9 @@
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 33);
+            this.label1.Size = new System.Drawing.Size(139, 33);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Tên Tài Khoản";
+            this.label1.Text = "Username";
             // 
             // tb_username
             // 
@@ -55,7 +55,7 @@
             this.tb_username.Name = "tb_username";
             this.tb_username.Size = new System.Drawing.Size(319, 36);
             this.tb_username.TabIndex = 3;
-            this.tb_username.Text = "trasua";
+            this.tb_username.Text = "trasuaDoraemon";
             // 
             // tb_password
             // 
@@ -65,7 +65,7 @@
             this.tb_password.PasswordChar = '*';
             this.tb_password.Size = new System.Drawing.Size(319, 36);
             this.tb_password.TabIndex = 5;
-            this.tb_password.Text = "taca";
+            this.tb_password.Text = "doraemon";
             // 
             // label2
             // 
@@ -73,9 +73,9 @@
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 33);
+            this.label2.Size = new System.Drawing.Size(136, 33);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Mật Khẩu";
+            this.label2.Text = "Password";
             // 
             // lb_forgetPassword
             // 
@@ -83,9 +83,9 @@
             this.lb_forgetPassword.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_forgetPassword.Location = new System.Drawing.Point(13, 187);
             this.lb_forgetPassword.Name = "lb_forgetPassword";
-            this.lb_forgetPassword.Size = new System.Drawing.Size(146, 23);
+            this.lb_forgetPassword.Size = new System.Drawing.Size(151, 23);
             this.lb_forgetPassword.TabIndex = 6;
-            this.lb_forgetPassword.Text = "Quên mật khẩu?";
+            this.lb_forgetPassword.Text = "Forget pasword?";
             // 
             // button1
             // 
@@ -96,7 +96,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 71);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Đăng Nhập";
+            this.button1.Text = "Log In";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -107,9 +107,9 @@
             this.lb_exit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lb_exit.Location = new System.Drawing.Point(322, 293);
             this.lb_exit.Name = "lb_exit";
-            this.lb_exit.Size = new System.Drawing.Size(56, 23);
+            this.lb_exit.Size = new System.Drawing.Size(70, 23);
             this.lb_exit.TabIndex = 8;
-            this.lb_exit.Text = "Thoát";
+            this.lb_exit.Text = "Escape";
             this.lb_exit.Click += new System.EventHandler(this.lb_exit_Click);
             // 
             // lb_error

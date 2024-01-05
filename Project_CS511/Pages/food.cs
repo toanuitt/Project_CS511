@@ -50,10 +50,10 @@ namespace Project_CS511.Pages
         {
             public string Address { get; set; }
             public double Latitude { get; set; }
-            public double Longitude { get ; set; }
+            public double Longitude { get; set; }
         }
         public Addressuser currentuser;
-        
+
         //set label address
         public void SetLabelAddress(string address)
         {
@@ -76,7 +76,7 @@ namespace Project_CS511.Pages
                     string distance = dsResult.Tables["distance"].Rows[0]["text"].ToString();
                 }
             }
-            
+
         }
         #endregion
 
