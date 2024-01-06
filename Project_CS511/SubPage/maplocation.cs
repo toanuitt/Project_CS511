@@ -216,14 +216,14 @@ namespace Project_CS511.SubPage
         {
             gMapControl1.DragButton = MouseButtons.Right;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
+          
             string address = main.foodPage.userlocation;
-            var (latitude, longitude) = GetLatLngFromAddress(address, api_key);
+            var (latitude, longitude) = GetLatLngFromAddress(address, main.api_key);
             gMapControl1.Position = new PointLatLng(latitude, longitude); // Initial coordinates
             gMapControl1.Zoom = 18;
             gMapControl1.MouseClick += GMapControl1_MouseClick;
 
-            richTextBox1.Text = GetAddressFromLatLng(latitude, longitude, api_key);
+            richTextBox1.Text = GetAddressFromLatLng(latitude, longitude, main.api_key);
             label1.Text = richTextBox1.Text.Split(',')[0].Trim();
             markerOverlay.Markers.Clear();
 
