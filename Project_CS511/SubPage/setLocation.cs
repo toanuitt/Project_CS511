@@ -36,8 +36,8 @@ namespace Project_CS511.SubPage
             gMapControl1.Position = new PointLatLng(10.8231, 106.6297); // Initial coordinates
             gMapControl1.Zoom = 18;
             gMapControl1.MouseClick += GMapControl1_MouseClick;
-            string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
-            richTextBox1.Text = GetAddressFromLatLng(10.8231, 106.6297, api_key);
+            
+            richTextBox1.Text = GetAddressFromLatLng(10.8231, 106.6297, main.api_key);
             label1.Text = richTextBox1.Text.Split(',')[0].Trim();
             markerOverlay.Markers.Clear();
 
@@ -62,8 +62,8 @@ namespace Project_CS511.SubPage
                 btn_confirmlocation.Enabled = true;
                 PointLatLng clickedPoint = gMapControl1.FromLocalToLatLng(e.X, e.Y);
                 //string address = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng, apiKey);
-                string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
-                richTextBox1.Text = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng, api_key);
+          
+                richTextBox1.Text = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng,main.api_key);
                 label1.Text = richTextBox1.Text.Split(',')[0].Trim();
                 // Clear existing markers before placing a new one
                 markerOverlay.Markers.Clear();

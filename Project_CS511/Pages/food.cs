@@ -68,9 +68,7 @@ namespace Project_CS511.Pages
         #region calculate time and distance
         public (string Time, string Distance) getDistance(string origin, string destination)
         {
-            System.Threading.Thread.Sleep(1000);
-            string key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
-            string url = "https://maps.googleapis.com/maps/api/distancematrix/xml?origins=" + origin + "&destinations=" + destination + "&key=" + key;
+            string url = "https://maps.googleapis.com/maps/api/distancematrix/xml?origins=" + origin + "&destinations=" + destination + "&key=" + main.api_key;
             WebRequest request = WebRequest.Create(url);
             using (WebResponse response = (HttpWebResponse)request.GetResponse())
             {

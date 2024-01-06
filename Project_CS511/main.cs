@@ -25,7 +25,7 @@ namespace Project_CS511
         public maplocation maplocationPage;
         private menuBar menu;
         public DataSource dataSource = new DataSource();
-
+        public string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
         public string currentUser;
         public string tempLocation;
         public mainForm()
