@@ -43,7 +43,7 @@ namespace Project_CS511.SubPage
             {
                 PointLatLng clickedPoint = gMapControl1.FromLocalToLatLng(e.X, e.Y);
                 //string address = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng, apiKey);
-                string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
+                string api_key = "AIzaSyA0RHWaL6ZVibn_iR_68K9GI-s8g_rSPYU";
                 richTextBox1.Text = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng, api_key);
                 label1.Text = richTextBox1.Text.Split(',')[0].Trim();
                 // Clear existing markers before placing a new one
