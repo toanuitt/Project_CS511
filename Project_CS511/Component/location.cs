@@ -50,6 +50,15 @@ namespace Project_CS511.Component
             richtxtbox_address.Text = distance + ":" + address;
             label1.Text = address.Split(',')[0].Trim();
         }
+        public void passrecommendaddress(string address)
+        {
+            main.dataSource.SetCollection("user");
+            string userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
+            var (time, distance) = main.foodPage.getDistance(userlocation, address);
+            richtxtbox_address.Text = distance + ":" + address;
+            label1.Text = address.Split(',')[0].Trim();
+            btn_choose.Image = Properties.Resources.location;
+        }
     }
 }
 
