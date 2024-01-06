@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Project_CS511.Component
 {
@@ -42,13 +43,17 @@ namespace Project_CS511.Component
         }
         public void passaddress(string address)
         {
+          
             richtxtbox_address.Text = address;
             btn_choose.Image = Properties.Resources.aim;
             label1.Text = "Current location";
         }
         public void passhistoryaddress(string address)
         {
-            richtxtbox_address.Text = address;
+            main.dataSource.SetCollection("user");
+            string userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
+            var (time, distance) = main.foodPage.getDistance(userlocation, address);
+            richtxtbox_address.Text = distance + ":" + address;
             label1.Text = address.Split(',')[0].Trim();
         }
     }

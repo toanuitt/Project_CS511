@@ -66,7 +66,7 @@ namespace Project_CS511.Pages
             return lbl_address.Text;
         }
         #region calculate time and distance
-        public void getDistance(string origin, string destination)
+        public (string Time, string Distance) getDistance(string origin, string destination)
         {
             System.Threading.Thread.Sleep(1000);
             string key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
@@ -80,6 +80,7 @@ namespace Project_CS511.Pages
                     dsResult.ReadXml(reader);
                     string time = dsResult.Tables["duration"].Rows[0]["text"].ToString();
                     string distance = dsResult.Tables["distance"].Rows[0]["text"].ToString();
+                    return (time, distance);
                 }
             }
 

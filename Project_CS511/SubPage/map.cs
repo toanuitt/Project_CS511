@@ -29,6 +29,7 @@ namespace Project_CS511.SubPage
         {
             hideAllControls();
             main.maplocationPage.Show();
+            main.maplocationPage.Init();
             main.maplocationPage.getPage(number);
         }
 
@@ -94,13 +95,16 @@ namespace Project_CS511.SubPage
             var result = collections.Find(filter).ToList();
 
             // Reverse the order of documents for bottom-up display
-            for (int i = result.Count - 1; i >= 0; i--)
+            int displayCount = Math.Min(result.Count, 5);
+
+            // Reverse the order of documents for bottom-up display
+            for (int i = displayCount - 1; i >= 0; i--)
             {
                 var document = result[i];
                 var location = document.GetValue("location").AsString;
                 var newestlocation = new location(main);
                 newestlocation.passhistoryaddress(location);
-                flowLayoutPanel1.Controls.Add((newestlocation));
+                flowLayoutPanel1.Controls.Add(newestlocation);
             }
         }
     }
