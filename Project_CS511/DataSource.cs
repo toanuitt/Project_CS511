@@ -155,6 +155,12 @@ namespace Project_CS511
             return randDocument;
         }
 
+        public List<BsonDocument> findWithFilter(FilterDefinition<BsonDocument> filter)
+        {
+            var result = collection.Find(filter).ToList();
+            return result;
+        }
+
         #endregion
         #region Update
 
@@ -195,7 +201,6 @@ namespace Project_CS511
             var result = collection.UpdateMany(filter, update);
 
         }
-
 
         #endregion
 

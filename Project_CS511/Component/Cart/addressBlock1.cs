@@ -25,11 +25,7 @@ namespace Project_CS511.Component.Cart
         {
             main.dataSource.SetCollection("user");
             lb_phone.Text = main.dataSource.findValue("loginName", main.currentUser, "sdt");
-
-            main.dataSource.SetCollection("tempData");
-            lb_address.Text = main.dataSource.findValue("id", "1", "location");
-
-            main.dataSource.SetCollection("user");
+            lb_address.Text = main.dataSource.findValue("loginName", main.currentUser, "location");
         }
 
         private void lb_address_Click(object sender, EventArgs e)

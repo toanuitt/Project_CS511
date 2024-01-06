@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using Project_CS511.Component;
 using System;
 using System.Collections.Generic;
@@ -21,16 +22,6 @@ namespace Project_CS511.SubPage
         {
             InitializeComponent();
             this.main = main;
-            init();
-        }
-
-        private void init()
-        {
-            for(int i = 0; i < 10; i++)
-            {
-                foodCommentBubble b = new foodCommentBubble();
-                flowLayoutPanel1.Controls.Add(b);
-            }    
         }
 
         public void addDataFood(BsonDocument dataFood)
@@ -52,7 +43,87 @@ namespace Project_CS511.SubPage
             //add shop name
             main.dataSource.SetCollection("user");
             lb_store.Text = main.dataSource.findValue("userId", shopId, "username");
+
+            //add comment
+            addComment(foodId);
+
+            //add rating block
+            addRatingBlock(foodId);
         }
+
+        #region add Data
+        public void addComment(string foodId)
+        {
+            main.dataSource.SetCollection("foodComment");
+
+            List<BsonDocument> comments = main.dataSource.findMultipleDoc("foodId", foodId);
+            foreach (BsonDocument comment in comments)
+            {
+                foodCommentBubble foodCommentBubble = new foodCommentBubble(main);
+                foodCommentBubble.addData(comment);
+                flowLayoutPanel1.Controls.Add(foodCommentBubble);
+
+            }
+            main.dataSource.SetCollection("user");
+        }
+
+        public void addRatingBlock(string foodId)
+        {
+            main.dataSource.SetCollection("user");
+            List<string> boughtProduct = main.dataSource.findValue("loginName", main.currentUser, "boughtFood").Split('-').ToList();
+            //no product bought yet
+            if (boughtProduct[0] == "")
+                return;
+            
+            //not buy food yet
+            if(!boughtProduct.Contains(foodId)) return;
+
+            main.dataSource.SetCollection("foodComment");
+            //filter definition
+            var filter = Builders<BsonDocument>.Filter.And(
+                Builders<BsonDocument>.Filter.Eq("loginName", main.currentUser),
+                Builders<BsonDocument>.Filter.Eq("foodId", foodId)
+            );
+            //find document
+            List<BsonDocument> commentData = main.dataSource.findWithFilter(filter);
+
+            if(commentData.Count > 0)
+            {
+                ratingBlock ratingBlock = new ratingBlock(main, commentData[0]);
+                ratingBlock.foodId = foodId;
+                this.Controls.Add(ratingBlock);
+            }
+            else
+            {
+                ratingBlock ratingBlock = new ratingBlock(main, null);
+                ratingBlock.foodId = foodId;
+                this.Controls.Add(ratingBlock);
+            }
+
+            main.dataSource.SetCollection("user");
+        }
+        #endregion
+
+        public void refreshComment()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            addComment(foodId);
+        }
+        private void pb_addToCart_Click(object sender, EventArgs e)
+        {
+            notification();
+
+            main.dataSource.SetCollection("user");
+            string temp = main.dataSource.findValue("loginName", main.currentUser, "cart");
+
+            if (temp == "")
+            { temp += foodId; }
+            else
+            { temp += "-" + foodId; }
+
+            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", temp);
+        }
+
 
         #region Các Hàm chức năng
         private string getFoodPicturePath()
@@ -70,10 +141,9 @@ namespace Project_CS511.SubPage
             return money.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
         }
 
-        private void notification()
+        public void notification()
         {
             btn_success.Visible = true;
-
             System.Timers.Timer timer = new System.Timers.Timer
             {
                 Interval = 2000,
@@ -88,22 +158,6 @@ namespace Project_CS511.SubPage
             timer.Start();
         }
         #endregion
-
-        private void pb_addToCart_Click(object sender, EventArgs e)
-        {
-            notification();
-
-            main.dataSource.SetCollection("user");
-            string temp = main.dataSource.findValue("loginName", main.currentUser, "cart");
-
-            if(temp == "")
-            {  temp += foodId; }
-            else
-            { temp += "-" + foodId; }
-
-            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", temp);
-        }
-
         private void pb_back_Click(object sender, EventArgs e)
         {
             main.RemoveControlByName("foodSubPage");

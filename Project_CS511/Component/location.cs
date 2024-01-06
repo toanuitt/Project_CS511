@@ -29,12 +29,6 @@ namespace Project_CS511.Component
         #endregion
         private void btn_choose_Click(object sender, EventArgs e)
         {
-            string newLocation = richtxtbox_address.Text;
-            main.dataSource.SetCollection("tempData");
-            string oldLocation = main.dataSource.findValue("id", "1", "location");
-            main.dataSource.findAndReplaceOne("location", oldLocation, "location", newLocation);
-            main.dataSource.SetCollection("user");
-
             main.foodPage.SetLabelAddress(richtxtbox_address.Text.Split(',')[0].Trim());
             main.foodPage.userlocation = richtxtbox_address.Text;
             hideAllControls();

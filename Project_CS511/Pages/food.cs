@@ -106,10 +106,9 @@ namespace Project_CS511.Pages
         public string userlocation;
         public void Init()
         {
-            main.dataSource.SetCollection("tempData");
-            userlocation = main.dataSource.findValue("id", "1", "location");
-            lbl_address.Text = userlocation.Split(',')[0].Trim();
             main.dataSource.SetCollection("user");
+            userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
+            lbl_address.Text = userlocation.Substring(0, 12) + "...";
         }
     }
 }

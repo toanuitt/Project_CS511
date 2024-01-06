@@ -35,13 +35,11 @@
             this.lb_price = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_success = new System.Windows.Forms.Button();
             this.pb_back = new System.Windows.Forms.PictureBox();
             this.pb_addToCart = new System.Windows.Forms.PictureBox();
             this.pb_star = new System.Windows.Forms.PictureBox();
             this.pb_food = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_comment = new System.Windows.Forms.TextBox();
-            this.btn_success = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_addToCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star)).BeginInit();
@@ -100,20 +98,34 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Location = new System.Drawing.Point(-2, 330);
+            this.label2.Location = new System.Drawing.Point(-3, 330);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(391, 13);
+            this.label2.Size = new System.Drawing.Size(409, 13);
             this.label2.TabIndex = 15;
-            this.label2.Text = "________________________________________________________________";
+            this.label2.Text = "___________________________________________________________________";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 446);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 455);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(409, 184);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(409, 175);
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.WrapContents = false;
+            // 
+            // btn_success
+            // 
+            this.btn_success.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_success.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_success.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_success.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_success.Location = new System.Drawing.Point(122, 12);
+            this.btn_success.Name = "btn_success";
+            this.btn_success.Size = new System.Drawing.Size(142, 33);
+            this.btn_success.TabIndex = 19;
+            this.btn_success.Text = "Added to basket";
+            this.btn_success.UseVisualStyleBackColor = false;
+            this.btn_success.Visible = false;
             // 
             // pb_back
             // 
@@ -161,46 +173,11 @@
             this.pb_food.TabIndex = 0;
             this.pb_food.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 374);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 22);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Add Comment";
-            // 
-            // tb_comment
-            // 
-            this.tb_comment.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_comment.Location = new System.Drawing.Point(3, 410);
-            this.tb_comment.Name = "tb_comment";
-            this.tb_comment.Size = new System.Drawing.Size(386, 26);
-            this.tb_comment.TabIndex = 18;
-            // 
-            // btn_success
-            // 
-            this.btn_success.BackColor = System.Drawing.Color.OliveDrab;
-            this.btn_success.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_success.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_success.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_success.Location = new System.Drawing.Point(122, 12);
-            this.btn_success.Name = "btn_success";
-            this.btn_success.Size = new System.Drawing.Size(142, 33);
-            this.btn_success.TabIndex = 19;
-            this.btn_success.Text = "Added to basket";
-            this.btn_success.UseVisualStyleBackColor = false;
-            this.btn_success.Visible = false;
-            // 
             // foodSubPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_success);
-            this.Controls.Add(this.tb_comment);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_back);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
@@ -234,8 +211,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pb_back;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_comment;
         private System.Windows.Forms.Button btn_success;
     }
 }

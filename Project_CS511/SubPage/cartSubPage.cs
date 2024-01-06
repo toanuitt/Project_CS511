@@ -36,11 +36,15 @@ namespace Project_CS511.SubPage
         {
             main.dataSource.SetCollection("user");
 
-            string[] raw = main.dataSource.findValue("loginName", main.currentUser, "cart").Split('-');
-            List<string> productId = new List<string>(raw);
-            List<string> shops = fillAllShopInCart(productId);
-            fillAllOrder(productId, shops);
-            totalMoney();
+            string data = main.dataSource.findValue("loginName", main.currentUser, "cart");
+            if(data != "")
+            {
+                string[] raw = data.Split('-');
+                List<string> productId = new List<string>(raw);
+                List<string> shops = fillAllShopInCart(productId);
+                fillAllOrder(productId, shops);
+                totalMoney();
+            }
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -61,7 +65,6 @@ namespace Project_CS511.SubPage
         private List<string> fillAllShopInCart(List<string> productId)
         {
             List<string> shops = new List<string>();
-
             main.dataSource.SetCollection("food");
             foreach(string id in productId)
             {
@@ -111,7 +114,7 @@ namespace Project_CS511.SubPage
             lb_subTotal.Text = FormatMoney(total.ToString()) + "₫";
             //Calcute shipping fee
             
-            lb_total.Text = FormatMoney((total + 25000).ToString()) + "₫";
+            lb_total.Text = FormatMoney((total + 0).ToString()) + "₫";
         }
 
         private Control findControlByName(Control container, string controlName)
@@ -133,5 +136,45 @@ namespace Project_CS511.SubPage
             return money.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
         }
         #endregion
+
+        private void lb_placeOrder_Click(object sender, EventArgs e)
+        {
+            List<string> uniqueProduct = new List<string>();
+            main.dataSource.SetCollection("user");
+            string[] products = main.dataSource.findValue("loginName", main.currentUser, "cart").Split('-');
+            foreach (string product in products)
+            {
+                if(!uniqueProduct.Contains(product))
+                {
+                    uniqueProduct.Add(product);
+                }
+            }
+            List<string> boughtFoodList = main.dataSource.findValue("loginName", main.currentUser, "boughtFood").Split('-').ToList();
+
+            if (boughtFoodList[0] == "")
+            {
+                foreach(string food in uniqueProduct)
+                {
+                    boughtFoodList.Add(food);
+                }
+                boughtFoodList = boughtFoodList.Skip(1).ToList();
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", string.Join("-", boughtFoodList));
+                return;
+            }
+
+            foreach(string product in uniqueProduct)
+            {
+                if(!boughtFoodList.Contains(product))
+                {
+                    boughtFoodList.Add(product);
+                }
+            }
+
+            string productList = string.Join("-", boughtFoodList);
+            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
+
+        }
     }
 }

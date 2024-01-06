@@ -27,6 +27,7 @@ namespace Project_CS511
         public DataSource dataSource = new DataSource();
 
         public string currentUser;
+        public string tempLocation;
         public mainForm()
         {
             InitializeComponent();

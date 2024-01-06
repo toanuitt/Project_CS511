@@ -100,9 +100,9 @@
             this.lb_subTotal.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_subTotal.Location = new System.Drawing.Point(314, 12);
             this.lb_subTotal.Name = "lb_subTotal";
-            this.lb_subTotal.Size = new System.Drawing.Size(68, 19);
+            this.lb_subTotal.Size = new System.Drawing.Size(27, 19);
             this.lb_subTotal.TabIndex = 10;
-            this.lb_subTotal.Text = "25.000D";
+            this.lb_subTotal.Text = "0₫";
             // 
             // label1
             // 
@@ -130,9 +130,9 @@
             this.lb_shippingFee.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_shippingFee.Location = new System.Drawing.Point(314, 11);
             this.lb_shippingFee.Name = "lb_shippingFee";
-            this.lb_shippingFee.Size = new System.Drawing.Size(53, 19);
+            this.lb_shippingFee.Size = new System.Drawing.Size(27, 19);
             this.lb_shippingFee.TabIndex = 10;
-            this.lb_shippingFee.Text = "25000";
+            this.lb_shippingFee.Text = "0₫";
             // 
             // lb_shipping
             // 
@@ -161,9 +161,9 @@
             this.lb_total.ForeColor = System.Drawing.Color.DarkGreen;
             this.lb_total.Location = new System.Drawing.Point(307, 13);
             this.lb_total.Name = "lb_total";
-            this.lb_total.Size = new System.Drawing.Size(75, 23);
+            this.lb_total.Size = new System.Drawing.Size(31, 23);
             this.lb_total.TabIndex = 10;
-            this.lb_total.Text = "25.000D";
+            this.lb_total.Text = "0₫";
             // 
             // label4
             // 
@@ -187,6 +187,7 @@
             this.lb_placeOrder.Size = new System.Drawing.Size(110, 23);
             this.lb_placeOrder.TabIndex = 14;
             this.lb_placeOrder.Text = "Place Order";
+            this.lb_placeOrder.Click += new System.EventHandler(this.lb_placeOrder_Click);
             // 
             // pb_placeOrder
             // 
@@ -198,6 +199,7 @@
             this.pb_placeOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_placeOrder.TabIndex = 13;
             this.pb_placeOrder.TabStop = false;
+            this.pb_placeOrder.Click += new System.EventHandler(this.lb_placeOrder_Click);
             // 
             // flowLayoutPanel1
             // 

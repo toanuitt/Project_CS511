@@ -358,6 +358,12 @@
     <Compile Include="Component\paymentlist.Designer.cs">
       <DependentUpon>paymentlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\ratingBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\ratingBlock.Designer.cs">
+      <DependentUpon>ratingBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\restaurantBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -516,6 +522,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\paymentlist.resx">
       <DependentUpon>paymentlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\ratingBlock.resx">
+      <DependentUpon>ratingBlock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\restaurantBlock.resx">
       <DependentUpon>restaurantBlock.cs</DependentUpon>
@@ -883,6 +892,8 @@
     <Content Include="icons\food\9.png" />
     <Content Include="icons\food\food1.png" />
     <Content Include="icons\pen.png" />
+    <None Include="icons\star_off.png" />
+    <None Include="icons\star_on.png" />
     <Content Include="icons\trash.png" />
     <Content Include="icons\white_pen.png" />
     <None Include="Resources\clock.png" />

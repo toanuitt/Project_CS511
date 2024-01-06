@@ -70,6 +70,9 @@ namespace Project_CS511.Component
                 {"password", tb_password.Text },
                 {"location", "" },
                 {"userId", (main.dataSource.getLength()+1).ToString() },
+                {"coordinate", ""},
+                {"cart", "" },
+                {"boughtFood", ""}
             };
 
             //thêm dữ liệu vào database (lưu ý collection phải là user do đang cần thêm người dùng)
