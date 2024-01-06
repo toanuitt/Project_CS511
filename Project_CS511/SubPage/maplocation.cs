@@ -31,25 +31,7 @@ namespace Project_CS511.SubPage
 
         private void maplocation_Load(object sender, EventArgs e)
         {
-            gMapControl1.DragButton = MouseButtons.Right;
-            gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(10.8231, 106.6297); // Initial coordinates
-            gMapControl1.Zoom = 18;
-            gMapControl1.MouseClick += GMapControl1_MouseClick;
-            string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
-            richTextBox1.Text = GetAddressFromLatLng(10.8231, 106.6297, api_key);
-            label1.Text = richTextBox1.Text.Split(',')[0].Trim();
-            markerOverlay.Markers.Clear();
-
-            // Create a new marker
-            GMarkerGoogle marker = new GMarkerGoogle(gMapControl1.Position, GMarkerGoogleType.red);
-            markerOverlay.Markers.Add(marker);
-
-            // Add the overlay to the map
-            if (!gMapControl1.Overlays.Contains(markerOverlay))
-            {
-                gMapControl1.Overlays.Add(markerOverlay);
-            }
+         
         }
         #region Các Hàm chức năng
         private GMapOverlay markerOverlay = new GMapOverlay("markers");
@@ -106,6 +88,37 @@ namespace Project_CS511.SubPage
                     // Handle error cases
                     Console.WriteLine("Error: " + result.status);
                     return null;
+                }
+            }
+        }
+        // convert address into latitude and longtitude
+        static (double Latitude, double Longitude) GetLatLngFromAddress(string address, string apiKey)
+        {
+            string encodedAddress = Uri.EscapeDataString(address);
+            string apiUrl = $"https://maps.googleapis.com/maps/api/geocode/json?address={encodedAddress}&key={apiKey}";
+
+            using (WebClient wc = new WebClient())
+            {
+                wc.Encoding = Encoding.UTF8;
+                string json = wc.DownloadString(apiUrl);
+
+                // Parse the JSON response
+                dynamic result = JsonConvert.DeserializeObject(json);
+
+                // Check if the response status is OK
+                if (result.status == "OK")
+                {
+                    // Get the latitude and longitude
+                    double latitude = result.results[0].geometry.location.lat;
+                    double longitude = result.results[0].geometry.location.lng;
+
+                    return (latitude, longitude);
+                }
+                else
+                {
+                    // Handle error cases
+                    Console.WriteLine("Error: " + result.status);
+                    return (0, 0); // Return a default value or handle the error accordingly
                 }
             }
         }
@@ -198,6 +211,31 @@ namespace Project_CS511.SubPage
         {
             hideAllControls();
             main.mapPage.Show();
+        }
+        public void Init()
+        {
+            gMapControl1.DragButton = MouseButtons.Right;
+            gMapControl1.MapProvider = GMapProviders.GoogleMap;
+            string api_key = "AIzaSyBSYbQZksuYN9M8fbvOMzOfHKITwHcSyxg";
+            string address = main.foodPage.userlocation;
+            var (latitude, longitude) = GetLatLngFromAddress(address, api_key);
+            gMapControl1.Position = new PointLatLng(latitude, longitude); // Initial coordinates
+            gMapControl1.Zoom = 18;
+            gMapControl1.MouseClick += GMapControl1_MouseClick;
+
+            richTextBox1.Text = GetAddressFromLatLng(latitude, longitude, api_key);
+            label1.Text = richTextBox1.Text.Split(',')[0].Trim();
+            markerOverlay.Markers.Clear();
+
+            // Create a new marker
+            GMarkerGoogle marker = new GMarkerGoogle(gMapControl1.Position, GMarkerGoogleType.red);
+            markerOverlay.Markers.Add(marker);
+
+            // Add the overlay to the map
+            if (!gMapControl1.Overlays.Contains(markerOverlay))
+            {
+                gMapControl1.Overlays.Add(markerOverlay);
+            }
         }
     }
 }
