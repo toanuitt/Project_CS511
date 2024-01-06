@@ -47,6 +47,7 @@
             this.txtbox_address.Name = "txtbox_address";
             this.txtbox_address.Size = new System.Drawing.Size(417, 27);
             this.txtbox_address.TabIndex = 1;
+            this.txtbox_address.TextChanged += new System.EventHandler(this.txtbox_address_TextChanged);
             // 
             // btn_recent
             // 

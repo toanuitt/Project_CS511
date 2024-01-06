@@ -84,6 +84,8 @@ namespace Project_CS511.SubPage
         // setting the flowlayoutpanel to show the history
         public void Init()
         {
+            btn_saved.Visible = true;
+            btn_recent.Visible = true;
             var newlocation = new location(main);
             flowLayoutPanel1.Controls.Clear();
             main.dataSource.SetCollection("user");
@@ -106,6 +108,47 @@ namespace Project_CS511.SubPage
                 newestlocation.passhistoryaddress(location);
                 flowLayoutPanel1.Controls.Add(newestlocation);
             }
+        }
+
+        private void txtbox_address_TextChanged(object sender, EventArgs e)
+        {
+            btn_saved.Visible = false;
+            btn_recent.Visible = false;
+            flowLayoutPanel1.Controls.Clear();
+            
+            IMongoCollection<BsonDocument> collections = main.dataSource.data.GetCollection<BsonDocument>("address");
+            if (txtbox_address.Text != "")
+            {
+                var filter = Builders<BsonDocument>.Filter.Regex("address", new BsonRegularExpression(txtbox_address.Text, "i"));
+                var matchingDocuments = collections.Find(filter).ToList();
+                foreach (var document in matchingDocuments)
+                {
+                    if (document.Contains("address"))
+                    {
+                        var addressValue = document["address"].AsString;
+                        var newestlocation = new location(main);
+                        newestlocation.passrecommendaddress(addressValue);
+                        flowLayoutPanel1.Controls.Add(newestlocation);
+
+                    }
+                }
+            }
+            else
+            {
+                var allDocuments = collections.Find(Builders<BsonDocument>.Filter.Empty).ToList();
+                foreach (var document in allDocuments)
+                {
+                    if (document.Contains("address"))
+                    {
+                        var addressValue = document["address"].AsString;
+                        var newestlocation = new location(main);
+                        newestlocation.passrecommendaddress(addressValue);
+                        flowLayoutPanel1.Controls.Add(newestlocation);
+
+                    }
+                }
+            }
+
         }
     }
 }

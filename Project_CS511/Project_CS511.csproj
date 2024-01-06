@@ -885,6 +885,7 @@
     <Content Include="icons\pen.png" />
     <Content Include="icons\trash.png" />
     <Content Include="icons\white_pen.png" />
+    <None Include="Resources\location.png" />
     <None Include="Resources\clock.png" />
     <None Include="Resources\aim.png" />
   </ItemGroup>
