@@ -128,6 +128,17 @@ namespace Project_CS511
         public void loginSuccess()
         {
             RemoveControlByName("logSignIn");
+            updateTempData();
+        }
+
+        public void updateTempData()
+        {
+            dataSource.SetCollection("user");
+            string newLocation = dataSource.findValue("loginName", currentUser, "location");
+            dataSource.SetCollection("tempData");
+            string oldLocation = dataSource.findValue("id", "1", "location");
+            dataSource.findAndReplaceOne("location", oldLocation, "location", newLocation);
+            //dataSource.SetCollection("user");
         }
         #endregion
     }

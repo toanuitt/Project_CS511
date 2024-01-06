@@ -65,6 +65,12 @@ namespace Project_CS511.SubPage
             else
             {
                 main.dataSource.findAndReplaceOne("loginName", main.currentUser, "loginName", tb_username.Text);
+
+                main.dataSource.SetCollection("location");
+                main.dataSource.findAndReplaceMany("userid", main.currentUser, "userid", tb_username.Text);
+                main.dataSource.SetCollection("user");
+
+
                 main.currentUser = tb_username.Text;
                 lb_usernameError.ForeColor = Color.DarkGreen;
                 lb_usernameError.Text = "Update Sucess";
