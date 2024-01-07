@@ -27,6 +27,7 @@ namespace Project_CS511
         public DataSource dataSource = new DataSource();
         public string api_key = "AIzaSyAJRMpBYJh-Rkbr3ozfr_m7LEjCjy--Lzc";
         public string currentUser;
+        public string currentId;
         public string tempLocation;
         public mainForm()
         {

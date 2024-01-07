@@ -103,7 +103,7 @@ namespace Project_CS511.SubPage
             }
         }
 
-        private void totalMoney()
+        public void totalMoney()
         {
             int total = 0;
             foreach(Control c in flowLayoutPanel1.Controls)

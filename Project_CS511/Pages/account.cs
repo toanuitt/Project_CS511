@@ -109,6 +109,13 @@ namespace Project_CS511.Pages
             main.bringControlToFront(f);
         }
 
+        private void lb_favourites_Click(object sender, EventArgs e)
+        {
+            likedSubPage f = new likedSubPage(main);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
+        }
+
         private void pn_changeUsername_Paint(object sender, PaintEventArgs e)
         {
 
@@ -146,13 +153,13 @@ namespace Project_CS511.Pages
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string selectedFilePath = openFileDialog.FileName;
-                string destinationFolder = Path.Combine(getAvatarPath(), main.currentUser + ".png");
+                string destinationFolder = Path.Combine(getAvatarPath(), main.currentId + ".png");
 
                 try
                 {
                     pb_avatar.Image.Dispose();
                     File.Copy(selectedFilePath, destinationFolder, true);
-                    reloadAvatar();
+                    reloadAvatar(main.currentId);
                     MessageBox.Show("Image copied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -170,9 +177,9 @@ namespace Project_CS511.Pages
 
         }
 
-        public void reloadAvatar()
+        public void reloadAvatar(string id)
         {
-            string avatarPath = getAvatarPath() + main.currentUser + ".png";
+            string avatarPath = getAvatarPath() + id + ".png";
             if (File.Exists(avatarPath))
             {
                 pb_avatar.Image = Image.FromFile(avatarPath);
@@ -181,6 +188,12 @@ namespace Project_CS511.Pages
             {
                 pb_avatar.Image = Resources.customer_active;
             }
+        }
+
+
+        private void pn_favourites_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

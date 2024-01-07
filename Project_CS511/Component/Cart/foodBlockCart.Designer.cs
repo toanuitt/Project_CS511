@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(foodBlockCart));
             this.lb_foodName = new System.Windows.Forms.Label();
             this.lb_number = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_money = new System.Windows.Forms.Label();
             this.pb_foodPic = new System.Windows.Forms.PictureBox();
+            this.pb_add = new System.Windows.Forms.PictureBox();
+            this.pb_sub = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_sub)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_foodName
@@ -73,7 +78,7 @@
             // 
             this.lb_money.AutoSize = true;
             this.lb_money.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_money.Location = new System.Drawing.Point(279, 17);
+            this.lb_money.Location = new System.Drawing.Point(268, 3);
             this.lb_money.MaximumSize = new System.Drawing.Size(200, 46);
             this.lb_money.Name = "lb_money";
             this.lb_money.Size = new System.Drawing.Size(65, 19);
@@ -90,10 +95,34 @@
             this.pb_foodPic.TabIndex = 5;
             this.pb_foodPic.TabStop = false;
             // 
+            // pb_add
+            // 
+            this.pb_add.Image = ((System.Drawing.Image)(resources.GetObject("pb_add.Image")));
+            this.pb_add.Location = new System.Drawing.Point(65, 28);
+            this.pb_add.Name = "pb_add";
+            this.pb_add.Size = new System.Drawing.Size(25, 25);
+            this.pb_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_add.TabIndex = 12;
+            this.pb_add.TabStop = false;
+            this.pb_add.Click += new System.EventHandler(this.pb_add_Click);
+            // 
+            // pb_sub
+            // 
+            this.pb_sub.Image = ((System.Drawing.Image)(resources.GetObject("pb_sub.Image")));
+            this.pb_sub.Location = new System.Drawing.Point(113, 28);
+            this.pb_sub.Name = "pb_sub";
+            this.pb_sub.Size = new System.Drawing.Size(25, 25);
+            this.pb_sub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_sub.TabIndex = 13;
+            this.pb_sub.TabStop = false;
+            this.pb_sub.Click += new System.EventHandler(this.pb_sub_Click);
+            // 
             // foodBlockCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pb_sub);
+            this.Controls.Add(this.pb_add);
             this.Controls.Add(this.lb_money);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_number);
@@ -102,6 +131,8 @@
             this.Name = "foodBlockCart";
             this.Size = new System.Drawing.Size(351, 56);
             ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_sub)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +145,7 @@
         private System.Windows.Forms.Label lb_number;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_money;
+        private System.Windows.Forms.PictureBox pb_add;
+        private System.Windows.Forms.PictureBox pb_sub;
     }
 }

@@ -298,6 +298,12 @@
     <Compile Include="Component\chatBlock.Designer.cs">
       <DependentUpon>chatBlock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\favouriteBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\favouriteBlock.Designer.cs">
+      <DependentUpon>favouriteBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\foodBlock.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -433,6 +439,12 @@
     <Compile Include="SubPage\foodSubPage.Designer.cs">
       <DependentUpon>foodSubPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubPage\likedSubPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\likedSubPage.Designer.cs">
+      <DependentUpon>likedSubPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubPage\logSignIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -493,6 +505,9 @@
     <EmbeddedResource Include="Component\chatBlock.resx">
       <DependentUpon>chatBlock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component\favouriteBlock.resx">
+      <DependentUpon>favouriteBlock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\foodBlock.resx">
       <DependentUpon>foodBlock.cs</DependentUpon>
     </EmbeddedResource>
@@ -540,6 +555,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubPage\foodSubPage.resx">
       <DependentUpon>foodSubPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\likedSubPage.resx">
+      <DependentUpon>likedSubPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubPage\logSignIn.resx">
       <DependentUpon>logSignIn.cs</DependentUpon>

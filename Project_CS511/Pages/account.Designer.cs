@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(account));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pb_edit = new System.Windows.Forms.PictureBox();
-            this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.lb_name = new System.Windows.Forms.Label();
             this.pn_changeUsername = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,15 +48,17 @@
             this.lb_payment = new System.Windows.Forms.Label();
             this.lb_logOut = new System.Windows.Forms.Label();
             this.pb_logOut = new System.Windows.Forms.PictureBox();
+            this.pb_edit = new System.Windows.Forms.PictureBox();
+            this.pb_avatar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             this.pn_changeUsername.SuspendLayout();
             this.pn_changePassword.SuspendLayout();
             this.pn_favourites.SuspendLayout();
             this.pn_savedPlaces.SuspendLayout();
             this.pn_payment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,28 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 128);
             this.panel1.TabIndex = 0;
-            // 
-            // pb_edit
-            // 
-            this.pb_edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_edit.Image = global::Project_CS511.Properties.Resources.white_pen;
-            this.pb_edit.Location = new System.Drawing.Point(344, 69);
-            this.pb_edit.Name = "pb_edit";
-            this.pb_edit.Size = new System.Drawing.Size(30, 28);
-            this.pb_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_edit.TabIndex = 6;
-            this.pb_edit.TabStop = false;
-            this.pb_edit.Click += new System.EventHandler(this.pb_edit_Click);
-            // 
-            // pb_avatar
-            // 
-            this.pb_avatar.Image = global::Project_CS511.Properties.Resources.customer_active;
-            this.pb_avatar.Location = new System.Drawing.Point(264, 19);
-            this.pb_avatar.Name = "pb_avatar";
-            this.pb_avatar.Size = new System.Drawing.Size(82, 78);
-            this.pb_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_avatar.TabIndex = 5;
-            this.pb_avatar.TabStop = false;
             // 
             // lb_name
             // 
@@ -197,6 +175,7 @@
             this.label3.Size = new System.Drawing.Size(28, 31);
             this.label3.TabIndex = 9;
             this.label3.Text = ">";
+            this.label3.Click += new System.EventHandler(this.lb_favourites_Click);
             this.label3.MouseEnter += new System.EventHandler(this.lb_favourites_MouseEnter);
             // 
             // lb_favourites
@@ -209,6 +188,7 @@
             this.lb_favourites.Size = new System.Drawing.Size(109, 22);
             this.lb_favourites.TabIndex = 8;
             this.lb_favourites.Text = "Favourites";
+            this.lb_favourites.Click += new System.EventHandler(this.lb_favourites_Click);
             this.lb_favourites.MouseEnter += new System.EventHandler(this.lb_favourites_MouseEnter);
             this.lb_favourites.MouseLeave += new System.EventHandler(this.pn_favourites_MouseLeave);
             // 
@@ -221,6 +201,8 @@
             this.pn_favourites.Name = "pn_favourites";
             this.pn_favourites.Size = new System.Drawing.Size(397, 58);
             this.pn_favourites.TabIndex = 10;
+            this.pn_favourites.Click += new System.EventHandler(this.lb_favourites_Click);
+            this.pn_favourites.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_favourites_Paint);
             this.pn_favourites.MouseEnter += new System.EventHandler(this.lb_favourites_MouseEnter);
             this.pn_favourites.MouseLeave += new System.EventHandler(this.pn_favourites_MouseLeave);
             // 
@@ -327,6 +309,28 @@
             this.pb_logOut.TabStop = false;
             this.pb_logOut.Click += new System.EventHandler(this.lb_logOut_Click);
             // 
+            // pb_edit
+            // 
+            this.pb_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_edit.Image = global::Project_CS511.Properties.Resources.white_pen;
+            this.pb_edit.Location = new System.Drawing.Point(344, 69);
+            this.pb_edit.Name = "pb_edit";
+            this.pb_edit.Size = new System.Drawing.Size(30, 28);
+            this.pb_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_edit.TabIndex = 6;
+            this.pb_edit.TabStop = false;
+            this.pb_edit.Click += new System.EventHandler(this.pb_edit_Click);
+            // 
+            // pb_avatar
+            // 
+            this.pb_avatar.Image = global::Project_CS511.Properties.Resources.customer_active;
+            this.pb_avatar.Location = new System.Drawing.Point(264, 19);
+            this.pb_avatar.Name = "pb_avatar";
+            this.pb_avatar.Size = new System.Drawing.Size(82, 78);
+            this.pb_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_avatar.TabIndex = 5;
+            this.pb_avatar.TabStop = false;
+            // 
             // account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,8 +347,6 @@
             this.Size = new System.Drawing.Size(400, 520);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).EndInit();
             this.pn_changeUsername.ResumeLayout(false);
             this.pn_changeUsername.PerformLayout();
             this.pn_changePassword.ResumeLayout(false);
@@ -356,6 +358,8 @@
             this.pn_payment.ResumeLayout(false);
             this.pn_payment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
