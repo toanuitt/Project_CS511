@@ -82,6 +82,7 @@
             this.pb_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_edit.TabIndex = 6;
             this.pb_edit.TabStop = false;
+            this.pb_edit.Click += new System.EventHandler(this.pb_edit_Click);
             // 
             // pb_avatar
             // 

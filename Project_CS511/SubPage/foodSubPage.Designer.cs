@@ -36,10 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_success = new System.Windows.Forms.Button();
+            this.pb_like = new System.Windows.Forms.PictureBox();
             this.pb_back = new System.Windows.Forms.PictureBox();
             this.pb_addToCart = new System.Windows.Forms.PictureBox();
             this.pb_star = new System.Windows.Forms.PictureBox();
             this.pb_food = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_like)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_addToCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star)).BeginInit();
@@ -127,6 +129,18 @@
             this.btn_success.UseVisualStyleBackColor = false;
             this.btn_success.Visible = false;
             // 
+            // pb_like
+            // 
+            this.pb_like.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_like.Image = ((System.Drawing.Image)(resources.GetObject("pb_like.Image")));
+            this.pb_like.Location = new System.Drawing.Point(301, 223);
+            this.pb_like.Name = "pb_like";
+            this.pb_like.Size = new System.Drawing.Size(40, 36);
+            this.pb_like.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_like.TabIndex = 20;
+            this.pb_like.TabStop = false;
+            this.pb_like.Click += new System.EventHandler(this.pb_like_Click);
+            // 
             // pb_back
             // 
             this.pb_back.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -177,6 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pb_like);
             this.Controls.Add(this.btn_success);
             this.Controls.Add(this.pb_back);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -190,6 +205,7 @@
             this.Controls.Add(this.pb_food);
             this.Name = "foodSubPage";
             this.Size = new System.Drawing.Size(400, 600);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_like)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_addToCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star)).EndInit();
@@ -212,5 +228,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pb_back;
         private System.Windows.Forms.Button btn_success;
+        private System.Windows.Forms.PictureBox pb_like;
     }
 }

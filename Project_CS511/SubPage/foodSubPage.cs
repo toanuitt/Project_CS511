@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using Project_CS511.Component;
+using Project_CS511.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Project_CS511.SubPage
     {
         mainForm main;
         string foodId;
+        bool liked = false;
         public foodSubPage(mainForm main)
         {
             InitializeComponent();
@@ -49,6 +51,14 @@ namespace Project_CS511.SubPage
 
             //add rating block
             addRatingBlock(foodId);
+
+            //add heart
+            List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "liked").Split('-').ToList();
+            if(likedProduct.Contains(foodId))
+            {
+                pb_like.Image = Resources.heart_on;
+                liked = true;
+            }
         }
 
         #region add Data
@@ -101,6 +111,18 @@ namespace Project_CS511.SubPage
             }
 
             main.dataSource.SetCollection("user");
+        }
+
+        public void addHeart(string foodId)
+        {
+            main.dataSource.SetCollection("user");
+            List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "liked").Split('-').ToList();
+
+            if(likedProduct.Contains(foodId))
+            {
+                pb_like.Image = Resources.heart_on;
+                liked = true;
+            }
         }
         #endregion
 
@@ -157,10 +179,58 @@ namespace Project_CS511.SubPage
             };
             timer.Start();
         }
+
+        private void addToLiked(string foodId)
+        {
+            main.dataSource.SetCollection("user");
+            List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "liked").Split('-').ToList();
+
+            if (likedProduct[0] == "")
+            {
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "liked", foodId);
+            }
+            else
+            {
+                string newLiked = main.dataSource.findValue("loginName", main.currentUser, "liked") + "-" +foodId;
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "liked", newLiked);
+            }      
+        }
+
+        private void removeFromLiked(string foodId)
+        {
+            main.dataSource.SetCollection("user");
+            List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "liked").Split('-').ToList();
+
+            if (likedProduct.Count == 1)
+            {
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "liked", "");
+            }
+            else
+            {
+                likedProduct.Remove(foodId);
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "liked", string.Join("-", likedProduct));
+            }
+        }
         #endregion
         private void pb_back_Click(object sender, EventArgs e)
         {
             main.RemoveControlByName("foodSubPage");
+        }
+
+        private void pb_like_Click(object sender, EventArgs e)
+        {
+            if(liked)
+            {
+                pb_like.Image = Resources.heart_off;
+                removeFromLiked(foodId);
+                liked = false;
+            }
+            else
+            {
+                pb_like.Image = Resources.heart_on;
+                addToLiked(foodId);
+                liked = true;
+            }
         }
     }
 }

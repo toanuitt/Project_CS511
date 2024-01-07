@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,18 @@ namespace Project_CS511.Component
 
             //add comment
             lb_comment.Text = data["comment"].AsString;
+
+            string avatarPath = getAvatarPath() + main.currentUser + ".png";
+
+            if(File.Exists(avatarPath))
+            {
+                pb_avatar.Image = Image.FromFile(avatarPath);
+            }
+            else
+            {
+                pb_avatar.Image = Resources.customer_active;
+            }
+
         }
 
         private void loadStart(string start)
@@ -75,6 +88,14 @@ namespace Project_CS511.Component
                 pictureBox4.Image = Resources.star_on;
                 pictureBox5.Image = Resources.star_on;
             }
+        }
+
+        private string getAvatarPath()
+        {
+            string[] s = { "\\bin" };
+            string currentPath = Application.StartupPath.Split(s, StringSplitOptions.None)[0] + "\\icons\\avatar\\";
+            return currentPath;
+
         }
     }
 }

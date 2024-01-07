@@ -891,6 +891,8 @@
     <Content Include="icons\food\8.png" />
     <Content Include="icons\food\9.png" />
     <Content Include="icons\food\food1.png" />
+    <None Include="icons\heart_off.png" />
+    <None Include="icons\heart_on.png" />
     <Content Include="icons\pen.png" />
     <None Include="icons\star_off.png" />
     <None Include="icons\star_on.png" />
@@ -900,7 +902,9 @@
     <None Include="Resources\clock.png" />
     <None Include="Resources\aim.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="icons\avatar\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,9 +1,11 @@
-﻿using Project_CS511.SubPage;
+﻿using Project_CS511.Properties;
+using Project_CS511.SubPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,7 @@ namespace Project_CS511.Pages
             InitializeComponent();
             this.main = main;
             init();
+
         }
 
         public void init()
@@ -133,6 +136,51 @@ namespace Project_CS511.Pages
         private void pn_savedPlaces_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pb_edit_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = openFileDialog.FileName;
+                string destinationFolder = Path.Combine(getAvatarPath(), main.currentUser + ".png");
+
+                try
+                {
+                    pb_avatar.Image.Dispose();
+                    File.Copy(selectedFilePath, destinationFolder, true);
+                    reloadAvatar();
+                    MessageBox.Show("Image copied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                }
+            }
+        }
+
+        private string getAvatarPath()
+        {
+            string[] s = { "\\bin" };
+            string currentPath = Application.StartupPath.Split(s, StringSplitOptions.None)[0] + "\\icons\\avatar\\";
+            return currentPath;
+
+        }
+
+        public void reloadAvatar()
+        {
+            string avatarPath = getAvatarPath() + main.currentUser + ".png";
+            if (File.Exists(avatarPath))
+            {
+                pb_avatar.Image = Image.FromFile(avatarPath);
+            }
+            else
+            {
+                pb_avatar.Image = Resources.customer_active;
+            }
         }
     }
 }
