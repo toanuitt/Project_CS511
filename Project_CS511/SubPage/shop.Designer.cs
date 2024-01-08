@@ -163,6 +163,7 @@
             // 
             // cb_filter
             // 
+            this.cb_filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_filter.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_filter.FormattingEnabled = true;
             this.cb_filter.Location = new System.Drawing.Point(296, 11);
