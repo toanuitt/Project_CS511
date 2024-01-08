@@ -18,12 +18,13 @@ namespace Project_CS511.Component
         {
             InitializeComponent();
             this.main = main;
-            init();
+            addFood();
         }
 
-        private void init()
+        public void addFood()
         {
-            for (int i = 0; i < 5; i++)
+            flowLayoutPanel1.Controls.Clear();
+            for (int i = 0; i < 10; i++)
             {
                 //create new food block
                 foodBlock f = new foodBlock(main);

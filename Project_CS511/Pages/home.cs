@@ -14,6 +14,7 @@ namespace Project_CS511.Pages
     public partial class home : UserControl
     {
         mainForm main;
+        foodSlide foodSlide1;
         public home(mainForm main)
         {
             InitializeComponent();
@@ -32,11 +33,12 @@ namespace Project_CS511.Pages
 
             foodSlide foodSlide = new foodSlide(main);
             flp_home.Controls.Add(foodSlide);
+            foodSlide1 = foodSlide;
         }
 
-        public mainForm GetMain()
+        public void updateFoodAfterDelete()
         {
-            return main;
+            foodSlide1.addFood();
         }
         private void flp_home_Paint(object sender, PaintEventArgs e)
         {

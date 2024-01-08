@@ -116,6 +116,13 @@ namespace Project_CS511.Pages
             main.bringControlToFront(f);
         }
 
+        private void lb_store_Click(object sender, EventArgs e)
+        {
+            yourStore f = new yourStore(main);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
+        }
+
         private void pn_changeUsername_Paint(object sender, PaintEventArgs e)
         {
 
@@ -192,6 +199,16 @@ namespace Project_CS511.Pages
 
 
         private void pn_favourites_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pn_payment_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pb_avatar_Click(object sender, EventArgs e)
         {
 
         }

@@ -141,6 +141,10 @@ namespace Project_CS511.Component
 
         private void addNewComment()
         {
+            main.dataSource.SetCollection("genericInfo");
+            int newMaxId = Int32.Parse(main.dataSource.findValue("id", "1", "maxFoodCommentID"))+1;
+            main.dataSource.findAndReplaceOne("id", "1", "maxFoodCommentID", newMaxId.ToString());
+
             main.dataSource.SetCollection("foodComment");
 
             DateTime currentDate = DateTime.Now;
@@ -150,7 +154,7 @@ namespace Project_CS511.Component
             {
                 {"loginName", main.currentUser },
                 {"foodId", foodId},
-                {"commentId", (main.dataSource.getLength()+1).ToString() },
+                {"commentId", newMaxId.ToString()},
                 {"rating", rating },
                 {"time", formattedDate },
                 {"comment", tb_comment.Text },

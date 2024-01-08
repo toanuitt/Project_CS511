@@ -161,6 +161,36 @@ namespace Project_CS511
             return result;
         }
 
+        public List<string> getAttributeValues( string attributeName)
+        {
+            // Create a filter to retrieve all documents
+            var filter = Builders<BsonDocument>.Filter.Empty;
+
+            // Project the specified attribute
+            var projection = Builders<BsonDocument>.Projection.Include(attributeName);
+
+            // Execute the find operation with the specified filter and projection
+            var cursor = collection.Find(filter).Project(projection).ToCursor();
+
+            // Create a list to store the attribute values
+            List<string> attributeValues = new List<string>();
+
+            // Iterate through the cursor and extract the attribute values
+            foreach (var document in cursor.ToEnumerable())
+            {
+                if (document.Contains(attributeName))
+                {
+                    attributeValues.Add(document[attributeName].AsString);
+                }
+                else
+                {
+                    // Handle cases where the attribute is missing in a document
+                    attributeValues.Add("N/A");
+                }
+            }
+
+            return attributeValues;
+        }
         #endregion
         #region Update
 
@@ -203,6 +233,18 @@ namespace Project_CS511
         }
 
         #endregion
+
+        public void deleteOneByValue(string attr, string value)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq(attr, value);
+            collection.DeleteOne(filter);
+        }
+
+        public void deleteManyByValue(string attr, string value)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq(attr, value);
+            collection.DeleteMany(filter);
+        }
 
         #region Cac Ham chuc nang
         public BsonArray ConvertToBsonArray(string jsonString)

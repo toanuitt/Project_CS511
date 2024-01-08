@@ -106,7 +106,10 @@ namespace Project_CS511.Pages
         {
             main.dataSource.SetCollection("user");
             userlocation = main.dataSource.findValue("loginName", main.currentUser, "location");
-            lbl_address.Text = userlocation.Substring(0, 12) + "...";
+            if(userlocation != "")
+                lbl_address.Text = userlocation.Substring(0, 12) + "...";
+            else
+                lbl_address.Text = "Please update your location";
         }
     }
 }

@@ -129,7 +129,7 @@ namespace Project_CS511.SubPage
         {
             if (cb_filter.SelectedIndex != -1)
             {
-                string selectedItem = cb_filter.SelectedItem.ToString().ToLower().Replace(" ", "");
+                string selectedItem = cb_filter.SelectedItem.ToString();
                 foreach (Control c in flowLayoutPanel1.Controls)
                 {
                     shopFoodBlock foodBlock = (shopFoodBlock)c;

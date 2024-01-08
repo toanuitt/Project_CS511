@@ -45,7 +45,7 @@
             this.lb_savedPlaces = new System.Windows.Forms.Label();
             this.pn_payment = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.lb_payment = new System.Windows.Forms.Label();
+            this.lb_store = new System.Windows.Forms.Label();
             this.lb_logOut = new System.Windows.Forms.Label();
             this.pb_logOut = new System.Windows.Forms.PictureBox();
             this.pb_edit = new System.Windows.Forms.PictureBox();
@@ -197,7 +197,7 @@
             this.pn_favourites.Controls.Add(this.label3);
             this.pn_favourites.Controls.Add(this.lb_favourites);
             this.pn_favourites.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pn_favourites.Location = new System.Drawing.Point(3, 314);
+            this.pn_favourites.Location = new System.Drawing.Point(3, 371);
             this.pn_favourites.Name = "pn_favourites";
             this.pn_favourites.Size = new System.Drawing.Size(397, 58);
             this.pn_favourites.TabIndex = 10;
@@ -211,7 +211,7 @@
             this.pn_savedPlaces.Controls.Add(this.label4);
             this.pn_savedPlaces.Controls.Add(this.lb_savedPlaces);
             this.pn_savedPlaces.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pn_savedPlaces.Location = new System.Drawing.Point(3, 371);
+            this.pn_savedPlaces.Location = new System.Drawing.Point(3, 314);
             this.pn_savedPlaces.Name = "pn_savedPlaces";
             this.pn_savedPlaces.Size = new System.Drawing.Size(397, 58);
             this.pn_savedPlaces.TabIndex = 10;
@@ -237,7 +237,7 @@
             this.lb_savedPlaces.AutoSize = true;
             this.lb_savedPlaces.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_savedPlaces.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_savedPlaces.Location = new System.Drawing.Point(14, 16);
+            this.lb_savedPlaces.Location = new System.Drawing.Point(14, 15);
             this.lb_savedPlaces.Name = "lb_savedPlaces";
             this.lb_savedPlaces.Size = new System.Drawing.Size(123, 22);
             this.lb_savedPlaces.TabIndex = 8;
@@ -249,12 +249,14 @@
             // pn_payment
             // 
             this.pn_payment.Controls.Add(this.label5);
-            this.pn_payment.Controls.Add(this.lb_payment);
+            this.pn_payment.Controls.Add(this.lb_store);
             this.pn_payment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pn_payment.Location = new System.Drawing.Point(3, 257);
             this.pn_payment.Name = "pn_payment";
             this.pn_payment.Size = new System.Drawing.Size(397, 58);
             this.pn_payment.TabIndex = 11;
+            this.pn_payment.Click += new System.EventHandler(this.lb_store_Click);
+            this.pn_payment.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_payment_Paint);
             this.pn_payment.MouseEnter += new System.EventHandler(this.lb_payment_MouseEnter);
             this.pn_payment.MouseLeave += new System.EventHandler(this.pn_payment_MouseLeave);
             // 
@@ -268,20 +270,22 @@
             this.label5.Size = new System.Drawing.Size(28, 31);
             this.label5.TabIndex = 9;
             this.label5.Text = ">";
+            this.label5.Click += new System.EventHandler(this.lb_store_Click);
             this.label5.MouseEnter += new System.EventHandler(this.lb_payment_MouseEnter);
             // 
-            // lb_payment
+            // lb_store
             // 
-            this.lb_payment.AutoSize = true;
-            this.lb_payment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_payment.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_payment.Location = new System.Drawing.Point(14, 16);
-            this.lb_payment.Name = "lb_payment";
-            this.lb_payment.Size = new System.Drawing.Size(166, 22);
-            this.lb_payment.TabIndex = 8;
-            this.lb_payment.Text = "Payment Method";
-            this.lb_payment.MouseEnter += new System.EventHandler(this.lb_payment_MouseEnter);
-            this.lb_payment.MouseLeave += new System.EventHandler(this.pn_payment_MouseLeave);
+            this.lb_store.AutoSize = true;
+            this.lb_store.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_store.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_store.Location = new System.Drawing.Point(14, 16);
+            this.lb_store.Name = "lb_store";
+            this.lb_store.Size = new System.Drawing.Size(109, 22);
+            this.lb_store.TabIndex = 8;
+            this.lb_store.Text = "Your Store";
+            this.lb_store.Click += new System.EventHandler(this.lb_store_Click);
+            this.lb_store.MouseEnter += new System.EventHandler(this.lb_payment_MouseEnter);
+            this.lb_store.MouseLeave += new System.EventHandler(this.pn_payment_MouseLeave);
             // 
             // lb_logOut
             // 
@@ -330,6 +334,7 @@
             this.pb_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_avatar.TabIndex = 5;
             this.pb_avatar.TabStop = false;
+            this.pb_avatar.Click += new System.EventHandler(this.pb_avatar_Click);
             // 
             // account
             // 
@@ -385,7 +390,7 @@
         private System.Windows.Forms.Label lb_savedPlaces;
         private System.Windows.Forms.Panel pn_payment;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lb_payment;
+        private System.Windows.Forms.Label lb_store;
         private System.Windows.Forms.Label lb_logOut;
         private System.Windows.Forms.PictureBox pb_logOut;
     }
