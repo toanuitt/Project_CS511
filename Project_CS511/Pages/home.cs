@@ -23,6 +23,10 @@ namespace Project_CS511.Pages
 
         private void init()
         {
+            restaurantSlide restaurantSlide = new restaurantSlide(main);
+            flp_home.Controls.Add(restaurantSlide);
+            flp_home.Controls.SetChildIndex(restaurantSlide, 2);
+
             adSlide adSlide = new adSlide();
             flp_home.Controls.Add(adSlide);
 
@@ -30,6 +34,10 @@ namespace Project_CS511.Pages
             flp_home.Controls.Add(foodSlide);
         }
 
+        public mainForm GetMain()
+        {
+            return main;
+        }
         private void flp_home_Paint(object sender, PaintEventArgs e)
         {
 

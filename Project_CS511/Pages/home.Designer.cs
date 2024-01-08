@@ -32,7 +32,6 @@
             this.flp_home = new System.Windows.Forms.FlowLayoutPanel();
             this.pic_advertisement = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.restaurantSlide1 = new Project_CS511.Component.restaurantSlide();
             this.label2 = new System.Windows.Forms.Label();
             this.flp_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_advertisement)).BeginInit();
@@ -43,7 +42,6 @@
             this.flp_home.AutoScroll = true;
             this.flp_home.Controls.Add(this.pic_advertisement);
             this.flp_home.Controls.Add(this.label1);
-            this.flp_home.Controls.Add(this.restaurantSlide1);
             this.flp_home.Controls.Add(this.label2);
             this.flp_home.Location = new System.Drawing.Point(-5, -4);
             this.flp_home.Name = "flp_home";
@@ -70,14 +68,6 @@
             this.label1.Size = new System.Drawing.Size(248, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Restaurants you may like ➜";
-            // 
-            // restaurantSlide1
-            // 
-            this.restaurantSlide1.Location = new System.Drawing.Point(4, 193);
-            this.restaurantSlide1.Margin = new System.Windows.Forms.Padding(4);
-            this.restaurantSlide1.Name = "restaurantSlide1";
-            this.restaurantSlide1.Size = new System.Drawing.Size(400, 185);
-            this.restaurantSlide1.TabIndex = 3;
             // 
             // label2
             // 

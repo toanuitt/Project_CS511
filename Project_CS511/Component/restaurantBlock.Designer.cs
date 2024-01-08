@@ -47,6 +47,7 @@
             this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_picture.TabIndex = 0;
             this.pb_picture.TabStop = false;
+            this.pb_picture.Click += new System.EventHandler(this.pb_picture_Click);
             this.pb_picture.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.pb_picture.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
@@ -60,6 +61,7 @@
             this.lb_name.Size = new System.Drawing.Size(140, 38);
             this.lb_name.TabIndex = 3;
             this.lb_name.Text = "Tiệm cà phê muối biển";
+            this.lb_name.Click += new System.EventHandler(this.pb_picture_Click);
             this.lb_name.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.lb_name.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
@@ -72,6 +74,7 @@
             this.lb_distance.Size = new System.Drawing.Size(52, 18);
             this.lb_distance.TabIndex = 4;
             this.lb_distance.Text = "2.3 km";
+            this.lb_distance.Click += new System.EventHandler(this.pb_picture_Click);
             this.lb_distance.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.lb_distance.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
@@ -84,6 +87,7 @@
             this.pb_star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_star.TabIndex = 5;
             this.pb_star.TabStop = false;
+            this.pb_star.Click += new System.EventHandler(this.pb_picture_Click);
             // 
             // lb_star
             // 
@@ -94,6 +98,7 @@
             this.lb_star.Size = new System.Drawing.Size(28, 19);
             this.lb_star.TabIndex = 6;
             this.lb_star.Text = "4.8";
+            this.lb_star.Click += new System.EventHandler(this.pb_picture_Click);
             // 
             // restaurantBlock
             // 
@@ -106,6 +111,8 @@
             this.Controls.Add(this.pb_picture);
             this.Name = "restaurantBlock";
             this.Size = new System.Drawing.Size(166, 182);
+            this.Load += new System.EventHandler(this.restaurantBlock_Load);
+            this.Click += new System.EventHandler(this.pb_picture_Click);
             this.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).EndInit();

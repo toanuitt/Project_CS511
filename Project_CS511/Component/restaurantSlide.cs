@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using Project_CS511.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,31 @@ namespace Project_CS511.Component
 {
     public partial class restaurantSlide : UserControl
     {
-        public restaurantSlide()
+        mainForm main;
+        public restaurantSlide(mainForm main)
         {
             InitializeComponent();
+            this.main = main;
+            init();
         }
 
         private void init()
         {
-            
+            for (int i = 1; i < 6; i++)
+            {
+                //create new food block
+                restaurantBlock f = new restaurantBlock(main);
+
+                //get a random documment from food
+                main.dataSource.SetCollection("user");
+                BsonDocument random = main.dataSource.findOneDoc("userId", i.ToString());
+
+                //add data to foodblock
+                f.addData(random);
+
+                //add new data to food the slide
+                flowLayoutPanel1.Controls.Add(f);
+            }
         }
     }
 }

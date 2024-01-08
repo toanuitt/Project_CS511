@@ -382,6 +382,12 @@
     <Compile Include="Component\restaurantSlide.Designer.cs">
       <DependentUpon>restaurantSlide.cs</DependentUpon>
     </Compile>
+    <Compile Include="Component\shopSubPage\shopFoodBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\shopSubPage\shopFoodBlock.Designer.cs">
+      <DependentUpon>shopFoodBlock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\SignUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -469,6 +475,12 @@
     <Compile Include="SubPage\maplocation.Designer.cs">
       <DependentUpon>maplocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubPage\shop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubPage\shop.Designer.cs">
+      <DependentUpon>shop.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubPage\updateInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -547,6 +559,9 @@
     <EmbeddedResource Include="Component\restaurantSlide.resx">
       <DependentUpon>restaurantSlide.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component\shopSubPage\shopFoodBlock.resx">
+      <DependentUpon>shopFoodBlock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -570,6 +585,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubPage\maplocation.resx">
       <DependentUpon>maplocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\shop.resx">
+      <DependentUpon>shop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubPage\updateInfo.resx">
       <DependentUpon>updateInfo.cs</DependentUpon>
