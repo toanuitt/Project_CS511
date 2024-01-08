@@ -14,6 +14,7 @@ using Newtonsoft.Json;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using System.Timers;
+using System.IO;
 
 namespace Project_CS511.SubPage
 {
@@ -33,11 +34,15 @@ namespace Project_CS511.SubPage
         {
             gMapControl1.DragButton = MouseButtons.Right;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-            gMapControl1.Position = new PointLatLng(10.8231, 106.6297); // Initial coordinates
+
+            main.dataSource.SetCollection("user");
+            string address = main.dataSource.findValue("loginName", main.currentUser, "location");
+            var (latitude, longitude) = GetLatLngFromAddress(address, main.api_key);
+            gMapControl1.Position = new PointLatLng(latitude, longitude); // Initial coordinates
             gMapControl1.Zoom = 18;
             gMapControl1.MouseClick += GMapControl1_MouseClick;
-            
-            richTextBox1.Text = GetAddressFromLatLng(10.8231, 106.6297, main.api_key);
+
+            richTextBox1.Text = GetAddressFromLatLng(latitude, longitude, main.api_key);
             label1.Text = richTextBox1.Text.Split(',')[0].Trim();
             markerOverlay.Markers.Clear();
 
@@ -146,7 +151,38 @@ namespace Project_CS511.SubPage
         {
             main.RemoveControlByName("setLocation");
         }
+        #region get address
+        static (double Latitude, double Longitude) GetLatLngFromAddress(string address, string apiKey)
+        {
+            string encodedAddress = Uri.EscapeDataString(address);
+            string apiUrl = $"https://maps.googleapis.com/maps/api/geocode/json?address={encodedAddress}&key={apiKey}";
 
+            using (WebClient wc = new WebClient())
+            {
+                wc.Encoding = Encoding.UTF8;
+                string json = wc.DownloadString(apiUrl);
+
+                // Parse the JSON response
+                dynamic result = JsonConvert.DeserializeObject(json);
+
+                // Check if the response status is OK
+                if (result.status == "OK")
+                {
+                    // Get the latitude and longitude
+                    double latitude = result.results[0].geometry.location.lat;
+                    double longitude = result.results[0].geometry.location.lng;
+
+                    return (latitude, longitude);
+                }
+                else
+                {
+                    // Handle error cases
+                    Console.WriteLine("Error: " + result.status);
+                    return (0, 0); // Return a default value or handle the error accordingly
+                }
+            }
+        }
+        #endregion
 
     }
 }
