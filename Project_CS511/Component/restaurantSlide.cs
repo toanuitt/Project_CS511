@@ -22,8 +22,9 @@ namespace Project_CS511.Component
             init();
         }
 
-        private void init()
+        public void init()
         {
+            flowLayoutPanel1.Controls.Clear();
             for (int i = 1; i < 6; i++)
             {
                 //create new food block
@@ -38,6 +39,15 @@ namespace Project_CS511.Component
 
                 //add new data to food the slide
                 flowLayoutPanel1.Controls.Add(f);
+            }
+        }
+
+        public void setAvoidImageConflict()
+        {
+            foreach(Control c in flowLayoutPanel1.Controls)
+            {
+                restaurantBlock f = (restaurantBlock)c;
+                f.setImageToDefault();
             }
         }
     }

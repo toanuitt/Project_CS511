@@ -910,6 +910,7 @@
     <Content Include="icons\ads\ad3.png" />
     <Content Include="icons\ads\kfc_ad.png" />
     <Content Include="icons\ad_kfc.png" />
+    <None Include="icons\avatar\default.png" />
     <Content Include="icons\back.png" />
     <Content Include="icons\bubble\output-onlinepngtools %286%29.png" />
     <Content Include="icons\bubble\output-onlinepngtools %287%29.png" />
@@ -956,9 +957,7 @@
     <None Include="Resources\clock.png" />
     <None Include="Resources\aim.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="icons\avatar\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.8.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

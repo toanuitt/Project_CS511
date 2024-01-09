@@ -164,11 +164,13 @@ namespace Project_CS511.Pages
 
                 try
                 {
+                    main.homePage.setToAvoidConflict();
                     pb_avatar.Image.Dispose();
+                    pb_avatar.Image = Resources._default;
+
                     File.Copy(selectedFilePath, destinationFolder, true);
                     reloadAvatar(main.currentId);
-                    MessageBox.Show("Image copied successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    main.homePage.reloadRestaurant();
                 }
                 catch (Exception ex)
                 {

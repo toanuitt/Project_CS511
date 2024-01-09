@@ -33,12 +33,14 @@
             this.lb_number = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_money = new System.Windows.Forms.Label();
-            this.pb_foodPic = new System.Windows.Forms.PictureBox();
-            this.pb_add = new System.Windows.Forms.PictureBox();
             this.pb_sub = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_add)).BeginInit();
+            this.pb_add = new System.Windows.Forms.PictureBox();
+            this.pb_foodPic = new System.Windows.Forms.PictureBox();
+            this.pic_delete = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_sub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_delete)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_foodName
@@ -85,15 +87,16 @@
             this.lb_money.TabIndex = 11;
             this.lb_money.Text = "10.000D";
             // 
-            // pb_foodPic
+            // pb_sub
             // 
-            this.pb_foodPic.Image = global::Project_CS511.Properties.Resources.marker;
-            this.pb_foodPic.Location = new System.Drawing.Point(3, 3);
-            this.pb_foodPic.Name = "pb_foodPic";
-            this.pb_foodPic.Size = new System.Drawing.Size(56, 51);
-            this.pb_foodPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_foodPic.TabIndex = 5;
-            this.pb_foodPic.TabStop = false;
+            this.pb_sub.Image = ((System.Drawing.Image)(resources.GetObject("pb_sub.Image")));
+            this.pb_sub.Location = new System.Drawing.Point(113, 28);
+            this.pb_sub.Name = "pb_sub";
+            this.pb_sub.Size = new System.Drawing.Size(25, 25);
+            this.pb_sub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_sub.TabIndex = 13;
+            this.pb_sub.TabStop = false;
+            this.pb_sub.Click += new System.EventHandler(this.pb_sub_Click);
             // 
             // pb_add
             // 
@@ -106,21 +109,32 @@
             this.pb_add.TabStop = false;
             this.pb_add.Click += new System.EventHandler(this.pb_add_Click);
             // 
-            // pb_sub
+            // pb_foodPic
             // 
-            this.pb_sub.Image = ((System.Drawing.Image)(resources.GetObject("pb_sub.Image")));
-            this.pb_sub.Location = new System.Drawing.Point(113, 28);
-            this.pb_sub.Name = "pb_sub";
-            this.pb_sub.Size = new System.Drawing.Size(25, 25);
-            this.pb_sub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_sub.TabIndex = 13;
-            this.pb_sub.TabStop = false;
-            this.pb_sub.Click += new System.EventHandler(this.pb_sub_Click);
+            this.pb_foodPic.Image = global::Project_CS511.Properties.Resources.marker;
+            this.pb_foodPic.Location = new System.Drawing.Point(3, 3);
+            this.pb_foodPic.Name = "pb_foodPic";
+            this.pb_foodPic.Size = new System.Drawing.Size(56, 51);
+            this.pb_foodPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_foodPic.TabIndex = 5;
+            this.pb_foodPic.TabStop = false;
+            // 
+            // pic_delete
+            // 
+            this.pic_delete.Image = global::Project_CS511.Properties.Resources.trash;
+            this.pic_delete.Location = new System.Drawing.Point(299, 29);
+            this.pic_delete.Name = "pic_delete";
+            this.pic_delete.Size = new System.Drawing.Size(25, 25);
+            this.pic_delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_delete.TabIndex = 14;
+            this.pic_delete.TabStop = false;
+            this.pic_delete.Click += new System.EventHandler(this.pic_delete_Click);
             // 
             // foodBlockCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pic_delete);
             this.Controls.Add(this.pb_sub);
             this.Controls.Add(this.pb_add);
             this.Controls.Add(this.lb_money);
@@ -130,9 +144,10 @@
             this.Controls.Add(this.pb_foodPic);
             this.Name = "foodBlockCart";
             this.Size = new System.Drawing.Size(351, 56);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_sub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_foodPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_delete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +162,6 @@
         private System.Windows.Forms.Label lb_money;
         private System.Windows.Forms.PictureBox pb_add;
         private System.Windows.Forms.PictureBox pb_sub;
+        private System.Windows.Forms.PictureBox pic_delete;
     }
 }

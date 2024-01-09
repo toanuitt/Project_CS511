@@ -15,6 +15,7 @@ namespace Project_CS511.Pages
     {
         mainForm main;
         foodSlide foodSlide1;
+        restaurantSlide restaurants;
         public home(mainForm main)
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace Project_CS511.Pages
             restaurantSlide restaurantSlide = new restaurantSlide(main);
             flp_home.Controls.Add(restaurantSlide);
             flp_home.Controls.SetChildIndex(restaurantSlide, 2);
+            restaurants = restaurantSlide;
 
             adSlide adSlide = new adSlide();
             flp_home.Controls.Add(adSlide);
@@ -36,6 +38,23 @@ namespace Project_CS511.Pages
             foodSlide1 = foodSlide;
         }
 
+        public void setToAvoidConflict()
+        {
+            restaurants.setAvoidImageConflict();
+        }
+
+        #region Reload function
+        public void reloadRestaurant()
+        {
+            restaurants.init();
+        }
+
+        public void reloadFood()
+        {
+            foodSlide1.addFood();
+        }
+
+        #endregion
         public void updateFoodAfterDelete()
         {
             foodSlide1.addFood();

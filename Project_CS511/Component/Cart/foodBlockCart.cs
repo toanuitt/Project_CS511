@@ -1,4 +1,5 @@
-﻿using Project_CS511.SubPage;
+﻿using Project_CS511.Pages;
+using Project_CS511.SubPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,6 +121,30 @@ namespace Project_CS511.Component.Cart
                 removeFromCart(Name);
 
             }
+
+            cartSubPage cartPage = (cartSubPage)main.Controls.Find("cartSubPage", true).FirstOrDefault();
+            cartPage.totalMoney();
+        }
+
+        private void pic_delete_Click(object sender, EventArgs e)
+        {
+            main.dataSource.SetCollection("user");
+            List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "cart").Split('-').ToList();
+
+            if (likedProduct.Count == 1)
+            {
+                if (likedProduct.Contains(Name))
+                {
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                }
+            }
+            else
+            {
+                likedProduct.RemoveAll(x => x == Name);
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", string.Join("-", likedProduct));
+            }
+
+            this.Parent.Controls.Remove(this);
 
             cartSubPage cartPage = (cartSubPage)main.Controls.Find("cartSubPage", true).FirstOrDefault();
             cartPage.totalMoney();

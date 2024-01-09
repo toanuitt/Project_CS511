@@ -84,7 +84,6 @@ namespace Project_CS511.Component
             setColorBack();
             hideAllControls();
             main.accountPage.Show();
-            main.accountPage.reloadAvatar(main.currentId);
             lb_account.ForeColor = green;
             pb_account.Image = Resources.customer_active;
         }

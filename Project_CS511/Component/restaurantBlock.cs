@@ -76,6 +76,13 @@ namespace Project_CS511.Component
 
         }
 
+        public void setImageToDefault()
+        {
+            pb_picture.Image.Dispose();
+            pb_picture.Image = Resources._default;
+        }
+
+
         private void restaurantBlock_Load(object sender, EventArgs e)
         {
 
