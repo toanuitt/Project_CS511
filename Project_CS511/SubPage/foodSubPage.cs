@@ -60,7 +60,42 @@ namespace Project_CS511.SubPage
                 liked = true;
             }
         }
+        #region foodpage
+        public void addDataFoodpage(string idshop,string idfood,string namefood,string money)
+        {
+            string path = getFoodPicturePath();
+            string shopId = idshop;//dataFood["shopId"].AsString;
 
+            foodId = idfood;
+
+            //add image
+            pb_food.Image = Image.FromFile(path + idfood + ".png");
+
+            //add food name
+            lb_name.Text = namefood;
+
+            //add money 
+            lb_price.Text = FormatMoney(money) + "₫";
+
+            //add shop name
+            main.dataSource.SetCollection("user");
+            lb_store.Text = main.dataSource.findValue("userId", shopId, "username");
+
+            //add comment
+            addComment(foodId);
+
+            //add rating block
+            addRatingBlock(foodId);
+
+            //add heart
+            List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "liked").Split('-').ToList();
+            if (likedProduct.Contains(foodId))
+            {
+                pb_like.Image = Resources.heart_on;
+                liked = true;
+            }
+        }
+        #endregion
         #region add Data
         public void addComment(string foodId)
         {

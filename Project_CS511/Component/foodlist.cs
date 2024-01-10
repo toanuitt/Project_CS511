@@ -25,6 +25,8 @@ namespace Project_CS511.Component
         private string _pic;
         private string _name;
         private string _price;
+        private string _foodid;
+        private string _shopid;
 
         [Category("Custom Props")]
         public string Picture
@@ -49,6 +51,18 @@ namespace Project_CS511.Component
             get { return _price; }
             set { _price = value; lbl_price.Text = _price + " đ"; }
         }
+        [Category("Custom Props")]
+        public string FoodID
+        {
+            get { return _foodid; }
+            set { _foodid = value;  }
+        }
+        [Category("Custom Props")]
+        public string ShopID
+        {
+            get { return _shopid; }
+            set { _shopid = value; }
+        }
 
         #endregion
         #region Các Hàm chức năng
@@ -70,7 +84,10 @@ namespace Project_CS511.Component
 
         private void pb_picture_Click(object sender, EventArgs e)
         {
-          
+            foodSubPage f = new foodSubPage(main);
+            f.addDataFoodpage(_shopid,_pic, _name, _price);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
         }
     }
 }
