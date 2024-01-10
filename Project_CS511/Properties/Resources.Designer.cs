@@ -133,6 +133,46 @@ namespace Project_CS511.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap burger {
+            get {
+                object obj = ResourceManager.GetObject("burger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap burger_check {
+            get {
+                object obj = ResourceManager.GetObject("burger_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cake {
+            get {
+                object obj = ResourceManager.GetObject("cake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cake_check {
+            get {
+                object obj = ResourceManager.GetObject("cake_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chat {
             get {
                 object obj = ResourceManager.GetObject("chat", resourceCulture);
@@ -156,6 +196,26 @@ namespace Project_CS511.Properties {
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coconut {
+            get {
+                object obj = ResourceManager.GetObject("coconut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coconut_check {
+            get {
+                object obj = ResourceManager.GetObject("coconut_check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +266,26 @@ namespace Project_CS511.Properties {
         internal static System.Drawing.Bitmap delete_food {
             get {
                 object obj = ResourceManager.GetObject("delete_food", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drink {
+            get {
+                object obj = ResourceManager.GetObject("drink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drink_check {
+            get {
+                object obj = ResourceManager.GetObject("drink_check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +396,26 @@ namespace Project_CS511.Properties {
         internal static System.Drawing.Bitmap star_on {
             get {
                 object obj = ResourceManager.GetObject("star_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sushi {
+            get {
+                object obj = ResourceManager.GetObject("sushi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sushi_check {
+            get {
+                object obj = ResourceManager.GetObject("sushi_check", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

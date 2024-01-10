@@ -30,25 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(food));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbl_address = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pic_sushi = new System.Windows.Forms.PictureBox();
+            this.pic_vegan = new System.Windows.Forms.PictureBox();
+            this.pic_cake = new System.Windows.Forms.PictureBox();
+            this.pic_fastfood = new System.Windows.Forms.PictureBox();
+            this.pic_drink = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_dinner = new System.Windows.Forms.Button();
             this.btn_delivery = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_address = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.foodlist4 = new Project_CS511.Component.foodlist();
-            this.foodlist3 = new Project_CS511.Component.foodlist();
-            this.foodlist2 = new Project_CS511.Component.foodlist();
-            this.foodlist1 = new Project_CS511.Component.foodlist();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_sushi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_vegan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_cake)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_fastfood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_drink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,16 +71,6 @@
             this.panel1.Size = new System.Drawing.Size(434, 58);
             this.panel1.TabIndex = 19;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(9, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 34);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,27 +81,115 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "What shall we deliver?";
             // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.foodlist4);
-            this.panel2.Controls.Add(this.foodlist3);
-            this.panel2.Controls.Add(this.foodlist2);
-            this.panel2.Controls.Add(this.foodlist1);
-            this.panel2.Location = new System.Drawing.Point(49, 236);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(453, 411);
-            this.panel2.TabIndex = 23;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 201);
+            this.label3.Location = new System.Drawing.Point(43, 321);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(292, 32);
             this.label3.TabIndex = 22;
             this.label3.Text = "Popular Restaurants";
+            // 
+            // lbl_address
+            // 
+            this.lbl_address.AutoSize = true;
+            this.lbl_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lbl_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_address.ForeColor = System.Drawing.Color.Black;
+            this.lbl_address.Location = new System.Drawing.Point(76, 33);
+            this.lbl_address.Name = "lbl_address";
+            this.lbl_address.Size = new System.Drawing.Size(274, 32);
+            this.lbl_address.TabIndex = 16;
+            this.lbl_address.Text = "31/35/15 Ung Van ...";
+            this.lbl_address.Click += new System.EventHandler(this.lbl_address_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(78, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Deliver to";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 32);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Browse cuisine";
+            // 
+            // pic_sushi
+            // 
+            this.pic_sushi.Image = global::Project_CS511.Properties.Resources.sushi;
+            this.pic_sushi.Location = new System.Drawing.Point(439, 246);
+            this.pic_sushi.Name = "pic_sushi";
+            this.pic_sushi.Size = new System.Drawing.Size(76, 48);
+            this.pic_sushi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_sushi.TabIndex = 28;
+            this.pic_sushi.TabStop = false;
+            this.pic_sushi.Click += new System.EventHandler(this.pic_sushi_Click);
+            // 
+            // pic_vegan
+            // 
+            this.pic_vegan.Image = global::Project_CS511.Properties.Resources.coconut;
+            this.pic_vegan.Location = new System.Drawing.Point(344, 246);
+            this.pic_vegan.Name = "pic_vegan";
+            this.pic_vegan.Size = new System.Drawing.Size(76, 48);
+            this.pic_vegan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_vegan.TabIndex = 27;
+            this.pic_vegan.TabStop = false;
+            this.pic_vegan.Click += new System.EventHandler(this.pic_vegan_Click);
+            // 
+            // pic_cake
+            // 
+            this.pic_cake.Image = global::Project_CS511.Properties.Resources.cake;
+            this.pic_cake.Location = new System.Drawing.Point(249, 246);
+            this.pic_cake.Name = "pic_cake";
+            this.pic_cake.Size = new System.Drawing.Size(76, 48);
+            this.pic_cake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_cake.TabIndex = 26;
+            this.pic_cake.TabStop = false;
+            this.pic_cake.Click += new System.EventHandler(this.pic_cake_Click);
+            // 
+            // pic_fastfood
+            // 
+            this.pic_fastfood.Image = global::Project_CS511.Properties.Resources.burger;
+            this.pic_fastfood.Location = new System.Drawing.Point(150, 246);
+            this.pic_fastfood.Name = "pic_fastfood";
+            this.pic_fastfood.Size = new System.Drawing.Size(76, 48);
+            this.pic_fastfood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_fastfood.TabIndex = 25;
+            this.pic_fastfood.TabStop = false;
+            this.pic_fastfood.Click += new System.EventHandler(this.pic_fastfood_Click);
+            // 
+            // pic_drink
+            // 
+            this.pic_drink.Image = global::Project_CS511.Properties.Resources.drink;
+            this.pic_drink.Location = new System.Drawing.Point(49, 246);
+            this.pic_drink.Name = "pic_drink";
+            this.pic_drink.Size = new System.Drawing.Size(76, 48);
+            this.pic_drink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_drink.TabIndex = 24;
+            this.pic_drink.TabStop = false;
+            this.pic_drink.Click += new System.EventHandler(this.pic_drink_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(9, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
             // 
             // btn_dinner
             // 
@@ -186,68 +270,29 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // lbl_address
+            // flowLayoutPanel1
             // 
-            this.lbl_address.AutoSize = true;
-            this.lbl_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lbl_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_address.ForeColor = System.Drawing.Color.Black;
-            this.lbl_address.Location = new System.Drawing.Point(76, 33);
-            this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(274, 32);
-            this.lbl_address.TabIndex = 16;
-            this.lbl_address.Text = "31/35/15 Ung Van ...";
-            this.lbl_address.Click += new System.EventHandler(this.lbl_address_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(78, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Deliver to";
-            // 
-            // foodlist4
-            // 
-            this.foodlist4.Location = new System.Drawing.Point(3, 540);
-            this.foodlist4.Name = "foodlist4";
-            this.foodlist4.Size = new System.Drawing.Size(421, 127);
-            this.foodlist4.TabIndex = 3;
-            // 
-            // foodlist3
-            // 
-            this.foodlist3.Location = new System.Drawing.Point(3, 407);
-            this.foodlist3.Name = "foodlist3";
-            this.foodlist3.Size = new System.Drawing.Size(421, 127);
-            this.foodlist3.TabIndex = 2;
-            // 
-            // foodlist2
-            // 
-            this.foodlist2.Location = new System.Drawing.Point(3, 268);
-            this.foodlist2.Name = "foodlist2";
-            this.foodlist2.Size = new System.Drawing.Size(421, 127);
-            this.foodlist2.TabIndex = 1;
-            // 
-            // foodlist1
-            // 
-            this.foodlist1.Location = new System.Drawing.Point(3, 131);
-            this.foodlist1.Name = "foodlist1";
-            this.foodlist1.Size = new System.Drawing.Size(421, 127);
-            this.foodlist1.TabIndex = 0;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 370);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(500, 275);
+            this.flowLayoutPanel1.TabIndex = 29;
             // 
             // food
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.pic_sushi);
+            this.Controls.Add(this.pic_vegan);
+            this.Controls.Add(this.pic_cake);
+            this.Controls.Add(this.pic_fastfood);
+            this.Controls.Add(this.pic_drink);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_dinner);
             this.Controls.Add(this.btn_delivery);
@@ -260,8 +305,12 @@
             this.Load += new System.EventHandler(this.food_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_sushi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_vegan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_cake)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_fastfood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_drink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -272,15 +321,9 @@
         }
 
         #endregion
-
-        private Component.foodlist foodlist3;
-        private Component.foodlist foodlist1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox1;
-        private Component.foodlist foodlist4;
-        private System.Windows.Forms.Panel panel2;
-        private Component.foodlist foodlist2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_dinner;
         private System.Windows.Forms.Button btn_delivery;
@@ -290,5 +333,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_address;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pic_drink;
+        private System.Windows.Forms.PictureBox pic_fastfood;
+        private System.Windows.Forms.PictureBox pic_cake;
+        private System.Windows.Forms.PictureBox pic_vegan;
+        private System.Windows.Forms.PictureBox pic_sushi;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

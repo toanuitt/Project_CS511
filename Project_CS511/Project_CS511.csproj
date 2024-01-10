@@ -939,6 +939,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons\add.png" />
+    <None Include="Resources\drink_check.png" />
+    <None Include="Resources\sushi_check.png" />
+    <None Include="Resources\coconut_check.png" />
+    <None Include="Resources\drink.png" />
+    <None Include="Resources\coconut.png" />
+    <None Include="Resources\cake_check.png" />
+    <None Include="Resources\burger_check.png" />
+    <None Include="Resources\burger.png" />
+    <None Include="Resources\cake.png" />
+    <None Include="Resources\sushi.png" />
     <None Include="icons\add_food.png" />
     <Content Include="icons\ads\ad1.png" />
     <Content Include="icons\ads\ad2.png" />
