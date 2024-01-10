@@ -171,7 +171,7 @@ namespace Project_CS511.SubPage
 
             timer.Elapsed += (timerSender, timerEvent) =>
             {
-                btn_success.Visible = false; ;
+                btn_success.Visible = false;
                 timer.Stop();
             };
             timer.Start();
@@ -234,6 +234,7 @@ namespace Project_CS511.SubPage
                 };
                 main.dataSource.insertToCollection(newComment);
 
+                addNotify("add", tb_name.Text);
                 main.dataSource.SetCollection("user");
                 notification();
 
@@ -245,7 +246,21 @@ namespace Project_CS511.SubPage
             }
         }
 
+        private void addNotify(string action, string foodName)
+        {
+            main.dataSource.SetCollection("user");
+            chatBlock f = new chatBlock(main);
+            if (action == "add")
+            {
+                f.addNotify(foodName);
+            }
+            else
+            {
+                f.deletedNotify(foodName);
+            }
 
+            main.messagePage.init();
+        }
 
         private void tb_price_KeyPress(object sender, KeyPressEventArgs e)
         {

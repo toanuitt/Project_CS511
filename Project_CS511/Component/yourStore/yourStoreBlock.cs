@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using Project_CS511.Component.Cart;
 using Project_CS511.Properties;
 using Project_CS511.SubPage;
 using System;
@@ -126,15 +127,18 @@ namespace Project_CS511.Component.yourStore
                 if (result == DialogResult.OK)
                 {
                     main.dataSource.SetCollection("food");
+                    addNotify("delete", main.dataSource.findValue("foodId", thisfoodId, "foodName"));
                     main.dataSource.deleteOneByValue("foodId", thisfoodId);
                     removeFromCart(thisfoodId);
                     removeFromLiked(thisfoodId);
                     removeComment(thisfoodId);
                     removeBoughtProduct(thisfoodId);
                     this.Parent.Controls.Remove(this);
+
                     main.dataSource.SetCollection("user");
 
                     main.homePage.updateFoodAfterDelete();
+                    
                 }
                 main.dataSource.SetCollection("user");
             }
@@ -239,6 +243,22 @@ namespace Project_CS511.Component.yourStore
 
         }
 
+        private void addNotify(string action,string foodName)
+        {
+            main.dataSource.SetCollection("user");
+            chatBlock f = new chatBlock(main);
+            if(action == "add")
+            {
+                f.addNotify(foodName);
+            }
+            else
+            {
+                f.deletedNotify(foodName);
+            }
+
+            main.messagePage.init();
+        }
+
         private string getFoodPath()
         {
             string[] s = { "\\bin" };
@@ -262,6 +282,7 @@ namespace Project_CS511.Component.yourStore
                 try
                 {
                     pb_picture.Image.Dispose();
+                    main.homePage.setToAvoidConflictFood();
                     File.Copy(selectedFilePath, destinationFolder, true);
                     pb_picture.Image = Image.FromFile(getFoodPath() + thisfoodId + ".png");
                     main.homePage.updateFoodAfterDelete();

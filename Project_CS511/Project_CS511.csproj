@@ -939,6 +939,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons\add.png" />
+    <None Include="icons\add_food.png" />
     <Content Include="icons\ads\ad1.png" />
     <Content Include="icons\ads\ad2.png" />
     <Content Include="icons\ads\ad3.png" />
@@ -949,6 +950,7 @@
     <Content Include="icons\bubble\output-onlinepngtools %286%29.png" />
     <Content Include="icons\bubble\output-onlinepngtools %287%29.png" />
     <Content Include="icons\coffee.jpg" />
+    <None Include="icons\delete_food.png" />
     <Content Include="icons\food\1.png" />
     <Content Include="icons\food\10.png" />
     <Content Include="icons\food\11.png" />

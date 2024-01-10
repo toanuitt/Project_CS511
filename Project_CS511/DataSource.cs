@@ -246,6 +246,11 @@ namespace Project_CS511
             collection.DeleteMany(filter);
         }
 
+        public void deleteAll()
+        {
+            collection.DeleteMany(FilterDefinition<BsonDocument>.Empty);
+        }
+
         #region Cac Ham chuc nang
         public BsonArray ConvertToBsonArray(string jsonString)
         {

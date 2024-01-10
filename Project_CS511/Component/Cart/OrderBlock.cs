@@ -15,6 +15,7 @@ namespace Project_CS511.Component.Cart
     {
         mainForm main;
         public List<string> items  = new List<string>();
+        public int shopOrderMoney = 0;
         public OrderBlock(mainForm main)
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace Project_CS511.Component.Cart
                 foodBlockCart foodBlockCart = (foodBlockCart)c;
                 totalShopBill += foodBlockCart.money;
             }
+            shopOrderMoney = totalShopBill;
             return totalShopBill;
         }
     }

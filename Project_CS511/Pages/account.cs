@@ -165,12 +165,14 @@ namespace Project_CS511.Pages
                 try
                 {
                     main.homePage.setToAvoidConflict();
+                    main.messagePage.setToAvoidConflict();
                     pb_avatar.Image.Dispose();
                     pb_avatar.Image = Resources._default;
 
                     File.Copy(selectedFilePath, destinationFolder, true);
                     reloadAvatar(main.currentId);
                     main.homePage.reloadRestaurant();
+                    main.messagePage.init();
                 }
                 catch (Exception ex)
                 {

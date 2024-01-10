@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using Project_CS511.Properties;
 using Project_CS511.SubPage;
 using System;
 using System.Collections.Generic;
@@ -58,6 +59,12 @@ namespace Project_CS511.Component
             int money = Int32.Parse(value);
             // Use the "N" format specifier with CultureInfo.InvariantCulture to get the desired format
             return money.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
+        }
+
+        public void setToAvoidConflict()
+        {
+            pb_picture.Image.Dispose();
+            pb_picture.Image = Resources.add_food;
         }
         #endregion
 

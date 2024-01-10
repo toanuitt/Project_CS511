@@ -44,5 +44,14 @@ namespace Project_CS511.Component
             }
             
         }
+
+        public void setToAvoidConflict()
+        {
+            foreach(Control control in flowLayoutPanel1.Controls)
+            {
+                foodBlock temp = (foodBlock) control;
+                temp.setToAvoidConflict();
+            }
+        }
     }
 }

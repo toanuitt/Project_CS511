@@ -83,6 +83,16 @@ namespace Project_CS511.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_food {
+            get {
+                object obj = ResourceManager.GetObject("add_food", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aim {
             get {
                 object obj = ResourceManager.GetObject("aim", resourceCulture);
@@ -186,6 +196,16 @@ namespace Project_CS511.Properties {
         internal static System.Drawing.Bitmap customer_active {
             get {
                 object obj = ResourceManager.GetObject("customer_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_food {
+            get {
+                object obj = ResourceManager.GetObject("delete_food", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

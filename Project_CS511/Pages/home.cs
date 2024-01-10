@@ -43,6 +43,11 @@ namespace Project_CS511.Pages
             restaurants.setAvoidImageConflict();
         }
 
+        public void setToAvoidConflictFood()
+        {
+            foodSlide1.setToAvoidConflict();
+        }
+
         #region Reload function
         public void reloadRestaurant()
         {

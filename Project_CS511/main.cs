@@ -133,6 +133,7 @@ namespace Project_CS511
             RemoveControlByName("logSignIn");
             updateTempData();
             accountPage.reloadAvatar(currentId);
+            messagePage.init();
 
             if(isNew)
             {

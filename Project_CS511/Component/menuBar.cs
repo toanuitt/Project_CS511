@@ -47,6 +47,7 @@ namespace Project_CS511.Component
             setColorBack();
             hideAllControls();
             main.homePage.Show();
+            main.messagePage.setToSeen(main.messagePage.hasSeen);
             lb_home.ForeColor = green;
             pb_home.Image = Resources.compass_active;
         }
@@ -57,6 +58,7 @@ namespace Project_CS511.Component
             hideAllControls();
             main.foodPage.Show();
             main.foodPage.Init();
+            main.messagePage.setToSeen(main.messagePage.hasSeen);
             lb_food.ForeColor = green;
             pb_food.Image = Resources.food_active;
         }
@@ -66,6 +68,7 @@ namespace Project_CS511.Component
             setColorBack();
             hideAllControls();
             main.paymentPage.Show();
+            main.messagePage.setToSeen(main.messagePage.hasSeen);
             lb_payment.ForeColor = green;
             pb_payment.Image = Resources.wallet_active;
         }
@@ -75,6 +78,7 @@ namespace Project_CS511.Component
             setColorBack();
             hideAllControls();
             main.messagePage.Show();
+            main.messagePage.hasSeen = true;
             lb_message.ForeColor = green;
             pb_message.Image = Resources.chat_active;
         }
@@ -84,6 +88,7 @@ namespace Project_CS511.Component
             setColorBack();
             hideAllControls();
             main.accountPage.Show();
+            main.messagePage.setToSeen(main.messagePage.hasSeen);
             lb_account.ForeColor = green;
             pb_account.Image = Resources.customer_active;
         }

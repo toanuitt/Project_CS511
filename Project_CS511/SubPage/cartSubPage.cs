@@ -1,4 +1,5 @@
-﻿using Project_CS511.Component.Cart;
+﻿using Project_CS511.Component;
+using Project_CS511.Component.Cart;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace Project_CS511.SubPage
     {
         mainForm main;
         addressBlock1 addressBlock;
+        List<string> shopIds = new List<string>();
         Color green = Color.FromArgb(16, 83, 53);
         public cartSubPage(mainForm main)
         {
@@ -41,8 +43,8 @@ namespace Project_CS511.SubPage
             {
                 string[] raw = data.Split('-');
                 List<string> productId = new List<string>(raw);
-                List<string> shops = fillAllShopInCart(productId);
-                fillAllOrder(productId, shops);
+                shopIds = fillAllShopInCart(productId);
+                fillAllOrder(productId, shopIds);
                 totalMoney();
             }
         }
@@ -101,6 +103,21 @@ namespace Project_CS511.SubPage
 
                 //OrderBlock orderBlock = (OrderBlock)flowLayoutPanel1.Controls.Find(foundShopId, true).FirstOrDefault();
             }
+        }
+
+        private void addNotify(List<string> allIds)
+        {
+            main.dataSource.SetCollection("user");
+            foreach (string id_shop in allIds)
+            {
+                string name = main.dataSource.findValue("userId", id_shop, "username");
+                chatBlock f = new chatBlock(main);
+
+                OrderBlock temp = (OrderBlock)flowLayoutPanel1.Controls.Find(id_shop, true).FirstOrDefault();
+                f.orderNotify(name, temp.shopOrderMoney.ToString(), id_shop);
+            }
+
+            main.messagePage.init();
         }
 
         public void totalMoney()
@@ -174,6 +191,12 @@ namespace Project_CS511.SubPage
             string productList = string.Join("-", boughtFoodList);
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
+
+            addNotify(shopIds);
+
+            main.messagePage.hasSeen = false;
+
+            //////
             if (main.methodepayment == "1")
             {
                 onlinepayment pay = new onlinepayment(main);

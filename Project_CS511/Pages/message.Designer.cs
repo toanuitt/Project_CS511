@@ -58,11 +58,11 @@
             this.lb_chat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_chat.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_chat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_chat.Location = new System.Drawing.Point(45, 71);
+            this.lb_chat.Location = new System.Drawing.Point(18, 71);
             this.lb_chat.Name = "lb_chat";
-            this.lb_chat.Size = new System.Drawing.Size(59, 23);
+            this.lb_chat.Size = new System.Drawing.Size(124, 23);
             this.lb_chat.TabIndex = 7;
-            this.lb_chat.Text = "Chats";
+            this.lb_chat.Text = "All Messages";
             this.lb_chat.Click += new System.EventHandler(this.lb_food_Click);
             // 
             // lb_notification
@@ -72,15 +72,16 @@
             this.lb_notification.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_notification.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_notification.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lb_notification.Location = new System.Drawing.Point(159, 71);
+            this.lb_notification.Location = new System.Drawing.Point(190, 71);
             this.lb_notification.Name = "lb_notification";
-            this.lb_notification.Size = new System.Drawing.Size(116, 23);
+            this.lb_notification.Size = new System.Drawing.Size(48, 23);
             this.lb_notification.TabIndex = 8;
-            this.lb_notification.Text = "Notifications";
+            this.lb_notification.Text = "New";
             this.lb_notification.Click += new System.EventHandler(this.lb_notification_Click);
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 110);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 424);
@@ -119,6 +120,7 @@
             this.pb_trash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_trash.TabIndex = 4;
             this.pb_trash.TabStop = false;
+            this.pb_trash.Click += new System.EventHandler(this.pb_trash_Click);
             // 
             // message
             // 
