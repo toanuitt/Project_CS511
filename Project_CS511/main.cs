@@ -29,6 +29,7 @@ namespace Project_CS511
         public string currentUser;
         public string currentId;
         public string tempLocation;
+        public string methodepayment;
         public mainForm()
         {
             InitializeComponent();
