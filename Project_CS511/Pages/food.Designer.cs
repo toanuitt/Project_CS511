@@ -42,8 +42,6 @@
             this.pic_drink = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btn_delivery = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -59,8 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_fastfood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_drink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +80,8 @@
             this.textBox1.Size = new System.Drawing.Size(376, 34);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "What shall we deliver?";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -204,7 +202,7 @@
             this.btn_delivery.ForeColor = System.Drawing.Color.Teal;
             this.btn_delivery.Image = ((System.Drawing.Image)(resources.GetObject("btn_delivery.Image")));
             this.btn_delivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_delivery.Location = new System.Drawing.Point(173, 153);
+            this.btn_delivery.Location = new System.Drawing.Point(163, 153);
             this.btn_delivery.Name = "btn_delivery";
             this.btn_delivery.Size = new System.Drawing.Size(177, 45);
             this.btn_delivery.TabIndex = 20;
@@ -212,28 +210,6 @@
             this.btn_delivery.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_delivery.UseVisualStyleBackColor = false;
             this.btn_delivery.Click += new System.EventHandler(this.btn_delivery_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(492, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(29, 20);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(441, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -339,8 +315,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_delivery);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "food";
@@ -354,8 +328,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_fastfood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_drink)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -369,8 +341,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_delivery;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_address;

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(foodlist));
             this.lbl_price = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbl_name = new System.Windows.Forms.Label();
             this.pb_picture = new System.Windows.Forms.PictureBox();
+            this.lbl_name = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).BeginInit();
             this.SuspendLayout();
@@ -58,16 +58,6 @@
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
-            // lbl_name
-            // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(144, 1);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(187, 29);
-            this.lbl_name.TabIndex = 10;
-            this.lbl_name.Text = "Cơm gà xối mỡ";
-            // 
             // pb_picture
             // 
             this.pb_picture.Image = ((System.Drawing.Image)(resources.GetObject("pb_picture.Image")));
@@ -77,17 +67,29 @@
             this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_picture.TabIndex = 9;
             this.pb_picture.TabStop = false;
+            this.pb_picture.Click += new System.EventHandler(this.pb_picture_Click);
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.Location = new System.Drawing.Point(145, 3);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(264, 55);
+            this.lbl_name.TabIndex = 13;
+            this.lbl_name.Text = "";
             // 
             // foodlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.lbl_price);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.pb_picture);
             this.Name = "foodlist";
-            this.Size = new System.Drawing.Size(487, 127);
+            this.Size = new System.Drawing.Size(425, 127);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).EndInit();
             this.ResumeLayout(false);
@@ -99,7 +101,7 @@
 
         private System.Windows.Forms.Label lbl_price;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox pb_picture;
+        private System.Windows.Forms.RichTextBox lbl_name;
     }
 }

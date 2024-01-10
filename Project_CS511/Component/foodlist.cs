@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_CS511.SubPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,5 +67,10 @@ namespace Project_CS511.Component
             return money.ToString("N0", System.Globalization.CultureInfo.InvariantCulture);
         }
         #endregion
+
+        private void pb_picture_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
