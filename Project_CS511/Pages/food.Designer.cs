@@ -41,13 +41,17 @@
             this.pic_fastfood = new System.Windows.Forms.PictureBox();
             this.pic_drink = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btn_dinner = new System.Windows.Forms.Button();
             this.btn_delivery = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbl_drink = new System.Windows.Forms.Label();
+            this.lbl_fastfood = new System.Windows.Forms.Label();
+            this.lbl_cake = new System.Windows.Forms.Label();
+            this.lbl_vegan = new System.Windows.Forms.Label();
+            this.lbl_sushi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_sushi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_vegan)).BeginInit();
@@ -85,7 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 321);
+            this.label3.Location = new System.Drawing.Point(12, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(292, 32);
             this.label3.TabIndex = 22;
@@ -120,7 +124,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 211);
+            this.label2.Location = new System.Drawing.Point(14, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 32);
             this.label2.TabIndex = 23;
@@ -140,7 +144,7 @@
             // pic_vegan
             // 
             this.pic_vegan.Image = global::Project_CS511.Properties.Resources.coconut;
-            this.pic_vegan.Location = new System.Drawing.Point(344, 246);
+            this.pic_vegan.Location = new System.Drawing.Point(329, 246);
             this.pic_vegan.Name = "pic_vegan";
             this.pic_vegan.Size = new System.Drawing.Size(76, 48);
             this.pic_vegan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +155,7 @@
             // pic_cake
             // 
             this.pic_cake.Image = global::Project_CS511.Properties.Resources.cake;
-            this.pic_cake.Location = new System.Drawing.Point(249, 246);
+            this.pic_cake.Location = new System.Drawing.Point(223, 246);
             this.pic_cake.Name = "pic_cake";
             this.pic_cake.Size = new System.Drawing.Size(76, 48);
             this.pic_cake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +166,7 @@
             // pic_fastfood
             // 
             this.pic_fastfood.Image = global::Project_CS511.Properties.Resources.burger;
-            this.pic_fastfood.Location = new System.Drawing.Point(150, 246);
+            this.pic_fastfood.Location = new System.Drawing.Point(120, 246);
             this.pic_fastfood.Name = "pic_fastfood";
             this.pic_fastfood.Size = new System.Drawing.Size(76, 48);
             this.pic_fastfood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +177,7 @@
             // pic_drink
             // 
             this.pic_drink.Image = global::Project_CS511.Properties.Resources.drink;
-            this.pic_drink.Location = new System.Drawing.Point(49, 246);
+            this.pic_drink.Location = new System.Drawing.Point(15, 246);
             this.pic_drink.Name = "pic_drink";
             this.pic_drink.Size = new System.Drawing.Size(76, 48);
             this.pic_drink.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,23 +195,6 @@
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
-            // btn_dinner
-            // 
-            this.btn_dinner.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_dinner.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_dinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dinner.Image = ((System.Drawing.Image)(resources.GetObject("btn_dinner.Image")));
-            this.btn_dinner.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btn_dinner.Location = new System.Drawing.Point(277, 153);
-            this.btn_dinner.Name = "btn_dinner";
-            this.btn_dinner.Size = new System.Drawing.Size(173, 45);
-            this.btn_dinner.TabIndex = 21;
-            this.btn_dinner.Text = "Dine-in";
-            this.btn_dinner.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_dinner.UseVisualStyleBackColor = false;
-            this.btn_dinner.Click += new System.EventHandler(this.btn_dinner_Click);
-            // 
             // btn_delivery
             // 
             this.btn_delivery.BackColor = System.Drawing.Color.LightCyan;
@@ -217,7 +204,7 @@
             this.btn_delivery.ForeColor = System.Drawing.Color.Teal;
             this.btn_delivery.Image = ((System.Drawing.Image)(resources.GetObject("btn_delivery.Image")));
             this.btn_delivery.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_delivery.Location = new System.Drawing.Point(94, 153);
+            this.btn_delivery.Location = new System.Drawing.Point(173, 153);
             this.btn_delivery.Name = "btn_delivery";
             this.btn_delivery.Size = new System.Drawing.Size(177, 45);
             this.btn_delivery.TabIndex = 20;
@@ -278,11 +265,68 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(500, 275);
             this.flowLayoutPanel1.TabIndex = 29;
             // 
+            // lbl_drink
+            // 
+            this.lbl_drink.AutoSize = true;
+            this.lbl_drink.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_drink.ForeColor = System.Drawing.Color.Black;
+            this.lbl_drink.Location = new System.Drawing.Point(25, 303);
+            this.lbl_drink.Name = "lbl_drink";
+            this.lbl_drink.Size = new System.Drawing.Size(54, 20);
+            this.lbl_drink.TabIndex = 30;
+            this.lbl_drink.Text = "Drink";
+            // 
+            // lbl_fastfood
+            // 
+            this.lbl_fastfood.AutoSize = true;
+            this.lbl_fastfood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fastfood.Location = new System.Drawing.Point(118, 303);
+            this.lbl_fastfood.Name = "lbl_fastfood";
+            this.lbl_fastfood.Size = new System.Drawing.Size(82, 20);
+            this.lbl_fastfood.TabIndex = 31;
+            this.lbl_fastfood.Text = "Fastfood";
+            // 
+            // lbl_cake
+            // 
+            this.lbl_cake.AutoSize = true;
+            this.lbl_cake.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cake.Location = new System.Drawing.Point(236, 303);
+            this.lbl_cake.Name = "lbl_cake";
+            this.lbl_cake.Size = new System.Drawing.Size(51, 20);
+            this.lbl_cake.TabIndex = 32;
+            this.lbl_cake.Text = "Cake";
+            // 
+            // lbl_vegan
+            // 
+            this.lbl_vegan.AutoSize = true;
+            this.lbl_vegan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_vegan.ForeColor = System.Drawing.Color.Black;
+            this.lbl_vegan.Location = new System.Drawing.Point(337, 304);
+            this.lbl_vegan.Name = "lbl_vegan";
+            this.lbl_vegan.Size = new System.Drawing.Size(61, 20);
+            this.lbl_vegan.TabIndex = 33;
+            this.lbl_vegan.Text = "Vegan";
+            // 
+            // lbl_sushi
+            // 
+            this.lbl_sushi.AutoSize = true;
+            this.lbl_sushi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sushi.Location = new System.Drawing.Point(451, 303);
+            this.lbl_sushi.Name = "lbl_sushi";
+            this.lbl_sushi.Size = new System.Drawing.Size(56, 20);
+            this.lbl_sushi.TabIndex = 34;
+            this.lbl_sushi.Text = "Sushi";
+            // 
             // food
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.lbl_sushi);
+            this.Controls.Add(this.lbl_vegan);
+            this.Controls.Add(this.lbl_cake);
+            this.Controls.Add(this.lbl_fastfood);
+            this.Controls.Add(this.lbl_drink);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pic_sushi);
             this.Controls.Add(this.pic_vegan);
@@ -294,7 +338,6 @@
             this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_dinner);
             this.Controls.Add(this.btn_delivery);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
@@ -325,7 +368,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_dinner;
         private System.Windows.Forms.Button btn_delivery;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -340,5 +382,10 @@
         private System.Windows.Forms.PictureBox pic_vegan;
         private System.Windows.Forms.PictureBox pic_sushi;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lbl_drink;
+        private System.Windows.Forms.Label lbl_fastfood;
+        private System.Windows.Forms.Label lbl_cake;
+        private System.Windows.Forms.Label lbl_vegan;
+        private System.Windows.Forms.Label lbl_sushi;
     }
 }

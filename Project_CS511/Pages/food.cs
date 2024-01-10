@@ -93,18 +93,11 @@ namespace Project_CS511.Pages
         {
             btn_delivery.BackColor = Color.LightCyan;
             btn_delivery.ForeColor = Color.Teal;
-            btn_dinner.BackColor = SystemColors.Control;
-            btn_dinner.ForeColor = SystemColors.ControlText;
+           
 
         }
 
-        private void btn_dinner_Click(object sender, EventArgs e)
-        {
-            btn_dinner.BackColor = Color.LightCyan;
-            btn_dinner.ForeColor = Color.Teal;
-            btn_delivery.BackColor = SystemColors.Control;
-            btn_delivery.ForeColor = SystemColors.ControlText;
-        }
+       
         public string userlocation;
         public void Init()
         {
@@ -140,10 +133,12 @@ namespace Project_CS511.Pages
                 case 1:
                     pic_drink.Image = Properties.Resources.drink_check;
                     addData();
+                    lbl_drink.ForeColor = Color.MediumAquamarine;
                     break;
                 case 0:
                     pic_drink.Image = Properties.Resources.drink;
                     addData();
+                    lbl_drink.ForeColor = Color.Black;
                     break;
             }
         }
@@ -156,10 +151,12 @@ namespace Project_CS511.Pages
                 case 1:
                     pic_fastfood.Image = Properties.Resources.burger_check;
                     addData();
+                    lbl_fastfood.ForeColor = Color.MediumAquamarine;
                     break;
                 case 0:
                     pic_fastfood.Image = Properties.Resources.burger;
                     addData();
+                    lbl_fastfood.ForeColor = Color.Black;
                     break;
             }
         }
@@ -172,10 +169,13 @@ namespace Project_CS511.Pages
                 case 1:
                     pic_cake.Image = Properties.Resources.cake_check;
                     addData();
+                    lbl_cake.ForeColor = Color.MediumAquamarine;
+
                     break;
                 case 0:
                     pic_cake.Image = Properties.Resources.cake;
                     addData();
+                    lbl_cake.ForeColor = Color.Black;
                     break;
             }
         }
@@ -188,10 +188,12 @@ namespace Project_CS511.Pages
                 case 1:
                     pic_vegan.Image = Properties.Resources.coconut_check;
                     addData();
+                    lbl_vegan.ForeColor = Color.MediumAquamarine;
                     break;
                 case 0:
                     pic_vegan.Image = Properties.Resources.coconut;
                     addData();
+                    lbl_vegan.ForeColor = Color.Black;
                     break;
             }
         }
@@ -204,10 +206,12 @@ namespace Project_CS511.Pages
                 case 1:
                     pic_sushi.Image = Properties.Resources.sushi_check;
                     addData();
+                    lbl_sushi.ForeColor = Color.MediumAquamarine;
                     break;
                 case 0:
                     pic_sushi.Image = Properties.Resources.sushi;
                     addData();
+                    lbl_sushi.ForeColor = Color.Black;
                     break;
             }
         }
@@ -274,6 +278,20 @@ namespace Project_CS511.Pages
             if (clickCountersushi % 2 == 1)
             {
                 var filter = Builders<BsonDocument>.Filter.Eq("foodType", "Sushi");
+                var result = collections.Find(filter).ToList();
+                for (int i = result.Count - 1; i >= 0; i--)
+                {
+                    var document = result[i];
+                    var foodmenu = new foodlist(main);
+                    foodmenu.Picture = document.GetValue("foodId").AsString;
+                    foodmenu.Namefood = document.GetValue("foodName").AsString;
+                    foodmenu.Price = document.GetValue("price").AsString;
+                    flowLayoutPanel1.Controls.Add(foodmenu);
+                }
+            }
+            if (clickCounterdrink % 2 == 0 && clickCounterfastfood % 2 == 0 && clickCountercake % 2 == 0 && clickCountervegan % 2 == 0 && clickCountersushi % 2 == 0)
+            {
+                var filter = Builders<BsonDocument>.Filter.Empty; // Empty filter to get all documents
                 var result = collections.Find(filter).ToList();
                 for (int i = result.Count - 1; i >= 0; i--)
                 {
