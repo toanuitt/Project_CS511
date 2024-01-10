@@ -26,6 +26,10 @@ namespace Project_CS511.SubPage
             main.dataSource.SetCollection("user");
             List<string> likedProduct = main.dataSource.findValue("loginName", main.currentUser, "liked").Split('-').ToList();
             int i = 0;
+            if (likedProduct[0] == "")
+            {
+                return;
+            }
             foreach(string product in likedProduct)
             {
                 favouriteBlock f = new favouriteBlock(main);
