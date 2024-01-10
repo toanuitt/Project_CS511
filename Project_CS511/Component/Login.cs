@@ -40,7 +40,7 @@ namespace Project_CS511.Component
             {
                 main.currentUser = tb_username.Text;
                 main.currentId = main.dataSource.findValue("loginName", main.currentUser, "userId");
-                main.loginSuccess();
+                main.loginSuccess(false);
             }
             else
             {

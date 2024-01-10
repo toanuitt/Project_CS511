@@ -83,7 +83,7 @@ namespace Project_CS511.Component
             //thêm vào database
             main.dataSource.insertToCollection(newUserInfo);
 
-            main.loginSuccess();
+            main.loginSuccess(true);
         }
 
         #region Các hàm chức năng

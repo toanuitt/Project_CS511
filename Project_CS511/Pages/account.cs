@@ -130,9 +130,9 @@ namespace Project_CS511.Pages
 
         private void lb_yourLocation_Click(object sender, EventArgs e)
         {
-            setLocation location = new setLocation(main);
-            main.Controls.Add(location);
-            main.bringControlToFront(location);
+            setLocation f = new setLocation(main);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
         }
 
         private void label2_Click(object sender, EventArgs e)

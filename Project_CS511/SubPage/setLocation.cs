@@ -20,6 +20,7 @@ namespace Project_CS511.SubPage
 {
     public partial class setLocation : UserControl
     {
+        bool isNewUser = false;
         mainForm main;
         string coordinate;
         string location;
@@ -32,17 +33,27 @@ namespace Project_CS511.SubPage
 
         private void maplocation_Load(object sender, EventArgs e)
         {
+
             gMapControl1.DragButton = MouseButtons.Right;
             gMapControl1.MapProvider = GMapProviders.GoogleMap;
-
             main.dataSource.SetCollection("user");
             string address = main.dataSource.findValue("loginName", main.currentUser, "location");
-            var (latitude, longitude) = GetLatLngFromAddress(address, main.api_key);
-            gMapControl1.Position = new PointLatLng(latitude, longitude); // Initial coordinates
+            if (address != "")
+            {
+                var (latitude, longitude) = GetLatLngFromAddress(address, main.api_key);
+                gMapControl1.Position = new PointLatLng(latitude, longitude); // Initial coordinates
+                richTextBox1.Text = GetAddressFromLatLng(latitude, longitude, main.api_key);
+            }
+            else
+            {
+                gMapControl1.Position = new PointLatLng(10.8231, 106.6297);
+                richTextBox1.Text = GetAddressFromLatLng(10.8231, 106.6297, main.api_key);
+            }
+
             gMapControl1.Zoom = 18;
             gMapControl1.MouseClick += GMapControl1_MouseClick;
 
-            richTextBox1.Text = GetAddressFromLatLng(latitude, longitude, main.api_key);
+
             label1.Text = richTextBox1.Text.Split(',')[0].Trim();
             markerOverlay.Markers.Clear();
 
@@ -137,6 +148,12 @@ namespace Project_CS511.SubPage
             };
             timer.Start();
         }
+
+        public void ModeNew()
+        {
+            btn_back.Hide();
+            isNewUser = true;
+        }
         #endregion
 
         private void btn_confirmlocation_Click(object sender, EventArgs e)
@@ -145,6 +162,10 @@ namespace Project_CS511.SubPage
             main.dataSource.SetCollection("user");
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "coordinate", coordinate);
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "location", location);
+            if(isNewUser)
+            {
+                main.RemoveControlByName("setLocation");
+            }
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -154,6 +175,8 @@ namespace Project_CS511.SubPage
         #region get address
         static (double Latitude, double Longitude) GetLatLngFromAddress(string address, string apiKey)
         {
+            if(address == "")
+                address = "RM67 + 4X6, Trường Sơn, Phường 2, Tân Bình, Thành phố Hồ Chí Minh, Vietnam";
             string encodedAddress = Uri.EscapeDataString(address);
             string apiUrl = $"https://maps.googleapis.com/maps/api/geocode/json?address={encodedAddress}&key={apiKey}";
 

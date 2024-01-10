@@ -25,7 +25,7 @@ namespace Project_CS511
         public maplocation maplocationPage;
         private menuBar menu;
         public DataSource dataSource = new DataSource();
-        public string api_key = "AIzaSyBvPAnGMxsWmuPzrK-1R2kfYkBcoNPG9as";
+        public string api_key = "AIzaSyAJRMpBYJh-Rkbr3ozfr_m7LEjCjy--Lzc";
         public string currentUser;
         public string currentId;
         public string tempLocation;
@@ -127,10 +127,19 @@ namespace Project_CS511
             }
         }
 
-        public void loginSuccess()
+        public void loginSuccess(bool isNew)
         {
             RemoveControlByName("logSignIn");
             updateTempData();
+            accountPage.reloadAvatar(currentId);
+
+            if(isNew)
+            {
+                setLocation f = new setLocation(this);
+                f.ModeNew();
+                Controls.Add(f);
+                bringControlToFront(f);
+            }
         }
 
         public void updateTempData()
