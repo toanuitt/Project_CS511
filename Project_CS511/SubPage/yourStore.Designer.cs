@@ -43,12 +43,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_success = new System.Windows.Forms.Button();
             this.cb_foodType = new System.Windows.Forms.ComboBox();
             this.pb_newImg = new System.Windows.Forms.PictureBox();
             this.tb_price = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.btn_update = new System.Windows.Forms.Button();
-            this.btn_success = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_search)).BeginInit();
             this.panel3.SuspendLayout();
@@ -219,6 +219,20 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
+            // btn_success
+            // 
+            this.btn_success.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_success.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_success.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_success.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_success.Location = new System.Drawing.Point(134, 55);
+            this.btn_success.Name = "btn_success";
+            this.btn_success.Size = new System.Drawing.Size(142, 33);
+            this.btn_success.TabIndex = 42;
+            this.btn_success.Text = "Product Added Success";
+            this.btn_success.UseVisualStyleBackColor = false;
+            this.btn_success.Visible = false;
+            // 
             // cb_foodType
             // 
             this.cb_foodType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -231,7 +245,7 @@
             // 
             // pb_newImg
             // 
-            this.pb_newImg.Image = ((System.Drawing.Image)(resources.GetObject("pb_newImg.Image")));
+            this.pb_newImg.Image = global::Project_CS511.Properties.Resources.add_food;
             this.pb_newImg.Location = new System.Drawing.Point(7, 13);
             this.pb_newImg.Name = "pb_newImg";
             this.pb_newImg.Size = new System.Drawing.Size(79, 74);
@@ -275,20 +289,6 @@
             this.btn_update.Text = "Add product";
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // btn_success
-            // 
-            this.btn_success.BackColor = System.Drawing.Color.OliveDrab;
-            this.btn_success.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_success.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_success.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_success.Location = new System.Drawing.Point(134, 55);
-            this.btn_success.Name = "btn_success";
-            this.btn_success.Size = new System.Drawing.Size(142, 33);
-            this.btn_success.TabIndex = 42;
-            this.btn_success.Text = "Product Added Success";
-            this.btn_success.UseVisualStyleBackColor = false;
-            this.btn_success.Visible = false;
             // 
             // yourStore
             // 

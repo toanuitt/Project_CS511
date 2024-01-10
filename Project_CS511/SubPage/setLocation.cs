@@ -75,7 +75,6 @@ namespace Project_CS511.SubPage
         {
             if (e.Button == MouseButtons.Left)
             {
-                btn_confirmlocation.Enabled = true;
                 PointLatLng clickedPoint = gMapControl1.FromLocalToLatLng(e.X, e.Y);
                 //string address = GetAddressFromLatLng(clickedPoint.Lat, clickedPoint.Lng, apiKey);
                     

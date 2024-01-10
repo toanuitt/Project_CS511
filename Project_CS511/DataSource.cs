@@ -237,7 +237,8 @@ namespace Project_CS511
         public void deleteOneByValue(string attr, string value)
         {
             var filter = Builders<BsonDocument>.Filter.Eq(attr, value);
-            collection.DeleteOne(filter);
+            var result = collection.DeleteOne(filter);
+            var num = result.DeletedCount;
         }
 
         public void deleteManyByValue(string attr, string value)

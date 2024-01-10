@@ -233,8 +233,12 @@ namespace Project_CS511.SubPage
                 {"comment", "" },
                 };
                 main.dataSource.insertToCollection(newComment);
-
                 addNotify("add", tb_name.Text);
+
+                //set iamge to avoid conflict
+                pb_newImg.Image.Dispose();
+                pb_newImg.Image = Resources.add_food;
+
                 main.dataSource.SetCollection("user");
                 notification();
 

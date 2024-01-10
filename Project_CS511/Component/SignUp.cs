@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -74,6 +75,8 @@ namespace Project_CS511.Component
                 {"cart", "" },
                 {"boughtFood", ""}
             };
+            string destinationFolder = Path.Combine(getAvatarPath(), (main.dataSource.getLength() + 1).ToString() + ".png");
+            File.Copy(getAvatarPath() + "default.png", destinationFolder, true);
 
             //thêm dữ liệu vào database (lưu ý collection phải là user do đang cần thêm người dùng)
 
@@ -83,6 +86,8 @@ namespace Project_CS511.Component
             //thêm vào database
             main.dataSource.insertToCollection(newUserInfo);
 
+            main.currentUser = tb_username.Text;
+            main.currentId = main.dataSource.findValue("loginName", main.currentUser, "userId");
             main.loginSuccess(true);
         }
 
@@ -94,6 +99,13 @@ namespace Project_CS511.Component
             return regex.IsMatch(email);
         }
 
+        private string getAvatarPath()
+        {
+            string[] s = { "\\bin" };
+            string currentPath = Application.StartupPath.Split(s, StringSplitOptions.None)[0] + "\\icons\\avatar\\";
+            return currentPath;
+
+        }
         static bool IsNumeric(string str)
         {
             if (int.TryParse(str, out _))

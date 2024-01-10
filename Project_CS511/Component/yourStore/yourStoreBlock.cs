@@ -126,21 +126,24 @@ namespace Project_CS511.Component.yourStore
                 DialogResult result = MessageBox.Show(notify, "Confirm delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (result == DialogResult.OK)
                 {
-                    main.dataSource.SetCollection("food");
                     addNotify("delete", main.dataSource.findValue("foodId", thisfoodId, "foodName"));
+                    main.dataSource.SetCollection("food");
                     main.dataSource.deleteOneByValue("foodId", thisfoodId);
                     removeFromCart(thisfoodId);
                     removeFromLiked(thisfoodId);
                     removeComment(thisfoodId);
                     removeBoughtProduct(thisfoodId);
                     this.Parent.Controls.Remove(this);
-
                     main.dataSource.SetCollection("user");
-
-                    main.homePage.updateFoodAfterDelete();
-                    
                 }
+
+                
                 main.dataSource.SetCollection("user");
+
+                pb_picture.Image.Dispose();
+                main.homePage.setToAvoidConflictFood();
+                File.Delete(getFoodPicturePath() + thisfoodId + ".png");
+                main.homePage.updateFoodAfterDelete();
             }
         }
 
@@ -258,6 +261,7 @@ namespace Project_CS511.Component.yourStore
 
             main.messagePage.init();
         }
+
 
         private string getFoodPath()
         {
