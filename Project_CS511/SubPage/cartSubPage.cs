@@ -174,6 +174,17 @@ namespace Project_CS511.SubPage
             string productList = string.Join("-", boughtFoodList);
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
+            if (main.methodepayment == "1")
+            {
+                onlinepayment pay = new onlinepayment(main);
+                main.Controls.Add(pay);
+                main.bringControlToFront(pay);
+            }
+            else if (main.methodepayment == null)
+            {
+                MessageBox.Show("Please select payment method");
+            }
+        
 
         }
     }
