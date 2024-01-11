@@ -35,8 +35,9 @@ namespace Project_CS511.Component.Cart
 
         private void label2_Click(object sender, EventArgs e)
         {
-            main.maplocationPage.BringToFront();
-            main.maplocationPage.Show();
+            setLocation f = new setLocation(main);
+            main.Controls.Add(f);
+            main.bringControlToFront(f);
         }
 
         public void updateAddress(string add)

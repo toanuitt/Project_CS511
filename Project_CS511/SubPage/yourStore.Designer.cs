@@ -102,7 +102,6 @@
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(249, 27);
             this.tb_search.TabIndex = 0;
-            this.tb_search.Text = "What shall we deliver?";
             this.tb_search.Click += new System.EventHandler(this.tb_search_Click);
             this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
             // 

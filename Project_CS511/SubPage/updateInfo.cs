@@ -88,6 +88,7 @@ namespace Project_CS511.SubPage
             {
                 main.dataSource.findAndReplaceOne("loginName", main.currentUser, "username", tb_name.Text);
                 lb_nameError.ForeColor = Color.DarkGreen;
+                main.accountPage.addName(main.currentId);
                 lb_nameError.Text = "Update Sucess";
             }
         }

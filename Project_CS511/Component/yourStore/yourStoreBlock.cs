@@ -56,13 +56,13 @@ namespace Project_CS511.Component.yourStore
             tb_price.Text = main.dataSource.findValue("foodId", foodId, "price").ToString();
 
             //add combobox
-            if(thisfoodType == "fastfood")
+            if(thisfoodType == "Fast Food")
             {
                 cb_foodType.SelectedIndex = cb_foodType.Items.IndexOf("Fast Food");
             }
             else
             {
-                int index = cb_foodType.Items.IndexOf(CapitalizeFirstLetter(thisfoodType));
+                int index = cb_foodType.Items.IndexOf(thisfoodType);
                 cb_foodType.SelectedIndex = index;
             }
         }
@@ -103,9 +103,16 @@ namespace Project_CS511.Component.yourStore
                 main.dataSource.SetCollection("food");
                 main.dataSource.findAndReplaceOne("foodId", thisfoodId, "foodName", tb_name.Text);
                 main.dataSource.findAndReplaceOne("foodId", thisfoodId, "price", tb_price.Text);
-                main.dataSource.findAndReplaceOne("foodId", thisfoodId, "foodType", cb_foodType.Text.ToLower().Replace(" ",""));
+                main.dataSource.findAndReplaceOne("foodId", thisfoodId, "foodType", cb_foodType.Text);
                 main.dataSource.SetCollection("user");
+
+                
+                SubPage.yourStore store = (SubPage.yourStore)main.findControlByName("yourStore");
+                store.addData(main.currentId);
+                store.setComboBox();
                 updateToggle("off");
+
+
             }
             else
             {
@@ -133,15 +140,14 @@ namespace Project_CS511.Component.yourStore
                     removeFromLiked(thisfoodId);
                     removeComment(thisfoodId);
                     removeBoughtProduct(thisfoodId);
-                    pb_picture.Image.Dispose();
-                    pb_picture.Image = Resources.add_food;
                     this.Parent.Controls.Remove(this);
+                    this.Dispose(); 
                     main.dataSource.SetCollection("user");
                 }
-                main.messagePage.setToAvoidConflict();
                 main.homePage.setToAvoidConflictFood();
                 main.foodPage.setToAvoidConflict();
-                File.Delete(getFoodPicturePath() + thisfoodId + ".png");
+                //main.RemoveControlByName("payment");
+                //File.Delete(getFoodPicturePath() + thisfoodId + ".png");
                 main.homePage.updateFoodAfterDelete();
                 main.messagePage.init();
 ;            }

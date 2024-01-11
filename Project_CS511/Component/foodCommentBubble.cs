@@ -24,7 +24,7 @@ namespace Project_CS511.Component
 
         public void addData(BsonDocument data)
         {
-            //add start
+            //add star
             loadStart(data["rating"].AsString);
 
             //add name
@@ -33,7 +33,9 @@ namespace Project_CS511.Component
             //add comment
             lb_comment.Text = data["comment"].AsString;
 
-            string avatarPath = getAvatarPath() + main.currentUser + ".png";
+            main.dataSource.SetCollection("user");
+            string userId = main.dataSource.findValue("loginName", lb_name.Text, "userId");
+            string avatarPath = getAvatarPath() + userId + ".png";
 
             if(File.Exists(avatarPath))
             {

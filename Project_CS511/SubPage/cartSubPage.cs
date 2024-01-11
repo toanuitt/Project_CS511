@@ -177,54 +177,96 @@ namespace Project_CS511.SubPage
 
         private void lb_placeOrder_Click(object sender, EventArgs e)
         {
-            List<string> uniqueProduct = new List<string>();
-            main.dataSource.SetCollection("user");
-            string[] products = main.dataSource.findValue("loginName", main.currentUser, "cart").Split('-');
-            foreach (string product in products)
-            {
-                if(!uniqueProduct.Contains(product))
-                {
-                    uniqueProduct.Add(product);
-                }
-            }
-            List<string> boughtFoodList = main.dataSource.findValue("loginName", main.currentUser, "boughtFood").Split('-').ToList();
-
-            if (boughtFoodList[0] == "")
-            {
-                foreach(string food in uniqueProduct)
-                {
-                    boughtFoodList.Add(food);
-                }
-                boughtFoodList = boughtFoodList.Skip(1).ToList();
-                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
-                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", string.Join("-", boughtFoodList));
-            }
-            else
-            {
-                foreach (string product in uniqueProduct)
-                {
-                    if (!boughtFoodList.Contains(product))
-                    {
-                        boughtFoodList.Add(product);
-                    }
-                }
-
-                string productList = string.Join("-", boughtFoodList);
-                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
-                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
-            }
-
-
-            addNotify(shopIds);
-
-            main.messagePage.hasSeen = false;
-
             //////
             if (main.methodepayment == "1")
             {
                 onlinepayment pay = new onlinepayment(main);
                 main.Controls.Add(pay);
                 main.bringControlToFront(pay);
+
+                List<string> uniqueProduct = new List<string>();
+                main.dataSource.SetCollection("user");
+                string[] products = main.dataSource.findValue("loginName", main.currentUser, "cart").Split('-');
+                foreach (string product in products)
+                {
+                    if (!uniqueProduct.Contains(product))
+                    {
+                        uniqueProduct.Add(product);
+                    }
+                }
+                List<string> boughtFoodList = main.dataSource.findValue("loginName", main.currentUser, "boughtFood").Split('-').ToList();
+
+                if (boughtFoodList[0] == "")
+                {
+                    foreach (string food in uniqueProduct)
+                    {
+                        boughtFoodList.Add(food);
+                    }
+                    boughtFoodList = boughtFoodList.Skip(1).ToList();
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", string.Join("-", boughtFoodList));
+                }
+                else
+                {
+                    foreach (string product in uniqueProduct)
+                    {
+                        if (!boughtFoodList.Contains(product))
+                        {
+                            boughtFoodList.Add(product);
+                        }
+                    }
+
+                    string productList = string.Join("-", boughtFoodList);
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
+                }
+                addNotify(shopIds);
+                main.messagePage.hasSeen = false;
+
+                main.RemoveControlByName("cartSubPage");
+            }
+            else if (main.methodepayment == "2")
+            {
+                List<string> uniqueProduct = new List<string>();
+                main.dataSource.SetCollection("user");
+                string[] products = main.dataSource.findValue("loginName", main.currentUser, "cart").Split('-');
+                foreach (string product in products)
+                {
+                    if (!uniqueProduct.Contains(product))
+                    {
+                        uniqueProduct.Add(product);
+                    }
+                }
+                List<string> boughtFoodList = main.dataSource.findValue("loginName", main.currentUser, "boughtFood").Split('-').ToList();
+
+                if (boughtFoodList[0] == "")
+                {
+                    foreach (string food in uniqueProduct)
+                    {
+                        boughtFoodList.Add(food);
+                    }
+                    boughtFoodList = boughtFoodList.Skip(1).ToList();
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", string.Join("-", boughtFoodList));
+                }
+                else
+                {
+                    foreach (string product in uniqueProduct)
+                    {
+                        if (!boughtFoodList.Contains(product))
+                        {
+                            boughtFoodList.Add(product);
+                        }
+                    }
+
+                    string productList = string.Join("-", boughtFoodList);
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                    main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
+                }
+                addNotify(shopIds);
+                main.messagePage.hasSeen = false;
+
+                main.RemoveControlByName("cartSubPage");
             }
             else if (main.methodepayment == null)
             {

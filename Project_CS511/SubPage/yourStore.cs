@@ -66,8 +66,9 @@ namespace Project_CS511.SubPage
             addData(userId);
         }
 
-        private void addData(string userId)
+        public void addData(string userId)
         {
+            flowLayoutPanel1.Controls.Clear();
             main.dataSource.SetCollection("food");
             List<BsonDocument> foodOfShop = main.dataSource.findMultipleDoc("shopId", userId);
             foreach (BsonDocument food in foodOfShop)
@@ -265,6 +266,12 @@ namespace Project_CS511.SubPage
             }
 
             main.messagePage.init();
+        }
+
+        public void setComboBox()
+        {
+            cb_filter.SelectedIndex = -1;
+            cb_filter.Text = "";
         }
 
         private void tb_price_KeyPress(object sender, KeyPressEventArgs e)

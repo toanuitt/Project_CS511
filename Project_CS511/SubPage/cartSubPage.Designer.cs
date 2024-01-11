@@ -213,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Wheat;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lb_placeOrder);
             this.Controls.Add(this.pb_placeOrder);

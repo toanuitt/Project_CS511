@@ -43,7 +43,7 @@
             this.lb_time.AutoSize = true;
             this.lb_time.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_time.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_time.Location = new System.Drawing.Point(78, 67);
+            this.lb_time.Location = new System.Drawing.Point(79, 81);
             this.lb_time.MaximumSize = new System.Drawing.Size(165, 17);
             this.lb_time.Name = "lb_time";
             this.lb_time.Size = new System.Drawing.Size(41, 17);
@@ -58,7 +58,7 @@
             this.lb_chat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_chat.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_chat.Location = new System.Drawing.Point(80, 28);
-            this.lb_chat.MaximumSize = new System.Drawing.Size(300, 40);
+            this.lb_chat.MaximumSize = new System.Drawing.Size(300, 60);
             this.lb_chat.Name = "lb_chat";
             this.lb_chat.Size = new System.Drawing.Size(277, 36);
             this.lb_chat.TabIndex = 11;
@@ -82,7 +82,7 @@
             // pb_trash
             // 
             this.pb_trash.Image = global::Project_CS511.Properties.Resources.trash;
-            this.pb_trash.Location = new System.Drawing.Point(355, 58);
+            this.pb_trash.Location = new System.Drawing.Point(354, 67);
             this.pb_trash.Name = "pb_trash";
             this.pb_trash.Size = new System.Drawing.Size(26, 31);
             this.pb_trash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -117,7 +117,7 @@
             this.Controls.Add(this.pb_avatar);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "chatBlock";
-            this.Size = new System.Drawing.Size(392, 89);
+            this.Size = new System.Drawing.Size(392, 103);
             this.MouseEnter += new System.EventHandler(this.pb_avatar_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.lb_time_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pb_trash)).EndInit();

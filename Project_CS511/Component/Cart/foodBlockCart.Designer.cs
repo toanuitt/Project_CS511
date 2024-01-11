@@ -90,7 +90,7 @@
             // pb_sub
             // 
             this.pb_sub.Image = ((System.Drawing.Image)(resources.GetObject("pb_sub.Image")));
-            this.pb_sub.Location = new System.Drawing.Point(113, 28);
+            this.pb_sub.Location = new System.Drawing.Point(265, 28);
             this.pb_sub.Name = "pb_sub";
             this.pb_sub.Size = new System.Drawing.Size(25, 25);
             this.pb_sub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             // pb_add
             // 
             this.pb_add.Image = ((System.Drawing.Image)(resources.GetObject("pb_add.Image")));
-            this.pb_add.Location = new System.Drawing.Point(65, 28);
+            this.pb_add.Location = new System.Drawing.Point(223, 28);
             this.pb_add.Name = "pb_add";
             this.pb_add.Size = new System.Drawing.Size(25, 25);
             this.pb_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +122,7 @@
             // pic_delete
             // 
             this.pic_delete.Image = global::Project_CS511.Properties.Resources.trash;
-            this.pic_delete.Location = new System.Drawing.Point(299, 29);
+            this.pic_delete.Location = new System.Drawing.Point(323, 28);
             this.pic_delete.Name = "pic_delete";
             this.pic_delete.Size = new System.Drawing.Size(25, 25);
             this.pic_delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tan;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.pic_delete);
             this.Controls.Add(this.pb_sub);
             this.Controls.Add(this.pb_add);
