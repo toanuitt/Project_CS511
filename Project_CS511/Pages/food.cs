@@ -123,6 +123,7 @@ namespace Project_CS511.Pages
                     foodmenu.Picture = document.GetValue("foodId").AsString;
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
+                    foodmenu.ShopID = document.GetValue("shopId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
