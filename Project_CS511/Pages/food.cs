@@ -116,12 +116,15 @@ namespace Project_CS511.Pages
             var result = collections.Find(filter).ToList();
             for (int i = result.Count - 1; i >= 0; i--)
             {
-                var document = result[i];
-                var foodmenu = new foodlist(main);
-                foodmenu.Picture = document.GetValue("foodId").AsString;
-                foodmenu.Namefood = document.GetValue("foodName").AsString;
-                foodmenu.Price = document.GetValue("price").AsString;
-                flowLayoutPanel1.Controls.Add(foodmenu);
+                if (result[i]["shopId"].AsString != main.currentId) 
+                {
+                    var document = result[i];
+                    var foodmenu = new foodlist(main);
+                    foodmenu.Picture = document.GetValue("foodId").AsString;
+                    foodmenu.Namefood = document.GetValue("foodName").AsString;
+                    foodmenu.Price = document.GetValue("price").AsString;
+                    flowLayoutPanel1.Controls.Add(foodmenu);
+                }
             }
         }
         private int clickCounterdrink = 0;

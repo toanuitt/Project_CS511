@@ -34,11 +34,14 @@ namespace Project_CS511.Component
                 main.dataSource.SetCollection("user");
                 BsonDocument random = main.dataSource.findOneDoc("userId", i.ToString());
 
-                //add data to foodblock
-                f.addData(random);
+                if (random["userId"].AsString != main.currentId)
+                {
+                    //add data to foodblock
+                    f.addData(random);
 
-                //add new data to food the slide
-                flowLayoutPanel1.Controls.Add(f);
+                    //add new data to food the slide
+                    flowLayoutPanel1.Controls.Add(f);
+                }
             }
         }
 

@@ -23,7 +23,7 @@ namespace Project_CS511.Pages
             init();
         }
 
-        private void init()
+        public void init()
         {
             restaurantSlide restaurantSlide = new restaurantSlide(main);
             flp_home.Controls.Add(restaurantSlide);
@@ -36,6 +36,12 @@ namespace Project_CS511.Pages
             foodSlide foodSlide = new foodSlide(main);
             flp_home.Controls.Add(foodSlide);
             foodSlide1 = foodSlide;
+        }
+
+        public void reload()
+        {
+            restaurants.init();
+            foodSlide1.addFood();
         }
 
         public void setToAvoidConflict()

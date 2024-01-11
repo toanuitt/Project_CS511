@@ -24,7 +24,7 @@ namespace Project_CS511.Component
         public void addFood()
         {
             flowLayoutPanel1.Controls.Clear();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 15; i++)
             {
                 //create new food block
                 foodBlock f = new foodBlock(main);
@@ -33,16 +33,17 @@ namespace Project_CS511.Component
                 main.dataSource.SetCollection("food");
                 BsonDocument random = main.dataSource.getRandomDoc();
 
-                //add data to foodblock
-                f.addData(random);
+                if (random["shopId"].AsString != main.currentId) 
+                {
+                    //add data to foodblock
+                    f.addData(random);
 
-                //add new data to food the slide
-                flowLayoutPanel1.Controls.Add(f);
-
-                //set data to user collection to avoid confusion
-                main.dataSource.SetCollection("user");
+                    //add new data to food the slide
+                    flowLayoutPanel1.Controls.Add(f);
+                }
             }
-            
+            //set data to user collection to avoid confusion
+            main.dataSource.SetCollection("user");
         }
 
         public void setToAvoidConflict()

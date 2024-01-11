@@ -28,6 +28,10 @@ namespace Project_CS511.SubPage
 
         public void addDataFood(BsonDocument dataFood)
         {
+            if (dataFood["shopId"].AsString == main.currentId)
+            {
+                pb_addToCart.Visible = false;
+            }
             string path = getFoodPicturePath();
             string shopId = dataFood["shopId"].AsString;
 
