@@ -52,26 +52,12 @@ namespace Project_CS511.SubPage
             flowLayoutPanel1.Controls.Clear();
             number = 1;
             btn_recent.BackColor = Color.LightCyan;
-            btn_recent.ForeColor = Color.Green;
-            btn_saved.BackColor = Color.White;
-            btn_saved.ForeColor = Color.Gray;
+            btn_recent.ForeColor = Color.Green;         
             Init();
             // add database recent to flowlayoutpanel1
         }
 
-        private void btn_saved_Click(object sender, EventArgs e)
-        {
-            number = 2;
-            btn_saved.BackColor = Color.LightCyan;
-            btn_saved.ForeColor = Color.Green;
-            btn_recent.BackColor = Color.White;
-            btn_recent.ForeColor = Color.Gray;
-            flowLayoutPanel1.Controls.Clear();
-            var addlocation = new addLocation(main);
-            flowLayoutPanel1.Controls.Add(addlocation);
-            
-            // add database saved to flowlayoutpanel1
-        }
+      
         public void getAddress(string address)
         {
             txtbox_address.Text = address;
@@ -84,7 +70,6 @@ namespace Project_CS511.SubPage
         // setting the flowlayoutpanel to show the history
         public void Init()
         {
-            btn_saved.Visible = true;
             btn_recent.Visible = true;
             var newlocation = new location(main);
             flowLayoutPanel1.Controls.Clear();
@@ -112,7 +97,6 @@ namespace Project_CS511.SubPage
 
         private void txtbox_address_TextChanged(object sender, EventArgs e)
         {
-            btn_saved.Visible = false;
             btn_recent.Visible = false;
             flowLayoutPanel1.Controls.Clear();
             
