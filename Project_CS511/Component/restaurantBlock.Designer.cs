@@ -32,10 +32,7 @@
             this.pb_picture = new System.Windows.Forms.PictureBox();
             this.lb_name = new System.Windows.Forms.Label();
             this.lb_distance = new System.Windows.Forms.Label();
-            this.pb_star = new System.Windows.Forms.PictureBox();
-            this.lb_star = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_picture
@@ -78,34 +75,10 @@
             this.lb_distance.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.lb_distance.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             // 
-            // pb_star
-            // 
-            this.pb_star.Image = global::Project_CS511.Properties.Resources.star;
-            this.pb_star.Location = new System.Drawing.Point(104, 147);
-            this.pb_star.Name = "pb_star";
-            this.pb_star.Size = new System.Drawing.Size(25, 25);
-            this.pb_star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_star.TabIndex = 5;
-            this.pb_star.TabStop = false;
-            this.pb_star.Click += new System.EventHandler(this.pb_picture_Click);
-            // 
-            // lb_star
-            // 
-            this.lb_star.AutoSize = true;
-            this.lb_star.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_star.Location = new System.Drawing.Point(130, 151);
-            this.lb_star.Name = "lb_star";
-            this.lb_star.Size = new System.Drawing.Size(28, 19);
-            this.lb_star.TabIndex = 6;
-            this.lb_star.Text = "4.8";
-            this.lb_star.Click += new System.EventHandler(this.pb_picture_Click);
-            // 
             // restaurantBlock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lb_star);
-            this.Controls.Add(this.pb_star);
             this.Controls.Add(this.lb_distance);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.pb_picture);
@@ -116,7 +89,6 @@
             this.MouseEnter += new System.EventHandler(this.pb_picture_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.pb_picture_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +99,5 @@
         private System.Windows.Forms.PictureBox pb_picture;
         private System.Windows.Forms.Label lb_name;
         private System.Windows.Forms.Label lb_distance;
-        private System.Windows.Forms.PictureBox pb_star;
-        private System.Windows.Forms.Label lb_star;
     }
 }

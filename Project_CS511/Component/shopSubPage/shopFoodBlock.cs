@@ -16,7 +16,7 @@ namespace Project_CS511.Component.shopSubPage
     public partial class shopFoodBlock : UserControl
     {
         mainForm main;
-        string thisfoodId;
+        public string thisfoodId;
         public string thisfoodType;
         bool liked = false;
         public bool isSearched = true;
@@ -40,7 +40,8 @@ namespace Project_CS511.Component.shopSubPage
             pb_picture.Image = Image.FromFile(getFoodPicturePath() + foodId + ".png");
             //add price
             lb_price.Text =  FormatMoney(main.dataSource.findValue("foodId", foodId, "price").ToString()) + "₫";
-
+            //add rating
+            lb_star.Text = main.dataSource.findValue("foodId", foodId, "rating");
             string userId = main.dataSource.findValue("foodId", foodId, "shopId");
             main.dataSource.SetCollection("user");
             lb_store.Text = main.dataSource.findValue("loginName", main.currentUser, "username");
@@ -53,7 +54,12 @@ namespace Project_CS511.Component.shopSubPage
                 liked = true;
             }
         }
-
+        public void updateStar(string foodId)
+        {
+            main.dataSource.SetCollection("food");
+            lb_star.Text = main.dataSource.findValue("foodId", foodId, "rating");
+            main.dataSource.SetCollection("user");
+        }
         #region cac ham chuc nang
         private string getFoodPicturePath()
         {

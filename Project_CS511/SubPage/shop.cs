@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.CodeDom.Compiler;
 
 namespace Project_CS511.SubPage
 {
@@ -69,6 +70,19 @@ namespace Project_CS511.SubPage
             }
 
             main.dataSource.SetCollection("user");
+        }
+
+        public void reloadStar(string foodId)
+        {
+            foreach(Control c in flowLayoutPanel1.Controls)
+            {
+                shopFoodBlock temp = (shopFoodBlock)c;
+                if(temp.thisfoodId == foodId)
+                {
+                    temp.updateStar(foodId);
+                    return;
+                }
+            }
         }
         #region cac ham chuc nang
         private string getFoodPicturePath()

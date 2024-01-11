@@ -63,9 +63,14 @@ namespace Project_CS511.SubPage
                 pb_like.Image = Resources.heart_on;
                 liked = true;
             }
+
+            //addRating
+            lb_star.Text = dataFood["rating"].AsString;
+
+
         }
         #region foodpage
-        public void addDataFoodpage(string idshop,string idfood,string namefood,string money)
+        public void addDataFoodpage(string idshop,string idfood,string namefood,string money, string rating)
         {
             string path = getFoodPicturePath();
             string shopId = idshop;//dataFood["shopId"].AsString;
@@ -98,6 +103,9 @@ namespace Project_CS511.SubPage
                 pb_like.Image = Resources.heart_on;
                 liked = true;
             }
+
+            //add rating
+            lb_star.Text = rating;
         }
         #endregion
         #region add Data
@@ -148,6 +156,17 @@ namespace Project_CS511.SubPage
                 ratingBlock.foodId = foodId;
                 this.Controls.Add(ratingBlock);
             }
+
+            main.dataSource.SetCollection("user");
+        }
+
+
+
+        public void updateRating(string foodId)
+        {
+            main.dataSource.SetCollection("food");
+
+            lb_star.Text = main.dataSource.findValue("foodId", foodId, "rating");
 
             main.dataSource.SetCollection("user");
         }

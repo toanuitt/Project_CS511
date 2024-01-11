@@ -54,5 +54,19 @@ namespace Project_CS511.Component
                 temp.setToAvoidConflict();
             }
         }
+
+        public void updateStar(string foodId)
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                foodBlock temp = (foodBlock)c;
+                if (temp.id == foodId)
+                {
+                    temp.updateStar(foodId);
+                    temp.updateFoodBlock(foodId);
+                    return;
+                }
+            }
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace Project_CS511.Component
     {
         mainForm main;
         BsonDocument foodBlockData;
+        public string id;
         public foodBlock(mainForm main)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace Project_CS511.Component
             foodBlockData = doc;
             string path = getFoodPicturePath();
             string shopId = doc["shopId"].AsString;
+            id = doc["foodId"].AsString;
 
             //add image
             pb_picture.Image = Image.FromFile(path + doc["foodId"]+".png");
@@ -42,6 +44,9 @@ namespace Project_CS511.Component
             //add shop name
             main.dataSource.SetCollection("user");
             lb_store.Text = main.dataSource.findValue("userId", shopId, "username");
+
+            //add rating
+            lb_star.Text = doc["rating"].AsString;
 
         }
 
@@ -66,6 +71,20 @@ namespace Project_CS511.Component
             pb_picture.Image.Dispose();
             pb_picture.Image = Resources.add_food;
         }
+
+        public void updateFoodBlock(string foodId)
+        {
+            main.dataSource.SetCollection("food");
+            foodBlockData = main.dataSource.findOneDoc("foodId", foodId);
+            main.dataSource.SetCollection("user");
+        }
+
+        public void updateStar(string foodId)
+        {
+            main.dataSource.SetCollection("food");
+            lb_star.Text = main.dataSource.findValue("foodId", foodId, "rating");
+            main.dataSource.SetCollection("user");
+        }
         #endregion
 
         #region decoration
@@ -87,5 +106,9 @@ namespace Project_CS511.Component
             main.Controls.Add(f);
             main.bringControlToFront(f);
         }
+
+        
+
+
     }
 }

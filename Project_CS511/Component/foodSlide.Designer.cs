@@ -30,7 +30,6 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -38,7 +37,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(420, 238);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(409, 249);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -51,7 +50,6 @@
             this.label2.Size = new System.Drawing.Size(143, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Food For You ➜";
-            
             // 
             // foodSlide
             // 
@@ -60,8 +58,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Name = "foodSlide";
-            this.Size = new System.Drawing.Size(400, 250);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(400, 272);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -70,6 +70,12 @@ namespace Project_CS511.Pages
         {
             foodSlide1.addFood();
         }
+
+        public void reloadStar(string foodId)
+        {
+            foodSlide1.updateStar(foodId);
+
+        }
         private void flp_home_Paint(object sender, PaintEventArgs e)
         {
 

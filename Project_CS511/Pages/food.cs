@@ -116,15 +116,14 @@ namespace Project_CS511.Pages
             var result = collections.Find(filter).ToList();
             for (int i = result.Count - 1; i >= 0; i--)
             {
-                if (result[i]["shopId"].AsString != main.currentId) 
-                {
-                    var document = result[i];
-                    var foodmenu = new foodlist(main);
-                    foodmenu.Picture = document.GetValue("foodId").AsString;
-                    foodmenu.Namefood = document.GetValue("foodName").AsString;
-                    foodmenu.Price = document.GetValue("price").AsString;
-                    flowLayoutPanel1.Controls.Add(foodmenu);
-                }
+                var document = result[i];
+                var foodmenu = new foodlist(main);
+                foodmenu.Picture = document.GetValue("foodId").AsString;
+                foodmenu.Namefood = document.GetValue("foodName").AsString;
+                foodmenu.Price = document.GetValue("price").AsString;
+                foodmenu.Rating = document.GetValue("rating").AsString;
+                foodmenu.FoodID = document.GetValue("foodId").AsString;
+                flowLayoutPanel1.Controls.Add(foodmenu);
             }
         }
         private int clickCounterdrink = 0;
@@ -253,6 +252,8 @@ namespace Project_CS511.Pages
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    foodmenu.Rating = document.GetValue("rating").AsString;
+                    foodmenu.FoodID = document.GetValue("foodId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -268,6 +269,8 @@ namespace Project_CS511.Pages
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    foodmenu.Rating = document.GetValue("rating").AsString;
+                    foodmenu.FoodID = document.GetValue("foodId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -283,6 +286,8 @@ namespace Project_CS511.Pages
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    foodmenu.Rating = document.GetValue("rating").AsString;
+                    foodmenu.FoodID = document.GetValue("foodId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -298,6 +303,8 @@ namespace Project_CS511.Pages
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    foodmenu.Rating = document.GetValue("rating").AsString;
+                    foodmenu.FoodID = document.GetValue("foodId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -313,6 +320,8 @@ namespace Project_CS511.Pages
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    foodmenu.Rating = document.GetValue("rating").AsString;
+                    foodmenu.FoodID = document.GetValue("foodId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -328,6 +337,8 @@ namespace Project_CS511.Pages
                     foodmenu.Namefood = document.GetValue("foodName").AsString;
                     foodmenu.Price = document.GetValue("price").AsString;
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    foodmenu.Rating = document.GetValue("rating").AsString;
+                    foodmenu.FoodID = document.GetValue("foodId").AsString;
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -366,6 +377,8 @@ namespace Project_CS511.Pages
                             foodmenu.Namefood = document.GetValue("foodName").AsString;
                             foodmenu.Price = document.GetValue("price").AsString;
                             foodmenu.ShopID = document.GetValue("shopId").AsString;
+                            foodmenu.Rating = document.GetValue("rating").AsString;
+                            foodmenu.FoodID = document.GetValue("foodId").AsString;
                             flowLayoutPanel1.Controls.Add(foodmenu);
                         }                  
 
@@ -385,11 +398,26 @@ namespace Project_CS511.Pages
                         foodmenu.Namefood = document.GetValue("foodName").AsString;
                         foodmenu.Price = document.GetValue("price").AsString;
                         foodmenu.ShopID = document.GetValue("shopId").AsString;
+                        foodmenu.Rating = document.GetValue("rating").AsString;
+                        foodmenu.FoodID = document.GetValue("foodId").AsString;
                         flowLayoutPanel1.Controls.Add(foodmenu);
                     }
                 }
             }
         }
        
+        public void reloadStar(string foodId)
+        {
+            foreach(Control c in flowLayoutPanel1.Controls)
+            {
+                foodlist temp = (foodlist)c;
+                if(temp.FoodID == foodId)
+                {
+                    main.dataSource.SetCollection("food");
+                    temp.Rating = main.dataSource.findValue("foodId", foodId, "rating");
+                    main.dataSource.SetCollection("user");
+                }
+            }
+        }
     }
 }

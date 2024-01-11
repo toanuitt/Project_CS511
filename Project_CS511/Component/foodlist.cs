@@ -1,4 +1,5 @@
-﻿using Project_CS511.SubPage;
+﻿using MongoDB.Bson;
+using Project_CS511.SubPage;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace Project_CS511.Component
         private string _price;
         private string _foodid;
         private string _shopid;
+        private string _rating;
 
         [Category("Custom Props")]
         public string Picture
@@ -55,13 +57,18 @@ namespace Project_CS511.Component
         public string FoodID
         {
             get { return _foodid; }
-            set { _foodid = value;  }
+            set { _foodid = value; }
         }
         [Category("Custom Props")]
         public string ShopID
         {
             get { return _shopid; }
             set { _shopid = value; }
+        }
+        public string Rating
+        {
+            get { return _rating; }
+            set { _rating = value; lb_star.Text = _rating; }
         }
 
         #endregion
@@ -85,7 +92,7 @@ namespace Project_CS511.Component
         private void pb_picture_Click(object sender, EventArgs e)
         {
             foodSubPage f = new foodSubPage(main);
-            f.addDataFoodpage(_shopid,_pic, _name, _price);
+            f.addDataFoodpage(_shopid,_pic, _name, _price, _rating);
             main.Controls.Add(f);
             main.bringControlToFront(f);
         }

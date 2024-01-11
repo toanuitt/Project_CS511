@@ -137,6 +137,22 @@ namespace Project_CS511.Component
             //refresh
             foodSubPage foodSubPage = (foodSubPage)this.Parent;
             foodSubPage.refreshComment();
+
+            //add rating
+
+            //update star for foodslide in homepage
+            main.homePage.reloadStar(foodId);
+            // update star for foodPage
+            main.foodPage.reloadStar(foodId);
+            //update star if shop is open
+            shop shopTemp = (shop)main.findControlByName("shop");
+            if(shopTemp != null)
+            {
+                shopTemp.reloadStar(foodId);
+            }
+            //update star for current foodBlock
+            foodSubPage temp = (foodSubPage)main.findControlByName("foodSubPage");
+            temp.updateRating(foodId);
         }
 
         private void addNewComment()
@@ -160,6 +176,7 @@ namespace Project_CS511.Component
                 {"comment", tb_comment.Text },
             };
             main.dataSource.insertToCollection(newComment);
+            updateRating(foodId);
             main.dataSource.SetCollection("user");
         }
 
@@ -168,6 +185,33 @@ namespace Project_CS511.Component
             main.dataSource.SetCollection("foodComment");
             main.dataSource.findAndReplaceOne("commentId", foodCommentBson["commentId"].AsString, "rating", rating);
             main.dataSource.findAndReplaceOne("commentId", foodCommentBson["commentId"].AsString, "comment", tb_comment.Text);
+            updateRating(foodCommentBson["foodId"].AsString);
+            main.dataSource.SetCollection("user");
+        }
+
+        public void updateRating(string foodId)
+        {
+            main.dataSource.SetCollection("foodComment");
+            float point = 0;
+            string result = "";
+
+            List<BsonDocument> allReviews = main.dataSource.findMultipleDoc("foodId", foodId);
+            if (allReviews.Count == 0)
+            {
+                result = "No Rating";
+            }
+            foreach (BsonDocument review in allReviews)
+            {
+                string star = review["rating"].AsString;
+                point += Int32.Parse(star);
+            }
+            point = point / allReviews.Count;
+            point = (float)Math.Round(point, 1);
+            result = point.ToString();
+
+            main.dataSource.SetCollection("food");
+
+            main.dataSource.findAndReplaceOne("foodId", foodId, "rating", result);
             main.dataSource.SetCollection("user");
         }
     }

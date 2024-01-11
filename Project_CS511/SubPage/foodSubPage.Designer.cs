@@ -76,12 +76,12 @@
             // 
             this.lb_star.AutoSize = true;
             this.lb_star.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_star.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_star.Location = new System.Drawing.Point(342, 297);
+            this.lb_star.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_star.Location = new System.Drawing.Point(288, 297);
             this.lb_star.Name = "lb_star";
-            this.lb_star.Size = new System.Drawing.Size(37, 26);
+            this.lb_star.Size = new System.Drawing.Size(103, 29);
             this.lb_star.TabIndex = 12;
-            this.lb_star.Text = "4.8";
+            this.lb_star.Text = "No Rating";
             // 
             // lb_price
             // 
@@ -133,7 +133,7 @@
             // 
             this.pb_like.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_like.Image = ((System.Drawing.Image)(resources.GetObject("pb_like.Image")));
-            this.pb_like.Location = new System.Drawing.Point(301, 223);
+            this.pb_like.Location = new System.Drawing.Point(251, 223);
             this.pb_like.Name = "pb_like";
             this.pb_like.Size = new System.Drawing.Size(40, 36);
             this.pb_like.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             // 
             this.pb_star.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_star.Image = global::Project_CS511.Properties.Resources.star;
-            this.pb_star.Location = new System.Drawing.Point(301, 291);
+            this.pb_star.Location = new System.Drawing.Point(251, 294);
             this.pb_star.Name = "pb_star";
             this.pb_star.Size = new System.Drawing.Size(40, 36);
             this.pb_star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
