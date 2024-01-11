@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(map));
             this.txtbox_address = new System.Windows.Forms.TextBox();
             this.btn_recent = new System.Windows.Forms.Button();
-            this.btn_saved = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_mapchoose = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.PictureBox();
@@ -63,21 +62,6 @@
             this.btn_recent.Text = "Recent";
             this.btn_recent.UseVisualStyleBackColor = false;
             this.btn_recent.Click += new System.EventHandler(this.btn_recent_Click);
-            // 
-            // btn_saved
-            // 
-            this.btn_saved.BackColor = System.Drawing.Color.White;
-            this.btn_saved.FlatAppearance.BorderSize = 0;
-            this.btn_saved.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_saved.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_saved.ForeColor = System.Drawing.Color.Gray;
-            this.btn_saved.Location = new System.Drawing.Point(139, 48);
-            this.btn_saved.Name = "btn_saved";
-            this.btn_saved.Size = new System.Drawing.Size(105, 34);
-            this.btn_saved.TabIndex = 4;
-            this.btn_saved.Text = "Saved";
-            this.btn_saved.UseVisualStyleBackColor = false;
-            this.btn_saved.Click += new System.EventHandler(this.btn_saved_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -122,7 +106,6 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.btn_mapchoose);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btn_saved);
             this.Controls.Add(this.btn_recent);
             this.Controls.Add(this.txtbox_address);
             this.Controls.Add(this.btn_back);
@@ -140,7 +123,6 @@
         private System.Windows.Forms.PictureBox btn_back;
         private System.Windows.Forms.TextBox txtbox_address;
         private System.Windows.Forms.Button btn_recent;
-        private System.Windows.Forms.Button btn_saved;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btn_mapchoose;
     }
