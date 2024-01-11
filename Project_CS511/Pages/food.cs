@@ -116,14 +116,28 @@ namespace Project_CS511.Pages
             var result = collections.Find(filter).ToList();
             for (int i = result.Count - 1; i >= 0; i--)
             {
+<<<<<<< HEAD
                 var document = result[i];
                 var foodmenu = new foodlist(main);
                 foodmenu.Picture = document.GetValue("foodId").AsString;
                 foodmenu.Namefood = document.GetValue("foodName").AsString;
                 foodmenu.Price = document.GetValue("price").AsString;
+                foodmenu.ShopID = document.GetValue("shopId").AsString;
                 foodmenu.Rating = document.GetValue("rating").AsString;
                 foodmenu.FoodID = document.GetValue("foodId").AsString;
                 flowLayoutPanel1.Controls.Add(foodmenu);
+=======
+                if (result[i]["shopId"].AsString != main.currentId) 
+                {
+                    var document = result[i];
+                    var foodmenu = new foodlist(main);
+                    foodmenu.Picture = document.GetValue("foodId").AsString;
+                    foodmenu.Namefood = document.GetValue("foodName").AsString;
+                    foodmenu.Price = document.GetValue("price").AsString;
+                    foodmenu.ShopID = document.GetValue("shopId").AsString;
+                    flowLayoutPanel1.Controls.Add(foodmenu);
+                }
+>>>>>>> 9157ec7a59f2a7433ad580045bc508e3c6c07b7b
             }
         }
         private int clickCounterdrink = 0;
