@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,17 @@ namespace Project_CS511.Component.Cart
     {
         mainForm main;
         public int money;
+        public string shopId;
         int thisprice;
         public foodBlockCart(mainForm main, string id, string name, string price)
         {
             InitializeComponent();
             Name = id;
+
+            main.dataSource.SetCollection("food");
+            shopId = main.dataSource.findValue("foodId", id, "shopId");
+            main.dataSource.SetCollection("user");
+
             this.main = main;
             pb_foodPic.Image = Image.FromFile(getFoodPicturePath()+id+".png");
             lb_foodName.Text = name;
@@ -90,6 +97,7 @@ namespace Project_CS511.Component.Cart
             }
         }
 
+
         #endregion
         private void pb_add_Click(object sender, EventArgs e)
         {
@@ -123,6 +131,13 @@ namespace Project_CS511.Component.Cart
             }
 
             cartSubPage cartPage = (cartSubPage)main.Controls.Find("cartSubPage", true).FirstOrDefault();
+            foreach (OrderBlock f in cartPage.getAllOrderBlock())
+            {
+                if (f.getControlNum() == 0)
+                {
+                    cartPage.removeOrderBlock(f);
+                }
+            }
             cartPage.totalMoney();
         }
 
@@ -147,6 +162,13 @@ namespace Project_CS511.Component.Cart
             this.Parent.Controls.Remove(this);
 
             cartSubPage cartPage = (cartSubPage)main.Controls.Find("cartSubPage", true).FirstOrDefault();
+            foreach (OrderBlock f in cartPage.getAllOrderBlock())
+            {
+                if(f.getControlNum() == 0)
+                {
+                    cartPage.removeOrderBlock(f);
+                }
+            }
             cartPage.totalMoney();
         }
     }

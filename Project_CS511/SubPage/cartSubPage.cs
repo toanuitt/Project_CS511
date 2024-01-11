@@ -101,8 +101,27 @@ namespace Project_CS511.SubPage
                     orderBlock.addFoodBlock(main.dataSource.findOneDoc("foodId", id_product));
                 }
 
+                if (orderBlock.shippingFee == 0)
+                    orderBlock.addShipFee();
                 //OrderBlock orderBlock = (OrderBlock)flowLayoutPanel1.Controls.Find(foundShopId, true).FirstOrDefault();
             }
+        }
+        public List<OrderBlock> getAllOrderBlock()
+        {
+            List<OrderBlock> list = new List<OrderBlock>();
+
+            foreach(Control control in flowLayoutPanel1.Controls)
+            {
+                OrderBlock temp = (OrderBlock)control;
+                list.Add(temp);
+            }
+
+            return list;
+        }
+
+        public void removeOrderBlock(OrderBlock orderBlock)
+        {
+            flowLayoutPanel1.Controls.Remove(orderBlock);
         }
 
         private void addNotify(List<string> allIds)
@@ -123,15 +142,17 @@ namespace Project_CS511.SubPage
         public void totalMoney()
         {
             int total = 0;
+            int shipMoney = 0;
             foreach(Control c in flowLayoutPanel1.Controls)
             {
                 OrderBlock orderBlock = (OrderBlock)c;
                 total += orderBlock.getShopBill();
+                shipMoney += orderBlock.shippingFee;
             }
             lb_subTotal.Text = FormatMoney(total.ToString()) + "₫";
             //Calcute shipping fee
-            
-            lb_total.Text = FormatMoney((total + 0).ToString()) + "₫";
+            lb_shippingFee.Text = FormatMoney(shipMoney.ToString()) + "₫";
+            lb_total.Text = FormatMoney((total + shipMoney).ToString()) + "₫";
         }
 
         private Control findControlByName(Control container, string controlName)

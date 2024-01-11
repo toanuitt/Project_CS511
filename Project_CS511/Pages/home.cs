@@ -68,6 +68,7 @@ namespace Project_CS511.Pages
         public void reloadDistance()
         {
             foodSlide1.addDistance();
+            restaurants.addDistance();
         }
 
         #endregion

@@ -53,5 +53,14 @@ namespace Project_CS511.Component
                 f.setImageToDefault();
             }
         }
+
+        public void addDistance()
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                restaurantBlock temp = (restaurantBlock)c;
+                temp.addDistance(temp.userId);
+            }
+        }
     }
 }
