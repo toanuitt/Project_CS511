@@ -133,18 +133,18 @@ namespace Project_CS511.Component.yourStore
                     removeFromLiked(thisfoodId);
                     removeComment(thisfoodId);
                     removeBoughtProduct(thisfoodId);
+                    pb_picture.Image.Dispose();
+                    pb_picture.Image = Resources.add_food;
                     this.Parent.Controls.Remove(this);
                     main.dataSource.SetCollection("user");
                 }
-
-                
-                main.dataSource.SetCollection("user");
-
-                pb_picture.Image.Dispose();
+                main.messagePage.setToAvoidConflict();
                 main.homePage.setToAvoidConflictFood();
+                main.foodPage.setToAvoidConflict();
                 File.Delete(getFoodPicturePath() + thisfoodId + ".png");
                 main.homePage.updateFoodAfterDelete();
-            }
+                main.messagePage.init();
+;            }
         }
 
         #region cac ham chuc nang
@@ -287,6 +287,8 @@ namespace Project_CS511.Component.yourStore
                 {
                     pb_picture.Image.Dispose();
                     main.homePage.setToAvoidConflictFood();
+                    main.foodPage.setToAvoidConflict();
+
                     File.Copy(selectedFilePath, destinationFolder, true);
                     pb_picture.Image = Image.FromFile(getFoodPath() + thisfoodId + ".png");
                     main.homePage.updateFoodAfterDelete();

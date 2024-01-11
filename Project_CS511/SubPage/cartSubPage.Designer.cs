@@ -65,10 +65,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(35, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 25);
+            this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "Confirm Order";
             // 
@@ -213,6 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lb_placeOrder);
             this.Controls.Add(this.pb_placeOrder);

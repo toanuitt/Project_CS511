@@ -158,7 +158,7 @@
             // 
             this.pb_addToCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_addToCart.Image = global::Project_CS511.Properties.Resources.add;
-            this.pb_addToCart.Location = new System.Drawing.Point(131, 294);
+            this.pb_addToCart.Location = new System.Drawing.Point(154, 294);
             this.pb_addToCart.Name = "pb_addToCart";
             this.pb_addToCart.Size = new System.Drawing.Size(40, 36);
             this.pb_addToCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,6 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.Controls.Add(this.lb_distance);
             this.Controls.Add(this.pb_like);
             this.Controls.Add(this.btn_success);

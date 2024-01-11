@@ -25,6 +25,12 @@ namespace Project_CS511.Pages
 
         }
 
+        public void addName(string userId)
+        {
+            main.dataSource.SetCollection("user");
+            lb_name.Text = main.dataSource.findValue("userId", userId, "username");
+        }
+
         public void init()
         {
             panel1.BackColor = green;

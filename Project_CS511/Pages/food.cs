@@ -429,6 +429,16 @@ namespace Project_CS511.Pages
             }
         }
        
+        public void setToAvoidConflict()
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                foodlist temp = (foodlist)c;
+                temp.disposeImg();
+                temp.Picture = "default";
+            }
+        }
+
         public void reloadStar(string foodId)
         {
             foreach(Control c in flowLayoutPanel1.Controls)

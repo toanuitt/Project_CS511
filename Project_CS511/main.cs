@@ -136,7 +136,7 @@ namespace Project_CS511
             updateTempData();
             accountPage.reloadAvatar(currentId);
             messagePage.init();
-            getLatAndLong();
+            accountPage.addName(currentId);
             if(isNew)
             {
                 setLocation f = new setLocation(this);
@@ -144,8 +144,13 @@ namespace Project_CS511
                 Controls.Add(f);
                 bringControlToFront(f);
             }
-            homePage.reloadDistance();
-            foodPage.loadDistance();
+            if(!isNew)
+            {
+                getLatAndLong();
+                homePage.reloadDistance();
+                foodPage.loadDistance();
+            }
+
         }
 
         public void updateTempData()

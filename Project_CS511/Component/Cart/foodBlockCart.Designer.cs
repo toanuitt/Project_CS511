@@ -134,6 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.Controls.Add(this.pic_delete);
             this.Controls.Add(this.pb_sub);
             this.Controls.Add(this.pb_add);

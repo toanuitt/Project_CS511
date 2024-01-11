@@ -78,6 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.Controls.Add(this.lb_shipping);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flp_order);

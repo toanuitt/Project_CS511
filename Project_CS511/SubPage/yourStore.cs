@@ -231,6 +231,7 @@ namespace Project_CS511.SubPage
                 {"foodType", cb_foodType.Text },
                 {"price", tb_price.Text },
                 {"comment", "" },
+                {"rating", "No Rating" },
                 };
                 main.dataSource.insertToCollection(newComment);
                 addNotify("add", tb_name.Text);
@@ -240,7 +241,7 @@ namespace Project_CS511.SubPage
                 pb_newImg.Image = Resources.add_food;
 
                 main.dataSource.SetCollection("user");
-                notification();
+                //notification();
 
 
                 //add new food

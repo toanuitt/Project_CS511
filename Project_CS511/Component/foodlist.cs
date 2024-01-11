@@ -83,6 +83,11 @@ namespace Project_CS511.Component
 
         }
 
+        public void disposeImg()
+        {
+            pb_picture.Image.Dispose();
+        }
+
         static string FormatMoney(string value)
         {
             int money = Int32.Parse(value);

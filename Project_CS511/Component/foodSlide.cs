@@ -64,7 +64,6 @@ namespace Project_CS511.Component
                 {
                     temp.updateStar(foodId);
                     temp.updateFoodBlock(foodId);
-                    return;
                 }
             }
         }

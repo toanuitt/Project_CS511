@@ -198,20 +198,22 @@ namespace Project_CS511.SubPage
                 boughtFoodList = boughtFoodList.Skip(1).ToList();
                 main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
                 main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", string.Join("-", boughtFoodList));
-                return;
             }
-
-            foreach(string product in uniqueProduct)
+            else
             {
-                if(!boughtFoodList.Contains(product))
+                foreach (string product in uniqueProduct)
                 {
-                    boughtFoodList.Add(product);
+                    if (!boughtFoodList.Contains(product))
+                    {
+                        boughtFoodList.Add(product);
+                    }
                 }
+
+                string productList = string.Join("-", boughtFoodList);
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
+                main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
             }
 
-            string productList = string.Join("-", boughtFoodList);
-            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "cart", "");
-            main.dataSource.findAndReplaceOne("loginName", main.currentUser, "boughtFood", productList);
 
             addNotify(shopIds);
 
