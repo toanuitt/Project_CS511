@@ -68,5 +68,14 @@ namespace Project_CS511.Component
                 }
             }
         }
+
+        public void addDistance()
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                foodBlock temp = (foodBlock)c;
+                temp.addDistance(temp.shopId);
+            }
+        }
     }
 }

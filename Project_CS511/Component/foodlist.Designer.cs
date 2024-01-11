@@ -35,6 +35,7 @@
             this.lbl_name = new System.Windows.Forms.RichTextBox();
             this.lb_star = new System.Windows.Forms.Label();
             this.pb_star = new System.Windows.Forms.PictureBox();
+            this.lb_distance = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star)).BeginInit();
@@ -107,10 +108,21 @@
             this.pb_star.TabIndex = 14;
             this.pb_star.TabStop = false;
             // 
+            // lb_distance
+            // 
+            this.lb_distance.AutoSize = true;
+            this.lb_distance.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_distance.Location = new System.Drawing.Point(256, 78);
+            this.lb_distance.Name = "lb_distance";
+            this.lb_distance.Size = new System.Drawing.Size(57, 19);
+            this.lb_distance.TabIndex = 16;
+            this.lb_distance.Text = "3.2 Km";
+            // 
             // foodlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lb_distance);
             this.Controls.Add(this.lb_star);
             this.Controls.Add(this.pb_star);
             this.Controls.Add(this.lbl_name);
@@ -136,5 +148,6 @@
         private System.Windows.Forms.RichTextBox lbl_name;
         private System.Windows.Forms.Label lb_star;
         private System.Windows.Forms.PictureBox pb_star;
+        private System.Windows.Forms.Label lb_distance;
     }
 }

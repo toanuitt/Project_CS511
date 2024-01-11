@@ -41,6 +41,7 @@
             this.pb_addToCart = new System.Windows.Forms.PictureBox();
             this.pb_star = new System.Windows.Forms.PictureBox();
             this.pb_food = new System.Windows.Forms.PictureBox();
+            this.lb_distance = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_like)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_addToCart)).BeginInit();
@@ -133,7 +134,7 @@
             // 
             this.pb_like.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_like.Image = ((System.Drawing.Image)(resources.GetObject("pb_like.Image")));
-            this.pb_like.Location = new System.Drawing.Point(251, 223);
+            this.pb_like.Location = new System.Drawing.Point(351, 220);
             this.pb_like.Name = "pb_like";
             this.pb_like.Size = new System.Drawing.Size(40, 36);
             this.pb_like.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,10 +188,21 @@
             this.pb_food.TabIndex = 0;
             this.pb_food.TabStop = false;
             // 
+            // lb_distance
+            // 
+            this.lb_distance.AutoSize = true;
+            this.lb_distance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_distance.Location = new System.Drawing.Point(184, 200);
+            this.lb_distance.Name = "lb_distance";
+            this.lb_distance.Size = new System.Drawing.Size(57, 19);
+            this.lb_distance.TabIndex = 21;
+            this.lb_distance.Text = "3.2 Km";
+            // 
             // foodSubPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lb_distance);
             this.Controls.Add(this.pb_like);
             this.Controls.Add(this.btn_success);
             this.Controls.Add(this.pb_back);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.PictureBox pb_back;
         private System.Windows.Forms.Button btn_success;
         private System.Windows.Forms.PictureBox pb_like;
+        private System.Windows.Forms.Label lb_distance;
     }
 }

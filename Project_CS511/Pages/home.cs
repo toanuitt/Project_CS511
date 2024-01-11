@@ -65,6 +65,11 @@ namespace Project_CS511.Pages
             foodSlide1.addFood();
         }
 
+        public void reloadDistance()
+        {
+            foodSlide1.addDistance();
+        }
+
         #endregion
         public void updateFoodAfterDelete()
         {

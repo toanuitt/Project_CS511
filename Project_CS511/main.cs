@@ -29,6 +29,8 @@ namespace Project_CS511
         public string currentUser;
         public string currentId;
         public string tempLocation;
+        public double currentLatitude;
+        public double currentLongitude;
         public string methodepayment;
         public mainForm()
         {
@@ -134,7 +136,7 @@ namespace Project_CS511
             updateTempData();
             accountPage.reloadAvatar(currentId);
             messagePage.init();
-
+            getLatAndLong();
             if(isNew)
             {
                 setLocation f = new setLocation(this);
@@ -142,6 +144,8 @@ namespace Project_CS511
                 Controls.Add(f);
                 bringControlToFront(f);
             }
+            homePage.reloadDistance();
+            foodPage.loadDistance();
         }
 
         public void updateTempData()
@@ -153,6 +157,14 @@ namespace Project_CS511
             dataSource.findAndReplaceOne("location", oldLocation, "location", newLocation);
             //dataSource.SetCollection("user");
         }
+
+        public void getLatAndLong()
+        {
+            dataSource.SetCollection("user");
+            currentLatitude = double.Parse(dataSource.findValue("userId", currentId, "coordinate").Split('-')[0]);
+            currentLongitude = double.Parse(dataSource.findValue("userId", currentId, "coordinate").Split('-')[1]);
+        }
+       
         #endregion
     }
 }

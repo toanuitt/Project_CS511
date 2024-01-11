@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -20,8 +21,10 @@ namespace Project_CS511.Pages
     public partial class food : UserControl
     {
         mainForm main;
+        bool addedDistance = false;
         public food(mainForm main)
         {
+            addedDistance = false;
             InitializeComponent();
             this.main = main;
             // init current user
@@ -116,7 +119,6 @@ namespace Project_CS511.Pages
             var result = collections.Find(filter).ToList();
             for (int i = result.Count - 1; i >= 0; i--)
             {
-<<<<<<< HEAD
                 var document = result[i];
                 var foodmenu = new foodlist(main);
                 foodmenu.Picture = document.GetValue("foodId").AsString;
@@ -125,19 +127,9 @@ namespace Project_CS511.Pages
                 foodmenu.ShopID = document.GetValue("shopId").AsString;
                 foodmenu.Rating = document.GetValue("rating").AsString;
                 foodmenu.FoodID = document.GetValue("foodId").AsString;
+                if (addedDistance)
+                    foodmenu.addDistance(foodmenu.ShopID);
                 flowLayoutPanel1.Controls.Add(foodmenu);
-=======
-                if (result[i]["shopId"].AsString != main.currentId) 
-                {
-                    var document = result[i];
-                    var foodmenu = new foodlist(main);
-                    foodmenu.Picture = document.GetValue("foodId").AsString;
-                    foodmenu.Namefood = document.GetValue("foodName").AsString;
-                    foodmenu.Price = document.GetValue("price").AsString;
-                    foodmenu.ShopID = document.GetValue("shopId").AsString;
-                    flowLayoutPanel1.Controls.Add(foodmenu);
-                }
->>>>>>> 9157ec7a59f2a7433ad580045bc508e3c6c07b7b
             }
         }
         private int clickCounterdrink = 0;
@@ -252,6 +244,7 @@ namespace Project_CS511.Pages
         }
         private void addData()
         {
+                
             flowLayoutPanel1.Controls.Clear();
             IMongoCollection<BsonDocument> collections = main.dataSource.data.GetCollection<BsonDocument>("food");
             if (clickCounterdrink % 2 == 1)
@@ -268,6 +261,8 @@ namespace Project_CS511.Pages
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
                     foodmenu.Rating = document.GetValue("rating").AsString;
                     foodmenu.FoodID = document.GetValue("foodId").AsString;
+                    if (addedDistance)
+                        foodmenu.addDistance(foodmenu.ShopID);
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -285,6 +280,8 @@ namespace Project_CS511.Pages
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
                     foodmenu.Rating = document.GetValue("rating").AsString;
                     foodmenu.FoodID = document.GetValue("foodId").AsString;
+                    if (addedDistance)
+                        foodmenu.addDistance(foodmenu.ShopID);
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -302,6 +299,8 @@ namespace Project_CS511.Pages
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
                     foodmenu.Rating = document.GetValue("rating").AsString;
                     foodmenu.FoodID = document.GetValue("foodId").AsString;
+                    if (addedDistance)
+                        foodmenu.addDistance(foodmenu.ShopID);
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -319,6 +318,8 @@ namespace Project_CS511.Pages
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
                     foodmenu.Rating = document.GetValue("rating").AsString;
                     foodmenu.FoodID = document.GetValue("foodId").AsString;
+                    if (addedDistance)
+                        foodmenu.addDistance(foodmenu.ShopID);
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -336,6 +337,8 @@ namespace Project_CS511.Pages
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
                     foodmenu.Rating = document.GetValue("rating").AsString;
                     foodmenu.FoodID = document.GetValue("foodId").AsString;
+                    if (addedDistance)
+                        foodmenu.addDistance(foodmenu.ShopID);
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -353,6 +356,8 @@ namespace Project_CS511.Pages
                     foodmenu.ShopID = document.GetValue("shopId").AsString;
                     foodmenu.Rating = document.GetValue("rating").AsString;
                     foodmenu.FoodID = document.GetValue("foodId").AsString;
+                    if (addedDistance)
+                        foodmenu.addDistance(foodmenu.ShopID);
                     flowLayoutPanel1.Controls.Add(foodmenu);
                 }
             }
@@ -393,6 +398,8 @@ namespace Project_CS511.Pages
                             foodmenu.ShopID = document.GetValue("shopId").AsString;
                             foodmenu.Rating = document.GetValue("rating").AsString;
                             foodmenu.FoodID = document.GetValue("foodId").AsString;
+                            if (addedDistance)
+                                foodmenu.addDistance(foodmenu.ShopID);
                             flowLayoutPanel1.Controls.Add(foodmenu);
                         }                  
 
@@ -414,6 +421,8 @@ namespace Project_CS511.Pages
                         foodmenu.ShopID = document.GetValue("shopId").AsString;
                         foodmenu.Rating = document.GetValue("rating").AsString;
                         foodmenu.FoodID = document.GetValue("foodId").AsString;
+                        if (addedDistance)
+                            foodmenu.addDistance(foodmenu.ShopID);
                         flowLayoutPanel1.Controls.Add(foodmenu);
                     }
                 }
@@ -432,6 +441,16 @@ namespace Project_CS511.Pages
                     main.dataSource.SetCollection("user");
                 }
             }
+        }
+
+        public void loadDistance()
+        {
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                foodlist temp = (foodlist)c;
+                temp.addDistance(temp.ShopID);
+            }
+            addedDistance = true;
         }
     }
 }

@@ -161,6 +161,9 @@ namespace Project_CS511.SubPage
             main.dataSource.SetCollection("user");
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "coordinate", coordinate);
             main.dataSource.findAndReplaceOne("loginName", main.currentUser, "location", location);
+            main.getLatAndLong();
+            main.homePage.reloadDistance();
+            main.foodPage.loadDistance();
             if(isNewUser)
             {
                 main.RemoveControlByName("setLocation");
